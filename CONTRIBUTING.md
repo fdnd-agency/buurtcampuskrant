@@ -1,4 +1,5 @@
 # Teamafspraken en teamcanvas
+Hier is alles te vinden over onze doelen, afspraken en onze conventies en templates. 
 
 ## Persoonlijke doelen
 ### Rick: 
