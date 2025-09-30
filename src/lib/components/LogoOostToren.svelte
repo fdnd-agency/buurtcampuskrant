@@ -1,0 +1,1 @@
+<img src="src/lib/assets/images/Toren_Wit_Oost_4.png">
