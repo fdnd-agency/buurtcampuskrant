@@ -1,6 +1,5 @@
 <script>
 
-
 const artikelen = [
   { 
     titel: "Artikel 1", 
@@ -36,3 +35,22 @@ const artikelen = [
 
 
 </script>
+
+<button>de wijk</button>
+<button>bewoners</button>
+<button>studenten</button>
+<button>alle</button>
+
+<ul>
+    {#each artikelen as artikel}
+      <li>
+        <h2>{artikel.titel}</h2>
+        <p>{artikel.inhoud}</p>
+      </li>
+    {/each}
+  </ul>
+
+
+  
+  
+
