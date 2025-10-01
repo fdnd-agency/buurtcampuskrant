@@ -33,20 +33,24 @@ const artikelen = [
   }
 ];
 
+let rubriek = null;
 
 </script>
 
-<button>de wijk</button>
-<button>bewoners</button>
-<button>studenten</button>
-<button>alle</button>
+<button on:click={() => rubriek = "De wijk"}>de wijk</button>
+<button on:click={() => rubriek = "Bewoners"}>bewoners</button>
+<button on:click={() => rubriek = "Studenten"}>studenten</button>
+<button on:click={() => rubriek = null}>alle</button>
 
 <ul>
     {#each artikelen as artikel}
+    <!-- als er geen rubriek actief is toon alles / artikel wat bij de filter hoort tonen  -->
+    {#if rubriek === null || artikel.rubriek === rubriek}
       <li>
         <h2>{artikel.titel}</h2>
         <p>{artikel.inhoud}</p>
       </li>
+      {/if}
     {/each}
   </ul>
 
