@@ -50,7 +50,35 @@ const artikelen = [
     {/each}
   </ul>
 
+<style>
 
-  
+button {
+    border-radius: 20px;
+    border: 1px solid black;
+}
+
+button:hover {
+    border: 1px solid black;
+}
+
+ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 0; 
+    gap: 1em;
+}
+
+li {
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    list-style-type: none;
+    
+}
+    </style>
+
+
   
 
