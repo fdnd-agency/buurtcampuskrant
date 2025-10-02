@@ -6,9 +6,32 @@
         </svg>
     </button>
 
-    <input type="email" name="email" placeholder="e-mailadres" required>
+    <input type="email" name="email" placeholder="  e-mailadres" required>
 </form>
 
 <style>
-    
+    form {
+        display: flex;
+        width: 230px;
+        height: 21px;
+
+        button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: hsla(230, 39%, 61%, 1);
+            border: none;
+        }
+
+        input {
+            background-color: hsla(230, 39%, 76%, 1);
+            border: none;
+        }
+
+        input::placeholder {
+            color: hsla(230, 38%, 21%, 1);
+            font-style: italic;
+            font-size: 11px;
+        }
+    }
 </style>
