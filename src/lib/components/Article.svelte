@@ -1,70 +1,87 @@
 <article>
-    <img src="https://images.squarespace-cdn.com/content/v1/66277968847b3143bb8b0b11/540ebc56-3661-434f-95cc-d99f14d1eed1/Buurtcampus+Raad+1.jpeg?format=2500w" alt="Article" width="280" height="150">
-    <h1>Title article</h1>
-    <p>Lorem ipsum dolor sit amet, consect badipiscing elit. Lorem ipsum consect badipiscing elit. </p>
+    <div class="container-content"> 
+        <img src="https://images.squarespace-cdn.com/content/v1/66277968847b3143bb8b0b11/540ebc56-3661-434f-95cc-d99f14d1eed1/Buurtcampus+Raad+1.jpeg?format=2500w" alt="Article" width="280" height="150">
+        <div class="content">   
+            <h1>Title article</h1>
+            <p>Lorem ipsum dolor sit amet, consect badipiscing elit. Lorem ipsum consect badipiscing elit. </p>
 
-    <div>
-        <a href="/oost">oost</a>
-        <a href="/wijk">wijk</a>
+            <div class="buttons">
+                <a href="/oost">oost</a>
+                <a href="/wijk">wijk</a>
+            </div>
+        </div>
     </div>
 </article>
 
 <style>
     article {
+        container-type: inline-size;
+        container-name: --article;
+
         display: flex;
         flex-direction: column;
-        justify-content: left;
-        min-height: 320px;
-        max-width: 280px;
         border-radius: 25px;
         overflow: hidden;
-        color: white;
-
-        /* kleuren verschillen per pagina (moet ingevuld worden op de pagina zelf) 
+        color: white;       
         background-color: #303A6D;
         border: solid 2px #303A6D;
-        */
-        
-        img {
-            max-height: 150px;
-            width: 100%;
-            object-fit: cover;
-        }
+        height: auto;
 
-        p, div, h1 {
-            margin-inline: 16px;
-        }  
+        .container-content {
 
-        p {
-            margin-block-start: 0;
-        }
-
-        div {
-            display: flex;
-            gap: 1em;
-            margin-bottom: 1em;
-
-            a {
-                display: flex;
-                justify-content: center;
-                height: 22px;
-                width: 64px;
-                border-radius: 25px;
-                text-decoration: none;
+            img {
+                width: 100%;
+                object-fit: cover;
             }
 
-            /* kleuren verschillen per pagina (moet ingevuld worden op de pagina zelf) 
-            a:nth-of-type(1) {
-                background-color: white;
-                color: #303A6D;
+            .content {
+                margin-inline: 16px;
+            
+                p {
+                    margin-block-start: 0;
+                }
+            
+                .buttons {
+                    display: flex;
+                    gap: 1em;
+                    margin-bottom: 1em;
+
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        height: 22px;
+                        width: 64px;
+                        border-radius: 25px;
+                        text-decoration: none;
+                    }
+                
+                    a:nth-of-type(1) {
+                        background-color: white;
+                        color: #303A6D;
+                    }
+                    a:nth-of-type(2) {
+                        background-color: #303A6D;
+                        color: white;
+                        border: solid 1px white;
+                    }    
+                }
             }
-            a:nth-of-type(2) {
-                background-color: #303A6D;
-                color: white;
-                border: solid 1px white;
-            }
-            */
         }
     }
+    @container --article (width > 430px) { 
+
+            article {
+                height: 135px;
+            }
+            
+            .container-content {
+                display: grid;
+                grid-template-columns: 40% 60%;
+
+                img {
+                    height: 100%;
+                }
+            }
+        }
 </style>
 
