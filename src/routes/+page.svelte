@@ -1,5 +1,7 @@
 <script>
 
-import Filter from '$lib/components/Qoute.svelte';
+  import Qoute from '$lib/components/Qoute.svelte';
 
 </script>
+
+<Qoute/>
