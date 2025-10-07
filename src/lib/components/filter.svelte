@@ -37,24 +37,33 @@ let rubriek = null;
 
 </script>
 
-<section>
+<section class="main-section">
 
+  <div class="buttons">
 <button on:click={() => rubriek = "De wijk"}>de wijk</button>
 <button on:click={() => rubriek = "Bewoners"}>bewoners</button>
 <button on:click={() => rubriek = "Studenten"}>studenten</button>
 <!-- <button on:click={() => rubriek = null}>alle</button> -->
+</div>
 
+<section class="content-wrapper">
+  <h2>Buurtcampus</h2>
 <ul>
     {#each artikelen as artikel}
     <!-- als er geen rubriek actief is toon alles / artikel wat bij de filter hoort tonen  -->
     {#if rubriek === null || artikel.rubriek === rubriek}
       <li>
-        <h2>{artikel.titel}</h2>
+        <img src="/images/foto.png" alt="">
+        <div class="info">
+        <h3>{artikel.titel}</h3>
         <p>{artikel.inhoud}</p>
+        <span class="label">{artikel.rubriek}</span>
+      </div>
       </li>
       {/if}
     {/each}
   </ul>
+</section>
 
 </section>
 
@@ -77,14 +86,57 @@ let rubriek = null;
 
 }
 
-  
-section {
+.main-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  margin: 0 auto;
   font-family: Arial, sans-serif;
 }  
 
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items:  flex-start;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto; 
+  /* padding: 0 1rem; */
+}
+
+.content-wrapper h2 {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+@media (min-width: 768px) {
+
+    .content-wrapper h2 {
+      text-align: left;
+      width: 100%;
+      font-size: 2rem;
+    }
+
+
+  }
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* align-items: flex-start; */
+  gap: 5px;
+  width: 100%;
+  padding: 0 1.5rem; 
+}
+
 button {
     border-radius: 20px;
-    padding: 6px 10px;
+    padding: 7px 10px;
     font-family: 'Arial', sans-serif;
     background-color: var(--button-bg);
     border: 1px solid var(--button-border);
@@ -96,27 +148,93 @@ button:hover {
     border: 1px solid var(--button-border);
 }
 
+@media (min-width: 768px){
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }    
+  }
+
 ul {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    padding-left: 0; 
+    /* justify-content: flex-start; */
+    /* align-items: flex-start;  */
+    width: 100%;
+    max-width: 1200px;
+    padding-left: 0;
+    margin: 0;
     gap: 1em;
 }
 
+@media (min-width: 768px){
+    ul, h2 {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1em;
+      padding: 0 2rem;
+      /* justify-content: flex-start; */
+      /* align-items: center; */
+    }    
+  }
+
+
 li {
+    display: flex;
+    flex-direction: column;
     border-radius: 20px;
-    width: 300px;
-    height: 300px;
+    max-width: 300px;
+    height: 350px;
     border: var(--card-border);
     list-style-type: none;
     background-color: var(--card-bg);
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
 }
 
-h2, p {
-   text-align: center;
+li img  {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
 }
+
+.info {
+  display: inline-block;
+  /* width: fit-content;    */
+  justify-content: space-between;
+  flex-grow: 1; 
+  padding: 8px 12px;
+  margin-top: 8px;
+  height: 30px;
+  box-sizing: border-box;
+} 
+
+.info p {
+  height: 40px;
+  margin-bottom: 20px;
+}
+
+.label {
+  border-radius: 20px;
+  padding: 6px 10px;
+  margin-bottom: 20px;
+  align-self: flex-start; 
+  text-align: center;
+  background-color: var(--button-bg);
+  border: 1px solid var(--button-border);
+}
+
+.label:hover {
+  background-color: var(--button-hover-border);
+  color: var(--button-hover-text);
+}
+
     </style>
 
 
