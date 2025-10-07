@@ -47,7 +47,7 @@ let rubriek = null;
 </div>
 
 <section class="content-wrapper">
-  <h2>Buurtcampus</h2>
+  <h2>Buurtcampus // Oost</h2>
 <ul>
     {#each artikelen as artikel}
     <!-- als er geen rubriek actief is toon alles / artikel wat bij de filter hoort tonen  -->
@@ -74,6 +74,7 @@ let rubriek = null;
  /* card kleuren  */
 --card-bg:hsla(232, 37%, 92%, 1);
 --card-border: 2px solid hsla(230, 39%, 31%, 1);
+--card-text: hsla(230, 39%, 31%, 1);
 
 /* Button kleuren */
 --button-bg: hsla(0, 0%, 100%, 1);
@@ -83,6 +84,8 @@ let rubriek = null;
 --button-hover-bg:  hsla(240, 32%, 18%, 1);
 --button-hover-border:  hsla(230, 39%, 31%, 1);
 --button-hover-text: hsla(0, 0%, 100%, 1);
+
+--title-color: hsla(230, 39%, 31%, 1);
 
 }
 
@@ -111,6 +114,8 @@ let rubriek = null;
   text-align: left;
   margin-bottom: 1rem;
   font-size: 1.5rem;
+  color: var(--title-color);
+  font-weight: 700;
 }
 
 @media (min-width: 768px) {
@@ -138,6 +143,8 @@ button {
     border-radius: 20px;
     padding: 7px 10px;
     font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    color: var(--title-color);
     background-color: var(--button-bg);
     border: 1px solid var(--button-border);
 }
@@ -209,15 +216,17 @@ li img  {
   /* width: fit-content;    */
   justify-content: space-between;
   flex-grow: 1; 
-  padding: 8px 12px;
-  margin-top: 8px;
+  padding: 8px 10px;
+  /* margin-top: 8px; */
   height: 30px;
   box-sizing: border-box;
+  color: var(--card-text);
 } 
 
 .info p {
   height: 40px;
   margin-bottom: 20px;
+  font-weight: 400;
 }
 
 .label {
@@ -226,7 +235,8 @@ li img  {
   margin-bottom: 20px;
   align-self: flex-start; 
   text-align: center;
-  background-color: var(--button-bg);
+  color: var(--button-hover-text);
+  background-color: var(--button-hover-bg);
   border: 1px solid var(--button-border);
 }
 
