@@ -37,10 +37,12 @@ let rubriek = null;
 
 </script>
 
+<section>
+
 <button on:click={() => rubriek = "De wijk"}>de wijk</button>
 <button on:click={() => rubriek = "Bewoners"}>bewoners</button>
 <button on:click={() => rubriek = "Studenten"}>studenten</button>
-<button on:click={() => rubriek = null}>alle</button>
+<!-- <button on:click={() => rubriek = null}>alle</button> -->
 
 <ul>
     {#each artikelen as artikel}
@@ -54,21 +56,51 @@ let rubriek = null;
     {/each}
   </ul>
 
+</section>
+
 <style>
+
+:root {
+
+ /* card kleuren  */
+--card-bg:hsla(232, 37%, 92%, 1);
+--card-border: 2px solid hsla(230, 39%, 31%, 1);
+
+/* Button kleuren */
+--button-bg: hsla(0, 0%, 100%, 1);
+--button-border: hsla(230, 39%, 31%, 1);
+
+  /* Button states */
+--button-hover-bg:  hsla(240, 32%, 18%, 1);
+--button-hover-border:  hsla(230, 39%, 31%, 1);
+--button-hover-text: hsla(0, 0%, 100%, 1);
+
+}
+
+  
+section {
+  font-family: Arial, sans-serif;
+}  
 
 button {
     border-radius: 20px;
-    border: 1px solid black;
+    padding: 6px 10px;
+    font-family: 'Arial', sans-serif;
+    background-color: var(--button-bg);
+    border: 1px solid var(--button-border);
 }
 
 button:hover {
-    border: 1px solid black;
+    color: var(--button-hover-text);
+    background-color: var(--button-hover-bg);
+    border: 1px solid var(--button-border);
 }
 
 ul {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: flex-start;
     padding-left: 0; 
     gap: 1em;
 }
@@ -77,9 +109,13 @@ li {
     border-radius: 20px;
     width: 300px;
     height: 300px;
-    border: 1px solid black;
+    border: var(--card-border);
     list-style-type: none;
-    
+    background-color: var(--card-bg);
+}
+
+h2, p {
+   text-align: center;
 }
     </style>
 
