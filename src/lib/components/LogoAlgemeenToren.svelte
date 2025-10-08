@@ -1,0 +1,1 @@
+<img src="src/lib/assets/images/Algemeen_wit.png">
