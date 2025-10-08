@@ -35,7 +35,8 @@
             color: white;
             background-color: #EE7C3C;
             border: none;
-            padding-right: 20px;
+            padding-right: 35px;
+            padding-left: 10px;
         }
 
         button::after {
@@ -55,7 +56,6 @@
             border-style: solid;
             border-color: #CACACA;
             border-width: 1px 0 1px 1px; 
-
         }
 
         input::placeholder {
