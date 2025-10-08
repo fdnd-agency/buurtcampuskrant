@@ -6,4 +6,4 @@
 </script>
 
 <Header/>
-<Footer/>
+<!-- <Footer/> -->
