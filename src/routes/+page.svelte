@@ -13,6 +13,4 @@
 <Qoute/>
 <Article/>
 <Header/>
-<Footer/>
-
-
+<Footer/> 
