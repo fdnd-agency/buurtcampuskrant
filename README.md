@@ -1,7 +1,5 @@
 # Buurtcampuskrant
 
-# Buurtcampuskrant
-
 [Design Challenge](https://github.com/fdnd-agency/buurtkrant/wiki/Design-Challenge)
 
 ## Description
