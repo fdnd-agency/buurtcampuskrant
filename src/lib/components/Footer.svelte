@@ -22,6 +22,5 @@
             <li><a href=""><LogoZuidOostToren/></a></li>
             <li><a href=""><LogoOostToren/></a></li>
         </ul>
-    </nav>
-    
+    </nav>  
 </footer>

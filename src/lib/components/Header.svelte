@@ -1,4 +1,3 @@
-
 <header>
     <a href="" aria-label="terug naar home"><LogoBuurtcampus/></a>
     <a href="#menu" class="menu-toggle" onclick={toggleSidebar}>MENU</a>
@@ -55,7 +54,6 @@
     </ul> -->
 </nav>
 
-
 <style>
    @font-face {
         font-family: 'primary-font';
@@ -63,6 +61,7 @@
         font-weight: normal;
         font-style: normal;
     }
+
     @font-face {
         font-family: 'secondary-font';
         src: url('src/lib/assets/fonts/Arial-BoldMT.ttf') format('truetype');
@@ -183,7 +182,6 @@
             display: none;
         }
     }
-
 </style>
 
 <script>
@@ -192,7 +190,6 @@
     import LogoZuidOostToren from "./LogoZuidOostToren.svelte";
     import LogoOostToren from "./LogoOostToren.svelte";
     import LogoBuurtcampus from "./LogoBuurtcampus.svelte";
-
 
     let menuOpen = $state(false);
 

@@ -68,6 +68,7 @@
             }
         }
     }
+    
     @container --article (width > 430px) { 
 
             article {
