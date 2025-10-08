@@ -37,10 +37,10 @@
 
 <section class="main-section">
   <div class="buttons">
+    <button on:click={() => rubriek = null}>alle</button>
     <button on:click={() => (rubriek = "De wijk")}>de wijk</button>
     <button on:click={() => (rubriek = "Bewoners")}>bewoners</button>
     <button on:click={() => (rubriek = "Studenten")}>studenten</button>
-    <!-- <button on:click={() => rubriek = null}>alle</button> -->
   </div>
 
   <section class="content-wrapper">
