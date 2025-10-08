@@ -8,7 +8,9 @@
     import { FacebookLogo } from '$lib';
 </script>
 
+
 <Filter {artikelen} />
+<Qoute/>
 <Article/>
 <Header/>
 <Footer/>
