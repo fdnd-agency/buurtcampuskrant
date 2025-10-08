@@ -1,3 +1,19 @@
+<script>
+/*
+        await fetch('https://fdnd.directus.app/items/messages/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                from: email,
+                text: 'Je bent aangemeld',
+                for: 'buurtcampuskrant'
+            })
+        });
+  */  
+
+
+</script>
+
 <form action="/subscribe" method="post">
     <input type="email" name="email" placeholder="  e-mailadres" required>
     <button type="submit">Aanmelden</button>
