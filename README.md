@@ -47,7 +47,7 @@ Finally, the images of the logos have also been placed in components. This is be
 
 
 
-## Datamodal
+## Datamodel
 ```mermaid
 erDiagram
     CATEGORY {
