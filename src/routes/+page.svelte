@@ -1,5 +1,8 @@
 <script>
     import { Newsletter } from '$lib';
+    export let artikelen = [];
+    import Filter from '$lib/components/Filter.svelte';
+
     import { Article } from '$lib';
     import { Header } from '$lib';
     import { Footer } from '$lib';
@@ -9,5 +12,4 @@
 <Newsletter/>
 <Article/>
 <Header/>
-<Footer/>
-
+<Footer/> 
