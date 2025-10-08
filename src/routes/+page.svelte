@@ -1,4 +1,5 @@
 <script>
+    import { Newsletter } from '$lib';
     export let artikelen = [];
     import Filter from '$lib/components/Filter.svelte';
 
@@ -8,9 +9,7 @@
     import { FacebookLogo } from '$lib';
 </script>
 
-
-<Filter {artikelen} />
-<Qoute/>
+<Newsletter/>
 <Article/>
 <Header/>
 <Footer/> 
