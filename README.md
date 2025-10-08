@@ -1,3 +1,18 @@
+# Buurtcampuskrant
+
+
+
+## Componenten
+
+### **Filter-component (`Filter.svelte`)**
+- **Doel:** gebruikers kunnen artikelen filteren op rubriek.
+- **Ontwerpkeuze:** gebruik van lokale state `rubriek` om filters eenvoudig te beheren zonder de originele data aan te passen.
+- **UX-keuze:** “Alle”-knop laat het filter resetten zodat alle artikelen zichtbaar zijn.
+ 
+### **Quote-component (`Quote.svelte`)**
+- **Doel:** herbruikbare component voor het tonen van quotes.
+- **Voordeel:** consistente styling en eenvoudiger onderhoud.
+
 # sv
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
