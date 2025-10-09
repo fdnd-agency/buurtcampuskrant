@@ -50,7 +50,7 @@
         <!-- als er geen rubriek actief is toon alles / artikel wat bij de filter hoort tonen  -->
         {#if rubriek === null || artikel.rubriek === rubriek}
           <li>
-            <img src="/images/foto.png" alt="" />
+            <img src="/images/foto.png" alt="Mensen op de buurtcampus" />
             <div class="info">
               <h3>{artikel.titel}</h3>
               <p>{artikel.inhoud}</p>
