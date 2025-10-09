@@ -1,6 +1,7 @@
 # Buurtcampuskrant
 
 [Design Challenge](https://github.com/fdnd-agency/buurtkrant/wiki/Design-Challenge)
+[Live Link Website](https://buurtcampuskrant.netlify.app/)
 
 ## Description
 Our assignment was to work as a team to create a digital version of the buurtcampus newspaper. This is a collaboration between Amsterdam University of Applied Sciences and Amsterdam Public Library, spread across various districts: East, New West and South-East. Buurtcampuskrant organises various social projects and campaigns aimed at enriching the neighbourhood. Important themes include sustainability, the environment and learning. The newspaper keeps you informed about these activities that have taken place. A paper version that can reach a larger audience through a digital version. 
@@ -42,9 +43,11 @@ Components are various elements that appear frequently on multiple pages. Below 
 
 Finally, the images of the logos have also been placed in components. This is because they are reused very often. 
 
+
 ## Features
-
-
+* Navigation: We have used a progressive enhanced menu. This means that the menu will also work for users who have JS and CSS disabled. Normally, a small device will have a drop-down navigation menu. On a larger screen, the navigation menu is simply located in the header. When you hover over it with the mouse (:hover), the corresponding submenu will appear.
+* Filtering: A filter system has also been added. This allows you to filter all items by the category you would like to see.
+* Newsletter: Finally, we have the newsletter. This is an interactive form where you can subscribe to the newsletter by leaving your email address.
 
 
 ## Datamodel
