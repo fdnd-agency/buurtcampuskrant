@@ -22,9 +22,9 @@
         flex-direction: column;
         border-radius: 25px;
         overflow: hidden;
-        color: white;       
-        background-color: #303A6D;
-        border: solid 2px #303A6D;
+        color: hsla(230, 39%, 31%, 1);       
+        background-color: hsla(232, 37%, 92%, 1);
+        border: solid 3px hsla(230, 39%, 31%, 1);
         height: auto;
 
         .container-content {
@@ -56,13 +56,13 @@
                     }
                 
                     a:nth-of-type(1) {
-                        background-color: white;
-                        color: #303A6D;
+                        background-color: hsla(230, 39%, 31%, 1);
+                        color: hsla(232, 37%, 92%, 1);
                     }
                     a:nth-of-type(2) {
-                        background-color: #303A6D;
-                        color: white;
-                        border: solid 1px white;
+                        background-color: hsla(232, 37%, 92%, 1);
+                        color: hsla(230, 39%, 31%, 1);
+                        border: solid 1px hsla(230, 39%, 31%, 1);
                     }    
                 }
             }

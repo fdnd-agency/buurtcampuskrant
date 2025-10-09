@@ -9,9 +9,36 @@
     import { FacebookLogo } from '$lib';
 </script>
 
-<Header/>
-<Filter/>
-<Quote/>
-<Newsletter/>
-<Article/>
-<Footer/> 
+<main>
+    <Header/>
+    <Filter/>
+
+    <h2>Quote</h2>
+    <Quote/>
+
+    <h2>Newsletter</h2>
+    <Newsletter/>
+    
+    <section>
+        <Article/>
+        <Article/>
+        <Article/>
+    </section>
+</main>
+
+<style>
+    main {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+
+        section {
+            display: flex;
+            flex-direction: column;
+            max-width: 500px;
+            padding-top: 5em;
+            gap: 1em;
+        }
+    }
+
+</style>
