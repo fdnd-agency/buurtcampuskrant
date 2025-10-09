@@ -110,4 +110,33 @@ We manage all work through GitHub issues connected to the project board.
   - Assigned to a team member  
   - Linked to the project board
 
+## Testing
+
+We conducted various quality and user tests to ensure the reliability and accessibility of this project.
+
+### Functional Testing
+- All features tested.
+- Unit/integration tests performed where necessary.
+
+### Performance
+- Lighthouse performance score: 97/100.
+- Notes: images are too large and could be optimized.
+
+### Accessibility (A11y)
+- Lighthouse accessibility score: 79/100.
+- Tab navigation: quotes and articles in the filter are not reachable via tab.
+- Contrast analyzer: issues found in the newsletter and menu.
+- Alt texts: checked and adjusted.
+
+### Responsiveness & Browser Tests
+- Safari: images are not displayed correctly.
+- Other devices tested for layout and functionality.
+
+### Validation
+- HTML validator checked: no errors found.
+
+### User Testing / UX
+- Content and context are not always clear to the user:
+  - Short introductory text or visual guidance is missing.
+  - Layout feels illogical: first articles, then newsletter, then other articles. The distinction and order are not clear.
 
