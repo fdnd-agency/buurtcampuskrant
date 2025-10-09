@@ -130,7 +130,7 @@ We conducted various quality and user tests to ensure the reliability and access
 
 ### Responsiveness & Browser Tests
 - Safari: images are not displayed correctly.
-- Other devices tested for layout and functionality.
+- Responsive checked
 
 ### Validation
 - HTML validator checked: no errors found.
