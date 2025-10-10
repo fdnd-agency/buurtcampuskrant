@@ -139,4 +139,38 @@ We conducted various quality and user tests to ensure the reliability and access
 - Content and context are not always clear to the user:
   - Short introductory text or visual guidance is missing.
   - Layout feels illogical: first articles, then newsletter, then other articles. The distinction and order are not clear.
+ 
+## Retrospective
+### Set the stage - Round of admiration (#76)
+**Jules about Rick:** Admires the positive vibes from Rick. He stays chill and calms me a bit when I can freak out. 
+**Rick about Akiko:** Admires from Akiko is in the lessons and created the component that was assigned to her. 
+**Akiko about Jules:** Admires from Jules that she takes the lead en makes sure everything is in control and that she designed something. 
+
+**Rick about Jules:** Admires that she is a go-getter. She is overall a good team lead. 
+**Jules about Akiko:** Admires that she communicates when she isn't at school. 
+**Akiko about Rick:** Admires that he is just a chill guy, that when she needs help he helps her. 
+
+
+### Gather Data - The good the bad and the uglie (#121)
+The following conclusions are a result off the 'gather data' round:
+* Akiko & Rick will come up more to make a planning or have a stand up. They will also take more responsibillity for deadlines etc. so that Jules won't be the only one that takes responsibillity.
+* Akiko maybe need to respond a bit faster in teams or communicate a little more.
+* Check up the teamcanvas a bit more for the personal goals.
+* Time to really get into the data!!
+* Pay more attention to the details within the pull requests.
+
+<img width="600" src="https://github.com/user-attachments/assets/4c459ec0-7c9c-4210-b480-6e6734a9863f">
+
+
+### Generate insights - Wish grantedn (#50)
+Everyones their wish was that the database would be filled in. That so we could move on with our code and that it will come nearer to the end result. 
+
+
+### Decide what to do - Pitch (#73)
+Verbally discussed.
+
+
+### Close the retrospective - You and me (#102)
+<img width="400" src="https://github.com/user-attachments/assets/e54d8b22-321d-4a3e-b690-d2a58655788f">
+<img width="400" src="https://github.com/user-attachments/assets/311b48f1-bbb7-4613-894c-a2ee4ea3b06e">
 
