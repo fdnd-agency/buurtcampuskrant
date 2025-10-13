@@ -92,7 +92,7 @@
         left: -100%;
         width: 60vw;
         height: 100vh;
-        background-color: #B4BDD0;
+        background-color: var(--primary-color-general);
         padding: 2em 1em;
         margin: .5em;
         box-shadow: 2px 0 10px rgba(0,0,0,0.3);
