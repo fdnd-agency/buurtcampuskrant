@@ -4,6 +4,75 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: "primary-font";
+    src: url('./fonts/BuurtCampusArial-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "secondary-font";
+    src: url('./fonts/Arial-BoldMT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "tertiary-font";
+    src: url('./fonts/Arial.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
+    /* COLOR */
     --primary-color-general: #B4BDD0;
+    --secondary-color-general: #F26522;
+
+    --primary-color-east: #303A6D;
+    --secondary-color-east: #E3E5F2;
+
+    --primary-color-new-west: #8EA34B;
+    --secondary-color-new-west: #F5F8EC;
+    --tertiary-color-new-west: #525E2B;
+
+    --primary-color-south-east: #085B64;
+    --secondary-color-south-east: #E5F3F5;
+
+    --primary-font: "primary-font";
+    --secondary-font: "secondary-font";
+    --tertiary-font: "tertiary-font";
+
+    /* SIZING */
+    --xs: .5rem;
+    --sm: 1rem;
+    --md: 2rem;
+    --lg: 3rem;
+    --xl: 4rem;
+    --xxl: 6rem;
+
+    /* EXTRAS */
+    --border-radius: 1.5rem;
+}
+
+h1,
+.xl {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+    font-family: var(--primary-font);
+}
+
+h2,
+.lg {
+    font-size: clamp(2rem, 5vw, 2.5rem);
+}
+
+h3,
+.md {
+    font-size: clamp(1.5rem, 4vw, 2rem)
+}
+
+h4,
+.sm {
+    font-size: clamp(1rem, 3.5vw, 1.5rem)
 }
