@@ -55,27 +55,12 @@
 </nav>
 
 <style>
-   @font-face {
-        font-family: 'primary-font';
-        src: url('src/lib/assets/fonts/BuurtCampusArial-Bold.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-    @font-face {
-        font-family: 'secondary-font';
-        src: url('src/lib/assets/fonts/Arial-BoldMT.ttf') format('truetype');
-        font-weight: normal;
-        font-style: normal;
-    }
-
-
     :global(header) {        
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        background-color: #B4BDD0;
+        background-color: var(--primary-color-general);
         padding: 1rem;
         position: relative;
     }
@@ -107,7 +92,7 @@
             color: black;
             text-decoration: none;
             display: block;
-            font-family: "seconday-font";
+            font-family: "secondary-font";
         }   
     }
 
@@ -120,7 +105,7 @@
     .menu-toggle {
         display: inline-block;
         padding: .5em 2em;
-        background: #F26522;
+        background: var(--secondary-color-general);
         color: white;
         text-decoration: none;
         font-family: "primary-font";
