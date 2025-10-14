@@ -114,6 +114,10 @@
         text-decoration: none;
         font-family: "primary-font";
         text-align: center;
+
+            &:hover {
+                background-color: var(--secondary-color-general-darker);
+            }
     }
 
     @media (min-width: 1080px) {
