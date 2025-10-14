@@ -11,7 +11,7 @@
 
 <main>
     <Header/>
-    <Filter/>
+    <!-- <Filter/>
 
     <h2>Quote</h2>
     <Quote/>
@@ -23,10 +23,10 @@
         <Article/>
         <Article/>
         <Article/>
-    </section>
+    </section> -->
 </main>
 
-<style>
+<!-- <style>
     main {
         display: flex;
         flex-direction: column;
@@ -41,4 +41,4 @@
         }
     }
 
-</style>
+</style> -->
