@@ -174,3 +174,24 @@ Verbally discussed.
 <img width="400" src="https://github.com/user-attachments/assets/e54d8b22-321d-4a3e-b690-d2a58655788f">
 <img width="400" src="https://github.com/user-attachments/assets/311b48f1-bbb7-4613-894c-a2ee4ea3b06e">
 
+
+## Definition of Ready
+The Definition of Ready is the set of agreements made by the Scrum Team to determine which items are ready to be worked on by the developers during the sprint. This is important because the goal of the Scrum Team is to deliver the most valuable items as quickly as possible. By making clear agreements about the quality of user stories, the developers can pick them up and deliver them more efficiently.
+Bron: [Wat is de Definition of Ready? | Agile Scrum Group](https://agilescrumgroup.nl/wat-is-definition-of-ready/)
+
+* Figma if necessary
+* Stories poker planned
+* Moscow used
+* format for user stories (as .. la la)
+
+
+## Definition of Done
+The Definition of Done is a checklist that indicates when a product or one of its components is considered complete. It prevents discussions about what “done” means and provides clarity within the Scrum Team. The checklist helps ensure quality and defines the minimum criteria that must be met for work to be considered delivered.
+Bron: [Wat is Definition of Done? Uitleg + voorbeelden (IT & non-IT)](https://agilescrumgroup.nl/wat-is-definition-of-done/)
+
+* Tested
+* Task is finished
+* Code convetions are implented
+* Merged into dev branch
+* Livelink with dev branch
+
