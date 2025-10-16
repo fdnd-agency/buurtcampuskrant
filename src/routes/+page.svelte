@@ -10,7 +10,7 @@
 </script>
 
 <main>
-    <Header/>
+    <!-- <Header/> -->
     <!-- <Filter/>
 
     <h2>Quote</h2>
@@ -24,6 +24,8 @@
         <Article/>
         <Article/>
     </section> -->
+    <Header />
+    <Footer/>
 </main>
 
 <!-- <style>

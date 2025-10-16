@@ -1,4 +1,20 @@
-<header>
+<script>
+    import LogoAlgemeenToren from "./LogoAlgemeenToren.svelte";
+    import LogoNieuwWestToren from "./LogoNieuwWestToren.svelte";
+    import LogoZuidOostToren from "./LogoZuidOostToren.svelte";
+    import LogoOostToren from "./LogoOostToren.svelte";
+    import LogoBuurtcampus from "./LogoBuurtcampus.svelte";
+
+    let props = $props();
+
+    let menuOpen = $state(false);
+
+    function toggleSidebar () {
+        menuOpen = !menuOpen;
+    }
+</script>
+
+<header class="{props.district}">
     <a href="" aria-label="terug naar home"><LogoBuurtcampus/></a>
     <a href="#menu" class="menu-toggle" onclick={toggleSidebar}>MENU</a>
 </header>
@@ -181,16 +197,4 @@
     }
 </style>
 
-<script>
-    import LogoAlgemeenToren from "./LogoAlgemeenToren.svelte";
-    import LogoNieuwWestToren from "./LogoNieuwWestToren.svelte";
-    import LogoZuidOostToren from "./LogoZuidOostToren.svelte";
-    import LogoOostToren from "./LogoOostToren.svelte";
-    import LogoBuurtcampus from "./LogoBuurtcampus.svelte";
 
-    let menuOpen = $state(false);
-
-    function toggleSidebar () {
-        menuOpen = !menuOpen;
-    }
-</script>
