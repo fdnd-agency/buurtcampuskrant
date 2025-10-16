@@ -3,7 +3,6 @@
     import InstagramLogo from "./InstagramLogo.svelte";
     import Newsletter from "./Newsletter.svelte"
     
-    // import LogoAlgemeenToren from "./LogoAlgemeenToren.svelte";
     import LogoNieuwWestToren from "./LogoNieuwWestToren.svelte";
     import LogoZuidOostToren from "./LogoZuidOostToren.svelte";
     import LogoOostToren from "./LogoOostToren.svelte";
