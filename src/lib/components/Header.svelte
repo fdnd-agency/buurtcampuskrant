@@ -71,6 +71,8 @@
 
     :global(.js .menu) {
         position: fixed;
+        display: flex;
+        justify-content: center;
         top: 0;
         left: -100%;
         width: 80vw;
@@ -83,17 +85,22 @@
         ul {
             list-style: none;
             padding: 0;
-            margin: 0 auto;
+            align-content: center;
         }
         li.menu-item {
             display: flex;
             padding-bottom: var(--md);
+            
         }   
         a {
-            color: black;
+            color: var(--primary-color-general-darker);
             text-decoration: none;
             display: block;
             font-family: "tertiary-font";
+
+                &:hover {
+                    font-family: var(--secondary-font);
+                }
         }  
 
     }
@@ -118,7 +125,7 @@
             }
     }
 
-    @media (min-width: 1080px) {
+    @media (min-width: 880px) {
         :global(.js .menu) {
             position: absolute;
             top: 5rem;
@@ -150,7 +157,7 @@
                     position: relative;
 
                     a {
-                        color: var(--primary-color-east);
+                        color: var(--primary-color-general-darker);
                         text-decoration: none;
                         padding: var(--xs) var(--sm);
                     }
@@ -162,11 +169,11 @@
             position: absolute;
             top: 100%;
             left: 0;
-            background: #b4bdd0;
+            background: var(--primary-color-general);
             padding: var(--xs) 0;
             border-radius: 0 0 8px 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            min-width: 180px;
+            width: fit-content;
         }
 
         :global(.js .menu li:hover > ul) {
