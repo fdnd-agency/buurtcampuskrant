@@ -22,6 +22,6 @@
         <Article/>
         <Article/>
     </section> -->
-    <!-- <Header /> -->
-    <Footer/>
+    <Header />
+    <!-- <Footer/> -->
 </main>
