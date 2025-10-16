@@ -3,24 +3,48 @@
     import InstagramLogo from "./InstagramLogo.svelte";
     import Newsletter from "./Newsletter.svelte"
     
-    import LogoAlgemeenToren from "./LogoAlgemeenToren.svelte";
+    // import LogoAlgemeenToren from "./LogoAlgemeenToren.svelte";
     import LogoNieuwWestToren from "./LogoNieuwWestToren.svelte";
     import LogoZuidOostToren from "./LogoZuidOostToren.svelte";
     import LogoOostToren from "./LogoOostToren.svelte";
 </script>
 
 <footer>
-    <Newsletter/>
+    <div class="flex-container">
+        <Newsletter/>
 
-    <a href="" aria-label="Facebook"><FacebookLogo/></a>
-    <a href="" aria-label="Instagram"><InstagramLogo/></a>
+        <div class="socials">
+            <a href="" aria-label="Facebook"><FacebookLogo/></a>
+            <a href="" aria-label="Instagram"><InstagramLogo/></a>
+        </div>
+    </div>
 
     <nav>
         <ul>
-            <li><a href=""><LogoAlgemeenToren/></a></li>
-            <li><a href=""><LogoNieuwWestToren/></a></li>
-            <li><a href=""><LogoZuidOostToren/></a></li>
-            <li><a href=""><LogoOostToren/></a></li>
+            <li class="menu-item"><a href=""><LogoNieuwWestToren/></a>
+                <ul class="submenu">
+                    <li><a href="#">de wijk</a></li>
+                    <li><a href="#">studenten</a></li>
+                    <li><a href="#">bewoners</a></li>
+                    <li><a href="#">wijkpartners</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href=""><LogoZuidOostToren/></a>
+                <ul class="submenu">
+                    <li><a href="#">de wijk</a></li>
+                    <li><a href="#">studenten</a></li>
+                    <li><a href="#">bewoners</a></li>
+                    <li><a href="#">wijkpartners</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href=""><LogoOostToren/></a>
+            <ul class="submenu">
+                    <li><a href="#">de wijk</a></li>
+                    <li><a href="#">studenten</a></li>
+                    <li><a href="#">bewoners</a></li>
+                    <li><a href="#">wijkpartners</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>  
 </footer>
@@ -28,24 +52,75 @@
 <style>
     footer {
         background-color: var(--primary-color-general);
+        padding: var(--sm);
+
+        :global(form) {
+            justify-self: center;
+        }
+
+        .socials {
+            display: flex;
+            justify-content: center;
+            padding: var(--sm) 0;
+        }
 
         ul {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            list-style-type: none;
+            display: flex;
+            justify-content: center;
             gap: var(--sm);
+            list-style-type: none;
 
-            li {
-                justify-self: center;
-                align-self: end;
+            .menu-item a:hover {
+                animation-name: hover-effect;
+                animation-duration: .5s;
             }
 
-            @media (width > 520px) {   
-                grid-template-columns: repeat(4, 1fr);
+            img {
+                width: auto;
+                height: 12vh;
             }
         }
-    
+        .submenu {
+            display: none;
+        }
+
+        @media (width > 880px) {
+            display: flex;
+            justify-content: space-evenly;
+
+            ul:first-child {
+                gap: var(--lg);
+            }
+
+            .flex-container {
+                display: flex;
+                gap: var(--md);
+                align-items: center;
+            }
+
+            .menu-item {
+                display: flex;
+                flex-direction: column;
+                gap: var(--sm);
+                
+                    .submenu {
+                        display: inline-block;
+                        a {
+                            font-family: var(--tertiary-font);
+                            text-decoration: none;
+                            color: var(--primary-color-general-darker);
+                            padding-bottom: var(--xs);
+
+                            &:hover {
+                                font-family: var(--secondary-font);
+                            }
+                        }
+                    }    
+            }
+            
+            
+        }
+
         
     }
-
 </style>

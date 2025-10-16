@@ -1,7 +1,7 @@
-<img src="src/lib/assets/images/Toren_Wit_4.png" alt="Algemeen">
+<img src="src/lib/assets/images/Toren_Wit_4.png" alt="Algemeen" class="footer-general header-general">
 
 <style>
-    img {
+    /* img {
         width: 28vw;
     }    
 
@@ -10,5 +10,10 @@
             width: auto;
             height: 15vh;
         }
-    }   
+    }    */
+
+    img {
+        width: auto;
+        height: 12vh;
+    }
 </style>

@@ -1,5 +1,4 @@
 <script>
-    import LogoAlgemeenToren from "./LogoAlgemeenToren.svelte";
     import LogoNieuwWestToren from "./LogoNieuwWestToren.svelte";
     import LogoZuidOostToren from "./LogoZuidOostToren.svelte";
     import LogoOostToren from "./LogoOostToren.svelte";
@@ -22,18 +21,7 @@
 <nav id="menu" class="menu" class:open={menuOpen}>
     <ul>
       <li class="menu-item">
-        <a href="#" aria-label="Algemeen"><LogoAlgemeenToren/></a>
-        <ul class="submenu">
-          <li><a href="#">nieuws</a></li>
-          <li><a href="#">docent</a></li>
-          <li><a href="#">partner</a></li>
-          <li><a href="#">HvA & Oba</a></li>
-          <li><a href="#">Doeners in Damsko</a></li>
-        </ul>
-      </li>
-
-      <li class="menu-item">
-        <a href="#" aria-label="Nieuw-west"><LogoNieuwWestToren/></a>
+        <a href="/district/nieuw-west" aria-label="Nieuw-west"><LogoNieuwWestToren/></a>
         <ul class="submenu">
           <li><a href="#">de wijk</a></li>
           <li><a href="#">studenten</a></li>
@@ -43,7 +31,7 @@
       </li>
 
       <li class="menu-item">
-        <a href="#" aria-label="Zuid-oost"><LogoZuidOostToren/></a>
+        <a href="/district/zuid-oost" aria-label="Zuid-oost"><LogoZuidOostToren/></a>
         <ul class="submenu">
           <li><a href="#">de wijk</a></li>
           <li><a href="#">studenten</a></li>
@@ -53,7 +41,7 @@
       </li>
 
       <li class="menu-item">
-        <a href="#" aria-label="Oost"><LogoOostToren/></a>
+        <a href="/district/oost" aria-label="Oost"><LogoOostToren/></a>
         <ul class="submenu">
           <li><a href="#">de wijk</a></li>
           <li><a href="#">studenten</a></li>
@@ -62,12 +50,6 @@
         </ul>
       </li>
     </ul>
-    <!-- <ul>
-        <li><a href="/district/nieuw-west" aria-label="Nieuws"><LogoAlgemeenToren/></a></li>
-        <li><a href="/" aria-label="Nieuw-West"><LogoNieuwWestToren/></a></li>
-        <li><a href="/" aria-label="Zuid-Oost"><LogoZuidOostToren/></a></li>
-        <li><a href="/" aria-label="Oost"><LogoOostToren/></a></li>
-    </ul> -->
 </nav>
 
 <style>
@@ -195,6 +177,7 @@
             display: none;
         }
     }
+    
 </style>
 
 
