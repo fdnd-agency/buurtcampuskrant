@@ -29,10 +29,14 @@
             font-size: 11px;
             font-weight: 500;
             color: white;
-            background-color: #EE7C3C;
+            background-color: var(--secondary-color-general);
             border: none;
             padding-right: 35px;
             padding-left: 10px;
+
+            &:hover {
+                background-color: var(--secondary-color-general-darker);
+            }
         }
 
         button::after {
@@ -44,7 +48,7 @@
             height: 0;
             border-top: 12px solid transparent;
             border-bottom: 12px solid transparent;
-            border-right: 15px solid hsla(230, 39%, 61%, 1);
+            border-right: 15px solid var(--primary-color-general);
         }
 
         input {

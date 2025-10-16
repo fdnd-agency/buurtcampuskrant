@@ -1,23 +1,27 @@
-<header>
+<script>
+    import LogoNieuwWestToren from "./LogoNieuwWestToren.svelte";
+    import LogoZuidOostToren from "./LogoZuidOostToren.svelte";
+    import LogoOostToren from "./LogoOostToren.svelte";
+    import LogoBuurtcampus from "./LogoBuurtcampus.svelte";
+
+    let props = $props();
+
+    let menuOpen = $state(false);
+
+    function toggleSidebar () {
+        menuOpen = !menuOpen;
+    }
+</script>
+
+<header class="{props.district}">
     <a href="" aria-label="terug naar home"><LogoBuurtcampus/></a>
     <a href="#menu" class="menu-toggle" onclick={toggleSidebar}>MENU</a>
 </header>
 
 <nav id="menu" class="menu" class:open={menuOpen}>
     <ul>
-      <li>
-        <a href="#">Algemeen</a>
-        <ul class="submenu">
-          <li><a href="#">nieuws</a></li>
-          <li><a href="#">docent</a></li>
-          <li><a href="#">partner</a></li>
-          <li><a href="#">HvA & Oba</a></li>
-          <li><a href="#">Doeners in Damsko</a></li>
-        </ul>
-      </li>
-
-      <li>
-        <a href="#">Oost</a>
+      <li class="menu-item">
+        <a href="/district/nieuw-west" aria-label="Nieuw-west"><LogoNieuwWestToren/></a>
         <ul class="submenu">
           <li><a href="#">de wijk</a></li>
           <li><a href="#">studenten</a></li>
@@ -26,8 +30,8 @@
         </ul>
       </li>
 
-      <li>
-        <a href="#">Nieuw-west</a>
+      <li class="menu-item">
+        <a href="/district/zuid-oost" aria-label="Zuid-oost"><LogoZuidOostToren/></a>
         <ul class="submenu">
           <li><a href="#">de wijk</a></li>
           <li><a href="#">studenten</a></li>
@@ -36,8 +40,8 @@
         </ul>
       </li>
 
-      <li>
-        <a href="#">Zuid-oost</a>
+      <li class="menu-item">
+        <a href="/district/oost" aria-label="Oost"><LogoOostToren/></a>
         <ul class="submenu">
           <li><a href="#">de wijk</a></li>
           <li><a href="#">studenten</a></li>
@@ -46,12 +50,6 @@
         </ul>
       </li>
     </ul>
-    <!-- <ul>
-        <li><a href="/district/nieuw-west" aria-label="Nieuws"><LogoAlgemeenToren/></a></li>
-        <li><a href="/" aria-label="Nieuw-West"><LogoNieuwWestToren/></a></li>
-        <li><a href="/" aria-label="Zuid-Oost"><LogoZuidOostToren/></a></li>
-        <li><a href="/" aria-label="Oost"><LogoOostToren/></a></li>
-    </ul> -->
 </nav>
 
 <style>
@@ -61,25 +59,24 @@
         align-items: center;
         justify-content: space-between;
         background-color: var(--primary-color-general);
-        padding: 1rem;
+        padding: var(--sm);
         position: relative;
     }
         
     /* zonder JS menu onderaan pagina */
     .menu {
         background: #eee;
-        padding: 1em;
+        padding: var(--sm);
     }
 
     :global(.js .menu) {
         position: fixed;
         top: 0;
         left: -100%;
-        width: 60vw;
+        width: 80vw;
         height: 100vh;
         background-color: var(--primary-color-general);
-        padding: 2em 1em;
-        margin: .5em;
+        padding: var(--md) var(--sm);
         box-shadow: 2px 0 10px rgba(0,0,0,0.3);
         transition: left .3s ease;
 
@@ -87,13 +84,18 @@
             list-style: none;
             padding: 0;
             margin: 0 auto;
+        }
+        li.menu-item {
+            display: flex;
+            padding-bottom: var(--md);
         }   
         a {
             color: black;
             text-decoration: none;
             display: block;
-            font-family: "secondary-font";
-        }   
+            font-family: "tertiary-font";
+        }  
+
     }
 
     /* MENU OPEN */
@@ -104,20 +106,24 @@
     /* MENU-BUTTON */
     .menu-toggle {
         display: inline-block;
-        padding: .5em 2em;
+        padding: var(--xs) var(--md);
         background: var(--secondary-color-general);
         color: white;
         text-decoration: none;
         font-family: "primary-font";
         text-align: center;
+
+            &:hover {
+                background-color: var(--secondary-color-general-darker);
+            }
     }
 
-    @media (min-width: 840px) {
+    @media (min-width: 1080px) {
         :global(.js .menu) {
             position: absolute;
             top: 5rem;
             left: auto;
-            right: 3rem;
+            right: var(--lg);
             transform: translateY(-50%);
             width: fit-content;
             height: fit-content;
@@ -127,11 +133,15 @@
             margin: 0;
             display: flex;
             align-items: center;
+
+            li.menu-item {
+                padding-bottom: 0;
+            }   
         }
 
         :global(.js .menu ul) {
             display: flex;
-            gap: 2rem;
+            gap: var(--md);
             list-style: none;
             margin: 0;
             padding: 0;
@@ -140,9 +150,9 @@
                     position: relative;
 
                     a {
-                        color: black;
+                        color: var(--primary-color-east);
                         text-decoration: none;
-                        padding: 0.5rem 1rem;
+                        padding: var(--xs) var(--sm);
                     }
                 }
         }
@@ -153,7 +163,7 @@
             top: 100%;
             left: 0;
             background: #b4bdd0;
-            padding: 0.5rem 0;
+            padding: var(--xs) 0;
             border-radius: 0 0 8px 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.15);
             min-width: 180px;
@@ -167,18 +177,7 @@
             display: none;
         }
     }
+    
 </style>
 
-<script>
-    import LogoAlgemeenToren from "./LogoAlgemeenToren.svelte";
-    import LogoNieuwWestToren from "./LogoNieuwWestToren.svelte";
-    import LogoZuidOostToren from "./LogoZuidOostToren.svelte";
-    import LogoOostToren from "./LogoOostToren.svelte";
-    import LogoBuurtcampus from "./LogoBuurtcampus.svelte";
 
-    let menuOpen = $state(false);
-
-    function toggleSidebar () {
-        menuOpen = !menuOpen;
-    }
-</script>

@@ -28,17 +28,20 @@
 :root {
     /* COLOR */
     --primary-color-general: #B4BDD0;
+    --primary-color-general-darker: #475471;
     --secondary-color-general: #F26522;
+    --secondary-color-general-darker: #B84809;
 
     --primary-color-east: #303A6D;
     --secondary-color-east: #E3E5F2;
 
     --primary-color-new-west: #8EA34B;
     --secondary-color-new-west: #F5F8EC;
-    --tertiary-color-new-west: #525E2B;
+    --tertiary-color-new-west: #343B1B;
 
     --primary-color-south-east: #085B64;
     --secondary-color-south-east: #E5F3F5;
+    
 
     --primary-font: "primary-font";
     --secondary-font: "secondary-font";
@@ -75,4 +78,13 @@ h3,
 h4,
 .sm {
     font-size: clamp(1rem, 3.5vw, 1.5rem)
+}
+
+@keyframes hover-effect {
+    40% {
+        rotate: 5deg;
+    }
+    80% {
+        rotate: -5deg;
+    }
 }
