@@ -88,6 +88,7 @@
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    padding: 1em 1em;
     font-family: Arial, sans-serif;
   }
 
@@ -123,7 +124,9 @@
     justify-content: flex-start;
     gap: 5px;
     width: 100%;
-    padding: 0 1.5rem;
+    /* padding: 0 1.5rem; */
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 
   button {
@@ -134,12 +137,14 @@
     color: var(--title-color);
     background-color: var(--button-bg);
     border: 1px solid var(--button-border);
+    transform: all ease 3s;
   }
 
   button:hover {
     color: var(--button-hover-text);
     background-color: var(--button-hover-bg);
     border: 1px solid var(--button-border);
+    transform: translateY(-2px);
   }
 
   @media (min-width: 768px) {
