@@ -1,4 +1,4 @@
-<img src="src/lib/assets/images/Toren_Wit_Oost_4.png">
+<img src="src/lib/assets/images/Toren_Wit_Oost_4.png" alt="Oost pagina">
 
 <style>
     /* img {

@@ -1,4 +1,4 @@
-<img src="src/lib/assets/images/Toren_Wit_4.png" alt="Algemeen">
+<img src="src/lib/assets/images/Toren_Wit_4.png" alt="Nieuw-west pagina">
 
 <style>
     img {
