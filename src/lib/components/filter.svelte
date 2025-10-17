@@ -136,14 +136,14 @@
     font-size: 1rem;
     color: var(--title-color);
     background-color: var(--button-bg);
-    border: 1px solid var(--button-border);
+    border: 1px solid var(--button-hover-bg);
     transform: all ease 3s;
   }
 
   button:hover {
     color: var(--button-hover-text);
     background-color: var(--button-hover-bg);
-    border: 1px solid var(--button-border);
+    border: 1px solid var(--button-hover-bg);
     transform: translateY(-2px);
   }
 
@@ -152,7 +152,7 @@
   }
 
   button:active {
-   transform: scale(1.1);
+   transform: scale(0.97);
    transition: transform 0.05s ease; 
   }
 
