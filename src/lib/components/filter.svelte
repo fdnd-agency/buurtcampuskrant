@@ -136,14 +136,14 @@
     font-size: 1rem;
     color: var(--title-color);
     background-color: var(--button-bg);
-    border: 1px solid var(--button-hover-bg);
+    border: 1px solid var(--button-border);
     transform: all ease 3s;
   }
 
   button:hover {
     color: var(--button-hover-text);
     background-color: var(--button-hover-bg);
-    border: 1px solid var(--button-hover-bg);
+    border: 1px solid var(--button-border);
     transform: translateY(-2px);
   }
 
