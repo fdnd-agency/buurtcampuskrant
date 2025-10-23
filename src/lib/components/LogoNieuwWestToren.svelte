@@ -1,4 +1,8 @@
-<img src="src/lib/assets/images/Toren_Wit_4.png" alt="Nieuw-west pagina">
+<script>
+    import LogoNieuwWestToren from "$lib/assets/images/Toren_Wit_4.png";
+</script>
+
+<img src={LogoNieuwWestToren} alt="Nieuw-west pagina">
 
 <style>
     img {
