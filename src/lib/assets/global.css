@@ -28,7 +28,7 @@
 :root {
     /* COLOR */
     --primary-color-general: #B4BDD0;
-    --primary-color-general-darker: #475471;
+    --primary-color-general-darker: #333D52;
     --secondary-color-general: #F26522;
     --secondary-color-general-darker: #B84809;
 
@@ -37,7 +37,7 @@
 
     --primary-color-new-west: #8EA34B;
     --secondary-color-new-west: #F5F8EC;
-    --tertiary-color-new-west: #343B1B;
+    --tertiary-color-new-west: #2F3418;
 
     --primary-color-south-east: #085B64;
     --secondary-color-south-east: #E5F3F5;
