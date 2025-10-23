@@ -11,12 +11,11 @@
 
     import { Newsletter } from '$lib';
     import { Footer } from '$lib';
-    import { FacebookLogo } from '$lib';
 </script>
 
 <main>
-    <Header/>
-    <Filter/>
+    <!-- <Header/> -->
+    <!-- <Filter/>
 
     <h2>Quote</h2>
     <Quote/>
@@ -46,3 +45,10 @@
         }
     }
 </style>
+        <Article/>
+        <Article/>
+        <Article/>
+    </section> -->
+    <!-- <Header /> -->
+    <Footer/>
+</main>
