@@ -1,9 +1,14 @@
 <script>
     import { Header } from '$lib';
-    export let artikelen = [];
+    
     import { Filter } from '$lib';
     import { Quote } from '$lib';
     import { Article } from '$lib';
+
+    export let data;
+    const articles = data.article;
+
+
     import { Newsletter } from '$lib';
     import { Footer } from '$lib';
     import { FacebookLogo } from '$lib';
@@ -20,9 +25,9 @@
     <Newsletter/>
     
     <section>
-        <Article/>
-        <Article/>
-        <Article/>
+       {#each articles as article}
+            <Article {article} />
+        {/each}
     </section>
 </main>
 
@@ -40,5 +45,4 @@
             gap: 1em;
         }
     }
-
 </style>
