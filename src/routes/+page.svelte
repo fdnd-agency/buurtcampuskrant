@@ -1,6 +1,9 @@
 <script>
+    export let data;
+    const { categories } = data;
+    // console.log('categories in page:', categories)
     import { Header } from '$lib';
-    export let artikelen = [];
+    // export let artikelen = [];
     import { Filter } from '$lib';
     import { Quote } from '$lib';
     import { Article } from '$lib';
@@ -11,7 +14,7 @@
 
 <main>
     <Header/>
-    <Filter/>
+    <Filter {categories} />
 
     <h2>Quote</h2>
     <Quote/>

@@ -1,4 +1,7 @@
 <script>
+
+export let categories; 
+// console.log('categories in Filter:', categories);
   const artikelen = [
     {
       titel: "Artikel 1",
@@ -34,6 +37,14 @@
 
   let rubriek = null;
 </script>
+
+<h1>Categorieën</h1>
+
+<ul>
+  {#each categories as category}
+    <li>{category.title}</li>
+  {/each}
+</ul>
 
 <section class="main-section">
   <div class="buttons">
