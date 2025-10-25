@@ -2,15 +2,19 @@
     export let article;
 </script>
 
-<article data-district="{ article.district }">
+<article data-district="{article.district}">
     <div class="container-content"> 
-        <img src="{ article.cover }" alt="{ article.alt }" width="280" height="150">
+<img 
+    src="https://fdnd-agency.directus.app/assets/{article.cover}" 
+    alt="{article.alt}" 
+    width="280" 
+    height="150">
         <div class="content">   
             <h2>{ article.title }</h2>
             <p>{ article.intro }</p>
 
             <div class="buttons">
-                <a href="/{ article.district}">{ article.district }</a>
+                <a href="/district/{ article.district}">{ article.district }</a>
                 <a href="/{ article.catogory}">{ article.catogory }</a>
             </div>
         </div>
@@ -18,19 +22,19 @@
 </article>
 
 <style>
-    [data-district="oost"] {
-        --color-main: hsla(232, 37%, 92%, 1);
-        --color-accent: hsla(230, 39%, 31%, 1);
+    article[data-district="east"] {
+        --primary-color-general: var(--secondary-color-east);
+        --primary-color-general-darker: var(--primary-color-east);
     }
 
-    [data-district="nieuw-west"] {
-        --color-main: hsla(188, 44%, 93%, 1);
-        --color-accent: hsla(186, 85%, 21%, 1);
+    article[data-district="new-west"] {
+        --primary-color-general: var(--secondary-color-new-west);
+        --primary-color-general-darker: var(--primary-color-new-west);
     }
 
-    [data-district="zuid-oost"] {
-        --color-main: hsla(75, 46%, 95%, 1);
-        --color-accent: hsla(74, 37%, 37%, 1);
+    article[data-district="south-east"] {
+        --primary-color-general: var(--secondary-color-south-east);
+        --primary-color-general-darker: var(--primary-color-south-east);
     }
     
     article {
@@ -42,9 +46,8 @@
         border-radius: 25px;
         overflow: hidden;
         color: var(--color-accent);       
-        background-color: var(--color-main);
-        border: solid 3px var(--color-accent);
-        height: auto;
+        background-color: var(--primary-color-general);
+        border: solid 3px var(--primary-color-general-darker);
 
         .container-content {
 
@@ -54,34 +57,49 @@
             }
 
             .content {
+                display: flex;
+                flex-direction: column;
                 margin-inline: 16px;
+                gap: 1em;
+                height: 100%;
+
+                h2 {
+                    font-size: 24px;
+                }
             
                 p {
                     margin-block-start: 0;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 5; 
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
                 }
             
                 .buttons {
                     display: flex;
                     gap: 1em;
                     margin-bottom: 1em;
+                    margin-top: auto;
 
                     a {
                         display: flex;
                         justify-content: center;
+                        align-items: center;
                         height: 22px;
-                        width: 64px;
+                        min-width: 64px;
+                        padding: 0.5em;
                         border-radius: 25px;
                         text-decoration: none;
                     }
                 
                     a:nth-of-type(1) {
-                        background-color: var(--color-accent);
-                        color: var(--color-main);
+                        background-color: var(--primary-color-general-darker);
+                        color: var(--primary-color-general);
                     }
                     a:nth-of-type(2) {
-                        background-color: var(--color-main);
-                        color: var(--color-accent);
-                        border: solid 1px var(--color-accent);
+                        background-color: var(--primary-color-general);
+                        color: var(--primary-color-general-darker);
+                        border: solid 1px var(--primary-color-general-darker);
                     }    
                 }
             }
@@ -89,10 +107,6 @@
     }
     
     @container --article (width > 430px) { 
-
-            article {
-                height: 135px;
-            }
             
             .container-content {
                 display: grid;

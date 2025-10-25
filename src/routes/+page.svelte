@@ -14,8 +14,8 @@
 </script>
 
 <main>
-    <!-- <Header/> -->
-    <!-- <Filter/>
+    <Header/> 
+    <Filter/>
 
     <h2>Quote</h2>
     <Quote/>
@@ -39,16 +39,10 @@
         section {
             display: flex;
             flex-direction: column;
-            max-width: 500px;
+            max-width: 1000px;
             padding-top: 5em;
             gap: 1em;
         }
     }
 </style>
-        <Article/>
-        <Article/>
-        <Article/>
-    </section> -->
-    <Header />
-    <!-- <Footer/> -->
-</main>
+ 
