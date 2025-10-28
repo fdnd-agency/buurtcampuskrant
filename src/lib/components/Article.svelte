@@ -54,18 +54,18 @@
             img {
                 width: 100%;
                 object-fit: cover;
-                min-height: 180px;
+                min-height: 11.25rem;
             }
 
             .content {
                 display: flex;
                 flex-direction: column;
-                margin-inline: 16px;
-                gap: 1em;
+                margin-inline: 1rem;
+                gap: var(--sm);
                 height: 100%;
 
                 h2 {
-                    font-size: 24px;
+                    font-size: 1.5rem;
                 }
             
                 p {
@@ -78,7 +78,7 @@
             
                 .buttons {
                     display: flex;
-                    gap: 1em;
+                    gap: var(--sm);
                     margin-bottom: 1em;
                     margin-top: auto;
 
@@ -88,7 +88,7 @@
                         align-items: center;
                         height: 22px;
                         min-width: 64px;
-                        padding: 0.5em;
+                        padding: 0.5rem;
                         border-radius: 25px;
                         text-decoration: none;
                     }
