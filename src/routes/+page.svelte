@@ -70,9 +70,5 @@
         }
     }
 
-    /* .article-detail[data-district="east"] {
-        --primary-color-general: var(--primary-color-east);
-        --secondary-color-general: var(--primary-color-east);
-    } */
 </style>
  
