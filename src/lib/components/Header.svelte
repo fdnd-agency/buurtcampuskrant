@@ -14,7 +14,7 @@
 </script>
 
 <header class="{props.district}">
-    <a href="" aria-label="terug naar home"><LogoBuurtcampus/></a>
+    <a href="/" aria-label="terug naar home"><LogoBuurtcampus/></a>
     <a href="#menu" class="menu-toggle" onclick={toggleSidebar}>MENU</a>
 </header>
 
@@ -93,7 +93,7 @@
             
         }   
         a {
-            color: var(--primary-color-general-darker);
+            color: var(--secondary-color-general);
             text-decoration: none;
             display: block;
             font-family: "tertiary-font";
@@ -114,14 +114,14 @@
     .menu-toggle {
         display: inline-block;
         padding: var(--xs) var(--md);
-        background: var(--secondary-color-general);
+        background: var(--accent-color);
         color: white;
         text-decoration: none;
         font-family: "primary-font";
         text-align: center;
 
             &:hover {
-                background-color: var(--secondary-color-general-darker);
+                background-color: var(--accent-color-darker);
             }
     }
 
@@ -157,7 +157,7 @@
                     position: relative;
 
                     a {
-                        color: var(--primary-color-general-darker);
+                        color: var(--secondary-color-general);
                         text-decoration: none;
                         padding: var(--xs) var(--sm);
                     }

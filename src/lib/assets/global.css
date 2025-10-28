@@ -28,12 +28,12 @@
 :root {
     /* COLOR */
     --primary-color-general: #B4BDD0;
-    --primary-color-general-darker: #333D52;
-    --primary-color-general-lighter: #E4E8EE; 
+    --secondary-color-general: #333D52;
+    --tertiary-color-general: #E4E8EE; 
 
-    --secondary-color-general: #F26522;
-    --secondary-color-general-darker: #B84809;
-    --secondary-color-general-lighter: #FEF0E7;
+    --accent-color: #F26522;
+    --accent-color-darker: #B84809;
+    --accent-color-lighter: #FEF0E7;
 
     --primary-color-east: #303A6D;
     --secondary-color-east: #E3E5F2;
@@ -90,20 +90,20 @@ p,a {
 
 
 .label-district {
-    border: 1px solid var(--primary-color-general-darker);
-    background-color: var(--primary-color-general-darker);
+    border: 1px solid var(--secondary-color-general);
+    background-color: var(--secondary-color-general);
     width: fit-content;
     padding: .25rem 1rem;
     border-radius: 1rem;
-    color: var(--primary-color-general-lighter);
+    color: var(--tertiary-color-general);
 }
 .label-outline {
-    border: 1px solid var(--primary-color-general-darker);
-    background-color: var(--primary-color-general-lighter);
+    border: 1px solid var(--secondary-color-general);
+    background-color: var(--tertiary-color-general);
     width: fit-content;
     padding: .25rem 1rem;
     border-radius: 1rem;
-    color: var(--primary-color-general-darker);
+    color: var(--secondary-color-general);
 }
 
 blockquote {
@@ -113,8 +113,8 @@ blockquote {
     justify-self: center;
     align-items: center;
     font-family: var(--secondary-font);
-    background-color: var(--primary-color-general-darker);
-    color: var(--primary-color-general-lighter);
+    background-color: var(--secondary-color-general);
+    color: var(--tertiary-color-general);
     width: fit-content;
     padding: var(--md);
     border-radius: var(--lg);
@@ -122,14 +122,16 @@ blockquote {
 }
 
 article {
+    justify-items: center;
+
     .label-district, .label-outline {
         margin-bottom: 1.5rem;
     }
-    .title, .intro {
+    .title {
         margin-bottom: var(--sm);
     }
     .title, .intro, p {
-        max-width: 70ch;
+        max-width: 65vw;
     }
     .intro {
         font-family: var(--secondary-font);
@@ -145,18 +147,26 @@ article {
         max-height: 90vh;
     }
     .cover {
-        float: right;
-        width: 30vw;
+        /* float: right; */
+        width: 70%;
         height: 30vh;
         object-fit: cover;
-        margin: 0 2rem 2rem 2rem;
+        margin-top: 1rem;
     }
     .body {
         img:first-child {
             display: none;
         }
-        span {
-            padding-top: 1rem;
+        p {
+            padding-top: .5rem;
+        }
+    }
+
+    @media (width > 34rem) {
+        .cover {
+            float: right;
+            width: 30vw;
+            margin: 1rem 2rem 2rem 2rem;
         }
     }
 }

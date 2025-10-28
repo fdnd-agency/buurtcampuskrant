@@ -9,7 +9,7 @@
 <style>
 svg {
         path:nth-of-type(1) {
-            fill: var(--primary-color-general-darker);
+            fill: var(--secondary-color-general);
         }
         rect:nth-of-type(2) {
             fill: var(--primary-color-general);

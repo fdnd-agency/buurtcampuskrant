@@ -12,62 +12,58 @@
 
 <main>
     <!-- <Filter/> -->
-    <article>
+    <article class="article-detail">
         <p class="label-district">{recentArticle.district}</p>
         <p class="label-category">{recentArticle.category}</p>
         <h2 class="title">{recentArticle.title}</h2>
         <p class="intro">{recentArticle.intro}</p>
         <p class="side-title">{recentArticle.side_title}</p>
         <img class="cover" src="https://fdnd-agency.directus.app/assets/{recentArticle.cover}" alt="{recentArticle.alt}">
-        <p class="body">{@html recentArticle.body}</p>
+        <div class="body">{@html recentArticle.body}</div>
     </article>
 
     <section>
-        {#each articles.slice(1) as article}
+        <h2 class="md">Laatste nieuws:</h2>
+        {#each articles.slice(1, 3) as article}
             <Article {article}/>
         {/each}   
     </section>
 </main>
 
+<Footer />
+
 <style>
-    article {
-        padding: var(--sm);
-        background-color: var(--primary-color-general-lighter);
-    }    
+     
     main {
         display: flex;
         flex-direction: column;
         gap: var(--sm);
         margin: var(--sm);
 
-        @media (width > 720px) {
+        article {
+            padding: var(--sm);
+            background-color: var(--tertiary-color-general);
+            height: 100%;
+        }   
+        section {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        @media (width > 1020px) {
             flex-direction: row;
+            justify-content: space-evenly;
             
             article {
                 width: 70vw;
             }
             section {
+                padding-top: 10rem;
                 width: 20vw;
             }
         }
     }
 
-    article[data-district="east"] {
-        --primary-color-general: var(--secondary-color-east);
-        --primary-color-general-darker: var(--primary-color-east);
-        --primary-color-general-lighter: var(--tertiary-color-east)
-    }
-
-    article[data-district="new-west"] {
-        --primary-color-general: var(--secondary-color-new-west);
-        --primary-color-general-darker: var(--primary-color-new-west);
-        --primary-color-general-lighter: var(--secondary-color-new-west);
-    }
-
-    article[data-district="south-east"] {
-        --primary-color-general: var(--secondary-color-south-east);
-        --primary-color-general-darker: var(--primary-color-south-east);
-        --primary-color-general-lighter: var(--secondary-color-south-east)
-    }
 </style>
  
