@@ -1,6 +1,7 @@
 <script>
 
-export let categories; 
+export let categories = [];
+  export let stories = [];
 
 // console.log('categories in Filter:', categories);
   // const artikelen = [
@@ -41,26 +42,34 @@ export let categories;
 
 <h1>Categorieën</h1>
 
-<!-- <ul> -->
+
   {#each categories as category}
     <button>{category.title}</button>
-
-    {#if category.stories && category.stories.length > 0}
-    <ul>
-    {#each category.stories as story}
-    <li> {story.title}
-
-    <!-- <img src="story.image"> -->
-  </li>
   {/each}
-</ul>
 
-<!-- <pre>{JSON.stringify(category.stories)}</pre> -->
+  {#if stories.length > 0}
+  <p>Er zijn {stories.length} stories.</p>
+  <ul>
+    {#each stories as story}
+      <li>{story.title}</li>
+    {/each}
+  </ul>
 {:else}
-<p>Geen stories beschikbaar</p>
+  <p>Geen stories gevonden</p>
 {/if}
 
-{/each}
+<!-- 
+{#if categories.length > 0}
+  <ul>
+    {#each categories as category}
+      <li>{category.title}</li>
+    {/each}
+  </ul>
+{:else}
+  <p>Geen categorieën gevonden.</p>
+{/if} -->
+<!-- <ul> -->
+
 
 <!-- </ul> -->
 
