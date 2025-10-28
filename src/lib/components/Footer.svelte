@@ -1,7 +1,7 @@
 <script>
     import FacebookLogo from "./FacebookLogo.svelte";
     import InstagramLogo from "./InstagramLogo.svelte";
-    import Newsletter from "./Newsletter.svelte"
+    import Newsletter from "$lib/components/Newsletter.svelte";
     
     import LogoNieuwWestToren from "./LogoNieuwWestToren.svelte";
     import LogoZuidOostToren from "./LogoZuidOostToren.svelte";

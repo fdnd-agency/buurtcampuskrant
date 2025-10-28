@@ -50,5 +50,6 @@
         <Article/>
     </section> -->
     <Header />
-    <!-- <Footer/> -->
+    
+    <Footer/> 
 </main>

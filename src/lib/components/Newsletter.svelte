@@ -1,18 +1,11 @@
 <script>
-    /*    await fetch('https://fdnd.directus.app/items/messages/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                from: email,
-                text: 'Je bent aangemeld',
-                for: 'buurtcampuskrant'
-            })
-        });   */  
+	import { enhance } from '$app/forms';
+	import { page } from '$app/stores';
 </script>
 
-<form action="/subscribe" method="post">
-    <input type="email" name="email" placeholder="  e-mailadres" required>
-    <button type="submit">Aanmelden</button>
+<form method="POST" use:enhance>
+	<input type="email" name="email" placeholder="  e-mailadres" required>
+	<button type="submit">Aanmelden</button>
 </form>
 
 <style>
