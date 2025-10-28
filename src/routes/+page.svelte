@@ -47,7 +47,7 @@
                 width: 70vw;
             }
             section {
-                width: 30vw;
+                width: 20vw;
             }
         }
     }
