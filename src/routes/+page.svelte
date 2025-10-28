@@ -5,57 +5,69 @@
 
     export let data;
     const articles = data.article;
-    console.log(data.article[0])
     const recentArticle = data.article[0]
 </script>
 
 <Header />
 
 <main>
-    <Header/> 
-    <Filter/>
+    <!-- <Filter/> -->
     <article>
-        <h2>{recentArticle.title}</h2>
-        <h2>{recentArticle.intro}</h2>
-        <h2>{recentArticle.body}</h2>
-
+        <p class="label-district">{recentArticle.district}</p>
+        <p class="label-category">{recentArticle.category}</p>
+        <h2 class="title">{recentArticle.title}</h2>
+        <p class="intro">{recentArticle.intro}</p>
+        <p class="side-title">{recentArticle.side_title}</p>
+        <img class="cover" src="https://fdnd-agency.directus.app/assets/{recentArticle.cover}" alt="{recentArticle.alt}">
+        <p class="body">{@html recentArticle.body}</p>
     </article>
-    <!-- <p>{recentArticle.}</p> -->
 
-    {#each articles.slice(1) as article}
-        <Article {article}/>
-    {/each}   
-        
-
-    <!-- <Header/> -->
-    <!-- <Filter/>
-
-    <h2>Quote</h2>
-    <Quote/>
-
-    <h2>Newsletter</h2>
-    <Newsletter/>
-    
     <section>
-       {#each articles as article}
-            <Article {article} />
-        {/each}
+        {#each articles.slice(1) as article}
+            <Article {article}/>
+        {/each}   
     </section>
 </main>
 
 <style>
+    article {
+        padding: var(--sm);
+        background-color: var(--primary-color-general-lighter);
+    }    
     main {
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        gap: var(--sm);
+        margin: var(--sm);
 
-        section {
-            display: flex;
-            flex-direction: column;
-            max-width: 1000px;
-            padding-top: 5em;
-            gap: 1em;
+        @media (width > 720px) {
+            flex-direction: row;
+            
+            article {
+                width: 70vw;
+            }
+            section {
+                width: 30vw;
+            }
         }
+    }
+
+    article[data-district="east"] {
+        --primary-color-general: var(--secondary-color-east);
+        --primary-color-general-darker: var(--primary-color-east);
+        --primary-color-general-lighter: var(--tertiary-color-east)
+    }
+
+    article[data-district="new-west"] {
+        --primary-color-general: var(--secondary-color-new-west);
+        --primary-color-general-darker: var(--primary-color-new-west);
+        --primary-color-general-lighter: var(--secondary-color-new-west);
+    }
+
+    article[data-district="south-east"] {
+        --primary-color-general: var(--secondary-color-south-east);
+        --primary-color-general-darker: var(--primary-color-south-east);
+        --primary-color-general-lighter: var(--secondary-color-south-east)
     }
 </style>
  

@@ -29,11 +29,15 @@
     /* COLOR */
     --primary-color-general: #B4BDD0;
     --primary-color-general-darker: #333D52;
+    --primary-color-general-lighter: #E4E8EE; 
+
     --secondary-color-general: #F26522;
     --secondary-color-general-darker: #B84809;
+    --secondary-color-general-lighter: #FEF0E7;
 
     --primary-color-east: #303A6D;
     --secondary-color-east: #E3E5F2;
+    --tertiary-color-east: #CDD1E9;
 
     --primary-color-new-west: #8EA34B;
     --secondary-color-new-west: #F5F8EC;
@@ -68,6 +72,7 @@ h1,
 h2,
 .lg {
     font-size: clamp(2rem, 5vw, 2.5rem);
+    font-family: var(--primary-font);
 }
 
 h3,
@@ -79,6 +84,84 @@ h4,
 .sm {
     font-size: clamp(1rem, 3.5vw, 1.5rem)
 }
+p,a {
+    font-family: var(--tertiary-font);
+}
+
+
+.label-district {
+    border: 1px solid var(--primary-color-general-darker);
+    background-color: var(--primary-color-general-darker);
+    width: fit-content;
+    padding: .25rem 1rem;
+    border-radius: 1rem;
+    color: var(--primary-color-general-lighter);
+}
+.label-outline {
+    border: 1px solid var(--primary-color-general-darker);
+    background-color: var(--primary-color-general-lighter);
+    width: fit-content;
+    padding: .25rem 1rem;
+    border-radius: 1rem;
+    color: var(--primary-color-general-darker);
+}
+
+blockquote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    font-family: var(--secondary-font);
+    background-color: var(--primary-color-general-darker);
+    color: var(--primary-color-general-lighter);
+    width: fit-content;
+    padding: var(--md);
+    border-radius: var(--lg);
+    margin: var(--md);
+}
+
+article {
+    .label-district, .label-outline {
+        margin-bottom: 1.5rem;
+    }
+    .title, .intro {
+        margin-bottom: var(--sm);
+    }
+    .title, .intro, p {
+        max-width: 70ch;
+    }
+    .intro {
+        font-family: var(--secondary-font);
+    }
+    .side-title {
+        font-family: var(--primary-font);
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        writing-mode: sideways-lr;
+        float: left;
+        padding-top: 4rem;
+        shape-outside: polygon(0 0, 0 4rem, 100% 4rem, 100% 100%, 0 100%);
+        margin: 1rem 1rem 1rem 0;
+        max-height: 90vh;
+    }
+    .cover {
+        float: right;
+        width: 30vw;
+        height: 30vh;
+        object-fit: cover;
+        margin: 0 2rem 2rem 2rem;
+    }
+    .body {
+        img:first-child {
+            display: none;
+        }
+        span {
+            padding-top: 1rem;
+        }
+    }
+}
+
+
 
 @keyframes hover-effect {
     40% {
