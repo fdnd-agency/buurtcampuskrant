@@ -12,7 +12,7 @@
 
 <main>
     <!-- <Filter/> -->
-    <article class="article-detail">
+    <article class="article-detail" data-district="{recentArticle.district}">
         <p class="label-district">{recentArticle.district}</p>
         <p class="label-category">{recentArticle.category}</p>
         <h2 class="title">{recentArticle.title}</h2>
@@ -40,10 +40,15 @@
         gap: var(--sm);
         margin: var(--sm);
 
+
         article {
             padding: var(--sm);
             background-color: var(--tertiary-color-general);
             height: 100%;
+
+            h2, .side-title {
+                color: var(--secondary-color-general);
+            }
         }   
         section {
             display: flex;
@@ -65,5 +70,9 @@
         }
     }
 
+    /* .article-detail[data-district="east"] {
+        --primary-color-general: var(--primary-color-east);
+        --secondary-color-general: var(--primary-color-east);
+    } */
 </style>
  
