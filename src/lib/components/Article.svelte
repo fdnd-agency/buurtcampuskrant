@@ -45,7 +45,7 @@
         flex-direction: column;
         border-radius: 25px;
         overflow: hidden;
-        color: var(--color-accent);       
+        color: var(--primary-color-general-darker);       
         background-color: var(--primary-color-general);
         border: solid 3px var(--primary-color-general-darker);
 
@@ -54,6 +54,7 @@
             img {
                 width: 100%;
                 object-fit: cover;
+                min-height: 180px;
             }
 
             .content {
