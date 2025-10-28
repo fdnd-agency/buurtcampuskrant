@@ -12,6 +12,8 @@
 <Header />
 
 <main>
+    <Header/> 
+    <Filter/>
     <article>
         <h2>{recentArticle.title}</h2>
         <h2>{recentArticle.intro}</h2>
@@ -50,19 +52,10 @@
         section {
             display: flex;
             flex-direction: column;
-            max-width: 500px;
+            max-width: 1000px;
             padding-top: 5em;
             gap: 1em;
         }
     }
 </style>
-        <Article/>
-        <Article/>
-        <Article/>
-    </section> -->
-    <Header />
-    
-    <Footer/> 
-</main>
-
-    <Footer/>
+ 
