@@ -8,10 +8,7 @@
     const recentArticle = data.article[0]
 </script>
 
-<!-- <Header /> -->
-
 <main>
-    <!-- <Filter/> -->
     <article class="article-detail" data-district="{recentArticle.district}">
         <p class="label-district">{recentArticle.district}</p>
         <p class="label-category">{recentArticle.category}</p>
@@ -29,8 +26,6 @@
         {/each}   
     </section>
 </main>
-
-<!-- <Footer /> -->
 
 <style>
      
