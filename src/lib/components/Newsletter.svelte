@@ -29,13 +29,13 @@
             font-size: 11px;
             font-weight: 500;
             color: white;
-            background-color: var(--secondary-color-general);
+            background-color: var(--accent-color);
             border: none;
             padding-right: 35px;
             padding-left: 10px;
 
             &:hover {
-                background-color: var(--accent-color);
+                background-color: var(--accent-color-darker);
             }
         }
 

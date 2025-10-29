@@ -31,8 +31,8 @@
     --secondary-color-general: #333D52;
     --tertiary-color-general: #E4E8EE; 
 
-    --accent-color: #F26522;
-    --accent-color-darker: #B84809;
+    --accent-color: #C94D12;
+    --accent-color-darker: #843101;
     --accent-color-lighter: #FEF0E7;
 
     --primary-color-east: #303A6D;
@@ -61,6 +61,21 @@
 
     /* EXTRAS */
     --border-radius: 1.5rem;
+}
+
+body.route-zuid-oost {
+    --primary-color-general: var(--primary-color-south-east);
+    --secondary-color-general: var(--secondary-color-south-east);
+}
+
+body.route-oost {
+    --primary-color-general: var(--primary-color-east);
+    --secondary-color-general: var(--secondary-color-east);
+}
+
+body.route-nieuw-west {
+    --primary-color-general: var(--primary-color-new-west);
+    --secondary-color-general: var(--tertiary-color-new-west);
 }
 
 h1,

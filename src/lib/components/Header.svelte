@@ -15,7 +15,7 @@
 
 <header class="{props.district}">
     <a href="/" aria-label="terug naar home"><LogoBuurtcampus/></a>
-    <a href="#menu" class="menu-toggle" onclick={toggleSidebar}>MENU</a>
+    <a href="#menu" class="menu-toggle" aria-label="open en sluit button menu" onclick={toggleSidebar}>MENU</a>
 </header>
 
 <nav id="menu" class="menu" class:open={menuOpen}>
