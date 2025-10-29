@@ -51,6 +51,7 @@
             flex-direction: column;
             gap: 1.5rem;
             max-width: 80%;
+            padding: 2rem 0;
 
             @media (width > 550px) {
                 display: grid;
