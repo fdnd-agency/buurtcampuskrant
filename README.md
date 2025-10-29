@@ -4,6 +4,12 @@
 [Live Link Website](https://buurtcampuskrant.netlify.app/)
 
 ## Description
+
+
+https://github.com/user-attachments/assets/34c24c6e-8a70-49e5-b5d1-2fe01edd41bd
+
+
+
 Our assignment was to work as a team to create a digital version of the buurtcampus newspaper. This is a collaboration between Amsterdam University of Applied Sciences and Amsterdam Public Library, spread across various districts: East, New West and South-East. Buurtcampuskrant organises various social projects and campaigns aimed at enriching the neighbourhood. Important themes include sustainability, the environment and learning. The newspaper keeps you informed about these activities that have taken place. A paper version that can reach a larger audience through a digital version. 
 
 We made this digital newspaper with Svelte and Sveltekit. The focus was on dividing the site into different sections (components) that recur frequently on the website. A lot of attention was also paid to the use of colours. Furthermore we have a homepage (where u land on first), this will show you the most recent newsarticle. On the side of that u can find a short link to other news articles. U can also navigate to differect district pages. 
