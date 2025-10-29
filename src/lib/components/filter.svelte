@@ -48,7 +48,6 @@
   <button type="submit" name="category" value="" class:selected={!categoryId}
     >alle</button
   >
-</form>
 
 {#each categories as category}
   <button
@@ -60,6 +59,7 @@
     {category.title}</button
   >
 {/each}
+</form>
 
 <!-- {#if stories.length > 0}
   <p>Er zijn {stories.length} stories.</p>

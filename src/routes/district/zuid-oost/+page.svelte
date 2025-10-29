@@ -14,17 +14,20 @@
 <Filter {categories}/>
 
 {#each categories as category}
-{#if category.stories.length > 0 && (!categoryId || category.id == categoryId)}
-<h2> {category.title}</h2>
-<p>Er zijn {category.stories.length} stories.</p>
-<ul>
-  {#each category.stories as story}
-    <li>{story.title}
-    <p>{story.intro}</p>
-  </li>
-  {/each}
-</ul>
-{:else}
-<p>Geen stories gevonden</p>
-{/if} 
+  {#if category.id == categoryId || !categoryId}
+    {#if category.stories.length > 0}
+      <h2>{category.title}</h2>
+      <p>Er zijn {category.stories.length} stories.</p>
+      <ul>
+        {#each category.stories as story}
+          <li>
+            <strong>{story.title}</strong>
+            <p>{story.intro}</p>
+          </li>
+        {/each}
+      </ul>
+    {:else}
+      <p>Geen artikelen gevonden</p>
+    {/if}
+  {/if}
 {/each}
