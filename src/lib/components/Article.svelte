@@ -4,11 +4,13 @@
 
 <article data-district="{article.district}">
     <div class="container-content"> 
-<img 
-    src="https://fdnd-agency.directus.app/assets/{article.cover}" 
-    alt="" 
-    width="280" 
-    height="150">
+        <a href="/nieuws/{article.id}">
+            <img 
+            src="https://fdnd-agency.directus.app/assets/{article.cover}" 
+            alt="" 
+            width="280" 
+            height="150">
+        </a>
         <div class="content">   
             <h2>{ article.title }</h2>
             <p>{ article.intro }</p>
