@@ -6,7 +6,7 @@
     <div class="container-content"> 
 <img 
     src="https://fdnd-agency.directus.app/assets/{article.cover}" 
-    alt="{article.alt}" 
+    alt="" 
     width="280" 
     height="150">
         <div class="content">   

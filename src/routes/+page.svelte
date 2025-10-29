@@ -15,7 +15,7 @@
         <h2 class="title">{recentArticle.title}</h2>
         <p class="intro">{recentArticle.intro}</p>
         <p class="side-title">{recentArticle.side_title}</p>
-        <img class="cover" src="https://fdnd-agency.directus.app/assets/{recentArticle.cover}" alt="{recentArticle.alt}">
+        <img class="cover" src="https://fdnd-agency.directus.app/assets/{recentArticle.cover}" alt="">
         <div class="body">{@html recentArticle.body}</div>
     </article>
 
