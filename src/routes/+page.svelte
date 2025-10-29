@@ -44,12 +44,35 @@
             h2, .side-title {
                 color: var(--secondary-color-general);
             }
-        }   
+        } 
+
         section {
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
+            max-width: 80%;
+
+            @media (width > 550px) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: min-content 1fr;
+                align-items: center;
+
+                    h2 {
+                        grid-column: 1/-1;
+                    }
+                    article {
+                        grid-row: 2;
+                    }
+            }
+            @media (width > 1020px) {
+                display: flex;
+                flex-direction: column;
+                align-items: normal;
+            }
         }
+
+        
 
         @media (width > 1020px) {
             flex-direction: row;
