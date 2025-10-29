@@ -6,8 +6,6 @@
     import Footer from "$lib/components/Footer.svelte"
 </script>
 
-<Header/>
-
 <main  data-district="{article.district}">
 
 <article class="article-detail">
@@ -19,9 +17,6 @@
 </article>
 
 </main>
-
-<Footer/>
-
 
 <style>
     main[data-district="east"] {
