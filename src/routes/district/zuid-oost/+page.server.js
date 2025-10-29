@@ -9,21 +9,23 @@ export async function load() {
     ),
   ]);
 
-    // categories.forEach(cat => {
-    //   cat.stories = stories.filter(story =>
-    //     story.categories.some(c => c.id === cat.id)
-    //   );
-    // });
+  const categoriesData = await categoriesRes.json();
+  const storiesData = await storiesRes.json();
 
-    const categoriesData = await categoriesRes.json();
-    const storiesData = await storiesRes.json();
+  const categories = categoriesData.data || [];
+  const stories = storiesData.data || [];
+
+    categories.forEach(cat => {
+      cat.stories = stories.filter(story =>
+        story.categories.some(c => c.id === cat.id)
+      );
+    });
 
     // console.log("categories:", categoriesData);
     // console.log("stories:", storiesData);
 
     return {
-      categories: categoriesData.data || [],
-      stories: storiesData.data || [],
+      categories,
     };
 
 

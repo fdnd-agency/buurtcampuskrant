@@ -3,6 +3,8 @@
   export let data;
   const { categories, stories } = data;
   // console.log(categories);
+
+
   
 </script>
 

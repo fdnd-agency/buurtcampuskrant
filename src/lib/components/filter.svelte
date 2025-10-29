@@ -1,9 +1,11 @@
 <script>
+  import { page } from "$app/stores";
+  export let categories = [];
+  $: categoryId = $page.url.searchParams.get("category");
 
-export let categories = [];
-  export let stories = [];
+  // export let stories = [];
 
-// console.log('categories in Filter:', categories);
+  // console.log('categories in Filter:', categories);
   // const artikelen = [
   //   {
   //     titel: "Artikel 1",
@@ -43,14 +45,23 @@ export let categories = [];
 <h1>Categorieën</h1>
 
 <form method="GET">
-  <button type="submit" name="category" value="">alle</button>
+  <button type="submit" name="category" value="" class:selected={!categoryId}
+    >alle</button
+  >
 </form>
 
 {#each categories as category}
-<button>{category.title}</button>
+  <button
+    type="submit"
+    name="category"
+    value={category.id}
+    class:selected={category.id == categoryId}
+  >
+    {category.title}</button
+  >
 {/each}
 
-  {#if stories.length > 0}
+<!-- {#if stories.length > 0}
   <p>Er zijn {stories.length} stories.</p>
   <ul>
     {#each stories as story}
@@ -59,7 +70,7 @@ export let categories = [];
   </ul>
 {:else}
   <p>Geen stories gevonden</p>
-{/if}
+{/if} -->
 
 <!-- 
 {#if categories.length > 0}
@@ -72,7 +83,6 @@ export let categories = [];
   <p>Geen categorieën gevonden.</p>
 {/if} -->
 <!-- <ul> -->
-
 
 <!-- </ul> -->
 
@@ -88,8 +98,8 @@ export let categories = [];
     <h2>Buurtcampus // Oost</h2>
     <ul>
       {#each artikelen as artikel} -->
-        <!-- als er geen rubriek actief is toon alles / artikel wat bij de filter hoort tonen  -->
-        <!-- {#if rubriek === null || artikel.rubriek === rubriek}
+<!-- als er geen rubriek actief is toon alles / artikel wat bij de filter hoort tonen  -->
+<!-- {#if rubriek === null || artikel.rubriek === rubriek}
           <li>
             <img src="/images/foto.png" alt="Mensen op de buurtcampus" />
             <div class="info">
