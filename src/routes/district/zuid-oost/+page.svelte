@@ -1,10 +1,11 @@
 <script>
-    import { Header } from '$lib';
-    import { Footer } from '$lib';
+  import Filter from '$lib/components/Filter.svelte';
+//   import Article from '$lib/components/Article.svelte';
+
+  export let data;
 </script>
 
-<Header/>
-<Footer/>
+<Filter artikelen={data.articles} />
 
 <style>
     :global(:root) {

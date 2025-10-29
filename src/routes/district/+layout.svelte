@@ -1,13 +1,35 @@
-<script>
-	import favicon from '$lib/assets/favicon.svg';
-	import '$lib/assets/global.css';
-	let { children } = $props();
-</script>
+ <script>
+	import Header from '$lib/components/Header.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+  </script>
+  
+  <svelte:head>
+	<link rel="icon" href="/favicon.svg" />
+  </svelte:head>
+  
+ <div>
+  <Header />
+  <main class="page-content">
+  <slot /> 
+</main>
+  <Footer />
+</div>
+  
+  <style>
+div {
+	display:flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
+main {
+	flex: 1;
+	padding: 2rem;
+}
 
-{@render children?.()}
+/* header, footer {
+	display: block;
+} */
 
+  </style>
 

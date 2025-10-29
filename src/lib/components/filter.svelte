@@ -1,38 +1,40 @@
 <script>
-  const artikelen = [
-    {
-      titel: "Artikel 1",
-      rubriek: "De wijk",
-      inhoud: "Een kort stukje info over de wijk.",
-    },
-    {
-      titel: "Artikel 2",
-      rubriek: "De wijk",
-      inhoud: "Nog een artikel over gebeurtenissen in de wijk.",
-    },
-    {
-      titel: "Artikel 3",
-      rubriek: "Bewoners",
-      inhoud: "Artikel over bewonersinitiatieven.",
-    },
-    {
-      titel: "Artikel 4",
-      rubriek: "Bewoners",
-      inhoud: "Interview met een bewoner.",
-    },
-    {
-      titel: "Artikel 5",
-      rubriek: "Studenten",
-      inhoud: "Studentenprojecten aan de universiteit.",
-    },
-    {
-      titel: "Artikel 6",
-      rubriek: "Studenten",
-      inhoud: "Leuke tips voor studenten in de stad.",
-    },
-  ];
+  // export let artikelen []
 
-  let rubriek = null;
+  // const artikelen = [
+  //   {
+  //     titel: "Artikel 1",
+  //     rubriek: "De wijk",
+  //     inhoud: "Een kort stukje info over de wijk.",
+  //   },
+  //   {
+  //     titel: "Artikel 2",
+  //     rubriek: "De wijk",
+  //     inhoud: "Nog een artikel over gebeurtenissen in de wijk.",
+  //   },
+  //   {
+  //     titel: "Artikel 3",
+  //     rubriek: "Bewoners",
+  //     inhoud: "Artikel over bewonersinitiatieven.",
+  //   },
+  //   {
+  //     titel: "Artikel 4",
+  //     rubriek: "Bewoners",
+  //     inhoud: "Interview met een bewoner.",
+  //   },
+  //   {
+  //     titel: "Artikel 5",
+  //     rubriek: "Studenten",
+  //     inhoud: "Studentenprojecten aan de universiteit.",
+  //   },
+  //   {
+  //     titel: "Artikel 6",
+  //     rubriek: "Studenten",
+  //     inhoud: "Leuke tips voor studenten in de stad.",
+  //   },
+  // ];
+
+  // let rubriek = null;
 </script>
 
 <section class="main-section">
@@ -42,13 +44,14 @@
     <button on:click={() => (rubriek = "Bewoners")}>bewoners</button>
     <button on:click={() => (rubriek = "Studenten")}>studenten</button>
   </div>
+  </section>
 
-  <section class="content-wrapper">
+ <!-- <section class="content-wrapper">
     <h2>Buurtcampus // Oost</h2>
     <ul>
-      {#each artikelen as artikel}
+      {#each artikelen as artikel}  -->
         <!-- als er geen rubriek actief is toon alles / artikel wat bij de filter hoort tonen  -->
-        {#if rubriek === null || artikel.rubriek === rubriek}
+  <!-- {#if rubriek === null || artikel.rubriek === rubriek}
           <li>
             <img src="/images/foto.png" alt="Mensen op de buurtcampus" />
             <div class="info">
@@ -61,7 +64,7 @@
       {/each}
     </ul>
   </section>
-</section>
+</section>  -->
 
 <style>
   :root {
