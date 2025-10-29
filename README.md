@@ -17,7 +17,8 @@ We had already been given a house style and the paper newspaper provided some gu
 
 We chose to carry the colors associated with a particular neighborhood through to the smallest details. This can be seen, for example, in the header and footer, which use the matching background color for each neighborhood. But it can also be found in accent colors in, for example, the small overview of news articles and details such as a filter. 
 
-<img width="800" height="503" alt="variated colors designs" src="https://github.com/user-attachments/assets/98a3c70d-7fdf-4bac-acf5-ee516d56ea43" />
+
+![Uploading Screenshot 2025-10-29 at 17.42.01.png…]()
 
 
 
@@ -35,9 +36,8 @@ Of course, the design is responsive, so it works on both small and large screens
 Components are various elements that appear frequently on multiple pages. Below are components that we have used. 
 
 * [Header.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/Header.svelte) This component contains de header with the responsive navigation. It is also progressive enhanced, which means that it'll still work without JS and CSS. 
-* [Article.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/Article.svelte) This component is a brief overview of the new item and links to its detail page.
+* [Article.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/Article.svelte) This component is a brief overview of the new item and links to its detail page where you can read all about the article in an expanded version.
 * [Filter.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/filter.svelte) The filter component ensures that a neighbourhood page can be filtered according to different categories.
-* [Quote.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/Quote.svelte) This component highlights a part from the article.
 * [Footer.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/Footer.svelte) This component contains a newsletter, links to socials and a navigation. This will also take place on every page.  
 * [Newsletter.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/Newsletter.svelte) The newsletter will be implemented in the footer. It goes without saying, but this is where people can subscribe to the newsletter.
 
