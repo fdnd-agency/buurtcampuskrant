@@ -42,10 +42,13 @@ export let categories = [];
 
 <h1>Categorieën</h1>
 
+<form method="GET">
+  <button type="submit" name="category" value="">alle</button>
+</form>
 
-  {#each categories as category}
-    <button>{category.title}</button>
-  {/each}
+{#each categories as category}
+<button>{category.title}</button>
+{/each}
 
   {#if stories.length > 0}
   <p>Er zijn {stories.length} stories.</p>
