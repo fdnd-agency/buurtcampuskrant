@@ -8,7 +8,7 @@
     const recentArticle = data.article[0]
 </script>
 
-<Header />
+<!-- <Header /> -->
 
 <main>
     <!-- <Filter/> -->
@@ -30,7 +30,7 @@
     </section>
 </main>
 
-<Footer />
+<!-- <Footer /> -->
 
 <style>
      
