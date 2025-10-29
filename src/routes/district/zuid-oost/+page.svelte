@@ -1,13 +1,30 @@
 <script>
   import Filter from "$lib/components/Filter.svelte";
   export let data;
-  const { categories, stories } = data;
+  const { categories } = data;
   // console.log(categories);
 
 
+  import { page } from '$app/stores';
+  $: categoryId = $page.url.searchParams.get('category');
   
 </script>
 
 
-<Filter {categories} {stories}/>
+<Filter {categories}/>
 
+{#each categories as category}
+{#if category.stories.length > 0 && (!categoryId || category.id == categoryId)}
+<h2> {category.title}</h2>
+<p>Er zijn {category.stories.length} stories.</p>
+<ul>
+  {#each category.stories as story}
+    <li>{story.title}
+    <p>{story.intro}</p>
+  </li>
+  {/each}
+</ul>
+{:else}
+<p>Geen stories gevonden</p>
+{/if} 
+{/each}

@@ -26,6 +26,7 @@ export async function load() {
 
     return {
       categories,
+    
     };
 
 
