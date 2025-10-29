@@ -10,6 +10,6 @@
     :global(:root) {
 		/* applies to <body> */
 		--primary-color-general: var(--primary-color-new-west);
-        --primary-color-general-darker: var(--tertiary-color-new-west);
+        --secondary-color-general: var(--tertiary-color-new-west);
 	}
 </style>

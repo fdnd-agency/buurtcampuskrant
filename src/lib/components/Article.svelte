@@ -24,17 +24,17 @@
 <style>
     article[data-district="east"] {
         --primary-color-general: var(--secondary-color-east);
-        --primary-color-general-darker: var(--primary-color-east);
+        --secondary-color-general: var(--primary-color-east);
     }
 
     article[data-district="new-west"] {
         --primary-color-general: var(--secondary-color-new-west);
-        --primary-color-general-darker: var(--primary-color-new-west);
+        --secondary-color-general: var(--primary-color-new-west);
     }
 
     article[data-district="south-east"] {
         --primary-color-general: var(--secondary-color-south-east);
-        --primary-color-general-darker: var(--primary-color-south-east);
+        --secondary-color-general: var(--primary-color-south-east);
     }
     
     article {
@@ -45,9 +45,9 @@
         flex-direction: column;
         border-radius: 25px;
         overflow: hidden;
-        color: var(--primary-color-general-darker);       
+        color: var(--secondary-color-general);       
         background-color: var(--primary-color-general);
-        border: solid 3px var(--primary-color-general-darker);
+        border: solid 3px var(--secondary-color-general);
 
         .container-content {
 
@@ -80,7 +80,6 @@
                     display: flex;
                     gap: var(--sm);
                     margin-bottom: 1em;
-                    margin-top: auto;
 
                     a {
                         display: flex;
@@ -94,13 +93,13 @@
                     }
                 
                     a:nth-of-type(1) {
-                        background-color: var(--primary-color-general-darker);
+                        background-color: var(--secondary-color-general);
                         color: var(--primary-color-general);
                     }
                     a:nth-of-type(2) {
                         background-color: var(--primary-color-general);
-                        color: var(--primary-color-general-darker);
-                        border: solid 1px var(--primary-color-general-darker);
+                        color: var(--secondary-color-general);
+                        border: solid 1px var(--secondary-color-general);
                     }    
                 }
             }

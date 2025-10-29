@@ -35,7 +35,7 @@
             padding-left: 10px;
 
             &:hover {
-                background-color: var(--secondary-color-general-darker);
+                background-color: var(--accent-color);
             }
         }
 

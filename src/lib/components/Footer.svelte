@@ -107,7 +107,7 @@
                         a {
                             font-family: var(--tertiary-font);
                             text-decoration: none;
-                            color: var(--primary-color-general-darker);
+                            color: var(--secondary-color-general);
                             padding-bottom: var(--xs);
 
                             &:hover {

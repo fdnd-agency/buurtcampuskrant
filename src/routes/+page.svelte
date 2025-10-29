@@ -5,57 +5,70 @@
 
     export let data;
     const articles = data.article;
-    console.log(data.article[0])
     const recentArticle = data.article[0]
 </script>
 
 <Header />
 
 <main>
-    <Header/> 
-    <Filter/>
-    <article>
-        <h2>{recentArticle.title}</h2>
-        <h2>{recentArticle.intro}</h2>
-        <h2>{recentArticle.body}</h2>
-
+    <!-- <Filter/> -->
+    <article class="article-detail" data-district="{recentArticle.district}">
+        <p class="label-district">{recentArticle.district}</p>
+        <p class="label-category">{recentArticle.category}</p>
+        <h2 class="title">{recentArticle.title}</h2>
+        <p class="intro">{recentArticle.intro}</p>
+        <p class="side-title">{recentArticle.side_title}</p>
+        <img class="cover" src="https://fdnd-agency.directus.app/assets/{recentArticle.cover}" alt="{recentArticle.alt}">
+        <div class="body">{@html recentArticle.body}</div>
     </article>
-    <!-- <p>{recentArticle.}</p> -->
 
-    {#each articles.slice(1) as article}
-        <Article {article}/>
-    {/each}   
-        
-
-    <!-- <Header/> -->
-    <!-- <Filter/>
-
-    <h2>Quote</h2>
-    <Quote/>
-
-    <h2>Newsletter</h2>
-    <Newsletter/>
-    
     <section>
-       {#each articles as article}
-            <Article {article} />
-        {/each}
+        <h2 class="md">Laatste nieuws:</h2>
+        {#each articles.slice(1, 3) as article}
+            <Article {article}/>
+        {/each}   
     </section>
 </main>
 
+<Footer />
+
 <style>
+     
     main {
         display: flex;
         flex-direction: column;
-        gap: 1em;
+        gap: var(--sm);
+        margin: var(--sm);
 
+
+        article {
+            padding: var(--sm);
+            background-color: var(--tertiary-color-general);
+            height: 100%;
+
+            h2, .side-title {
+                color: var(--secondary-color-general);
+            }
+        }   
         section {
             display: flex;
             flex-direction: column;
-            max-width: 1000px;
-            padding-top: 5em;
-            gap: 1em;
+            gap: 1.5rem;
+        }
+
+        @media (width > 1020px) {
+            flex-direction: row;
+            justify-content: space-evenly;
+            
+            article {
+                width: 70vw;
+            }
+            section {
+                padding-top: 10rem;
+                width: 20vw;
+            }
         }
     }
+
 </style>
  
