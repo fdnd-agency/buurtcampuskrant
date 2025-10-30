@@ -6,9 +6,11 @@
 
 </script>
 
-<Filter/>
-<Article article={data} />
 
+<Filter/>
+<div class="articles">
+<Article article={data} />
+</div>
 
 <style>
     :global(:root) {
@@ -16,4 +18,22 @@
 		--primary-color-general: var(--primary-color-south-east);
         --secondary-color-general: var(--secondary-color-south-east);
 	}
+
+
+  :global(.filter),
+  :global(article) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto; 
+  }
+
+  .articles {
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    margin: 0 auto;
+  }
+
 </style>
