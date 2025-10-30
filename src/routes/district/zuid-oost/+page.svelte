@@ -8,6 +8,8 @@
   import { page } from '$app/stores';
   $: categoryId = $page.url.searchParams.get('category');
   
+
+
 </script>
 
 
@@ -16,8 +18,8 @@
 {#each categories as category}
   {#if category.id == categoryId || !categoryId}
     {#if category.stories.length > 0}
-      <h2>{category.title}</h2>
-      <p>Er zijn {category.stories.length} stories.</p>
+      <!-- <h2>{category.title}</h2> -->
+        <p>{category.stories.length} artikel{category.stories.length === 1 ? '' : 'en'} met het filter “{category.title || category.name}”</p>
       <ul>
         {#each category.stories as story}
           <li>

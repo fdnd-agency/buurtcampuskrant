@@ -2,7 +2,6 @@
   import { page } from "$app/stores";
   export let categories = [];
   $: categoryId = $page.url.searchParams.get("category");
-
   // export let stories = [];
 
   // console.log('categories in Filter:', categories);
@@ -49,40 +48,17 @@
     >alle</button
   >
 
-{#each categories as category}
-  <button
-    type="submit"
-    name="category"
-    value={category.id}
-    class:selected={category.id == categoryId}
-  >
-    {category.title}</button
-  >
-{/each}
+  {#each categories as category}
+    <button
+      type="submit"
+      name="category"
+      value={category.id}
+      class:selected={category.id == categoryId}
+    >
+      {category.title}</button
+    >
+  {/each}
 </form>
-
-<!-- {#if stories.length > 0}
-  <p>Er zijn {stories.length} stories.</p>
-  <ul>
-    {#each stories as story}
-      <li>{story.title}</li>
-    {/each}
-  </ul>
-{:else}
-  <p>Geen stories gevonden</p>
-{/if} -->
-
-<!-- 
-{#if categories.length > 0}
-  <ul>
-    {#each categories as category}
-      <li>{category.title}</li>
-    {/each}
-  </ul>
-{:else}
-  <p>Geen categorieën gevonden.</p>
-{/if} -->
-<!-- <ul> -->
 
 <!-- </ul> -->
 
