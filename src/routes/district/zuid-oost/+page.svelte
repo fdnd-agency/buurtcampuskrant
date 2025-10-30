@@ -1,11 +1,14 @@
 <script>
   import Filter from '$lib/components/Filter.svelte';
-//   import Article from '$lib/components/Article.svelte';
+  import Article from '$lib/components/Article.svelte';
 
   export let data;
+
 </script>
 
-<Filter artikelen={data.articles} />
+<Filter/>
+<Article article={data} />
+
 
 <style>
     :global(:root) {
