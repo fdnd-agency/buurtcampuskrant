@@ -1,0 +1,5 @@
+title: "Buurtcampuskrant"
+status: "in progress"
+main_link: "https://buurtcampuskrant.agency.fdnd.nl/"
+dev_link: "https://buurtcampuskrant.dev.fdnd.nl/"
+tech_stack: ["SvelteKit", "Directus"]
