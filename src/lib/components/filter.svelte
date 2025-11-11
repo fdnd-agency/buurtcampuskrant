@@ -1,6 +1,6 @@
 <script>
   import Article from './Article.svelte';
-export let categories = [];
+  export let categories = [];
   export let categoryId = null;
   // export let artikelen []
 
@@ -58,13 +58,7 @@ export let categories = [];
     {/each}
   </form>
 
-  {#each categories as category}
-  {#if category.id == categoryId || !categoryId}
-    {#each category.stories as story}
-      <Article article={story} />
-    {/each}
-  {/if}
-{/each}
+
 
 <!-- <section class="main-section">
   <div class="buttons">
