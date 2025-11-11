@@ -173,6 +173,22 @@
     border: 1px solid var(--button-border);
   }
 
+  button:hover {
+    color: var(--button-hover-text);
+    background-color: var(--button-hover-bg);
+    border: 1px solid var(--button-border);
+    transform: translateY(-2px);
+  }
+
+  button:focus {
+    box-shadow:  0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  button:active {
+   transform: scale(0.97);
+   transition: transform 0.05s ease; 
+  }
+
   @media (min-width: 768px) {
     .buttons {
       display: flex;
