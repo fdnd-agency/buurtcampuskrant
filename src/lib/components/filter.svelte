@@ -1,4 +1,7 @@
 <script>
+  import Article from './Article.svelte';
+export let categories = [];
+  export let categoryId = null;
   // export let artikelen []
 
   // const artikelen = [
@@ -37,14 +40,40 @@
   // let rubriek = null;
 </script>
 
-<section class="main-section">
+  
+  <form method="GET">
+    <button type="submit" name="category" value="" class:selected={!categoryId}
+      >alle</button
+    >
+  
+    {#each categories as category}
+      <button
+        type="submit"
+        name="category"
+        value={category.id}
+        class:selected={category.id == categoryId}
+      >
+        {category.title}</button
+      >
+    {/each}
+  </form>
+
+  {#each categories as category}
+  {#if category.id == categoryId || !categoryId}
+    {#each category.stories as story}
+      <Article article={story} />
+    {/each}
+  {/if}
+{/each}
+
+<!-- <section class="main-section">
   <div class="buttons">
     <button on:click={() => rubriek = null}>alle</button>
     <button on:click={() => (rubriek = "De wijk")}>de wijk</button>
     <button on:click={() => (rubriek = "Bewoners")}>bewoners</button>
     <button on:click={() => (rubriek = "Studenten")}>studenten</button>
   </div>
-  </section>
+  </section> -->
 
  <!-- <section class="content-wrapper">
     <h2>Buurtcampus // Oost</h2>
