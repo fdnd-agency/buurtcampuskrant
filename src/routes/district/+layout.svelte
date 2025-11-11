@@ -25,6 +25,10 @@ div {
 main {
 	flex: 1;
 	padding: 2rem;
+  /* max-width:1600px;  */
+  margin: 0 auto;
+  /* align-items: center; */
+  width: 100%;  
 }
 
 /* header, footer {

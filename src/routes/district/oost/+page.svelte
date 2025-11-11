@@ -12,22 +12,27 @@ $: allStories = categories.flatMap(c => c.stories);
 
 </script>
 
-<Filter {categories}/>
+<div class="centered-container">
 
-<DistrictImg />
+<Filter {categories}/>
 
 <!-- <img src="{districtImg}" alt="District afbeelding" /> -->
 
+
 {#if !categoryId}
   {#if allStories.length > 0}
-<p>{allStories.length} artikelen gevonden</p> 
- <ul>
+<p class="total-articles">{allStories.length} artikelen gevonden</p> 
+<ul class="article-list">
       {#each allStories as story}
        <Article article={story} />
       {/each}
+      <li class="grid-item">
+        <DistrictImg />
+      </li>
     </ul> 
 {:else}
    <p>Geen artikelen gevonden</p>
+   <DistrictImg />
 {/if}
 {/if}
 
@@ -37,9 +42,12 @@ $: allStories = categories.flatMap(c => c.stories);
     {#if category.stories.length > 0}
       <!-- <h2>{category.title}</h2> -->
         <p>{category.stories.length} artikel{category.stories.length === 1 ? '' : 'en'} met het filter “{category.title || category.name}”</p>
-      <ul>
+      <ul class="article-list">
         {#each category.stories as story}
         <Article article={story} />
+        <li class="grid-item">
+          <DistrictImg />
+        </li>
           <!-- <li>
             <strong>{story.title}</strong>
             <p>{story.intro}</p>
@@ -48,11 +56,14 @@ $: allStories = categories.flatMap(c => c.stories);
       </ul>
     {:else}
       <p>Geen artikelen gevonden</p>
+      <DistrictImg />
     {/if}
   {/if}
 {/each}
 
+<!-- <DistrictImg /> -->
 
+</div>
 
 <style>
     :global(:root) {
@@ -60,5 +71,57 @@ $: allStories = categories.flatMap(c => c.stories);
 		--primary-color-general: var(--primary-color-east);
     --secondary-color-general: var(--secondary-color-east);
 	}
+
+
+  .centered-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /* justify-items: center; */
+    align-items: center;
+    width: 100%;
+
+    /* width: 100%; */
+  /* padding: 2rem 1rem; */
+  /* box-sizing: border-box; */
+  /* text-align: center;  */
+  }
+
+  .centered-container p {
+  text-align: left;
+  width: 100%;
+  max-width: 1200px;
+  margin: 1rem auto 0;
+  padding-left: 1rem;
+}
+
+ul li.grid-item {
+ list-style-type: none;
+}
+
+  .article-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 100%;  
+  max-width: 1200px;  
+  margin: 0 auto;  
+  /* justify-items: center;   */
+  }
+
+  @media (min-width: 600px) {
+  .article-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .article-grid {
+    grid-template-columns: repeat(3, 1fr);
+    /* align-items: start; */
+  }
+
+}
+
 </style>
 

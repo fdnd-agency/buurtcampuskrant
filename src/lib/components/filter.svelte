@@ -43,8 +43,7 @@
   
   <form method="GET">
     <button type="submit" name="category" value="" class:selected={!categoryId}
-      >alle</button
-    >
+      >alle</button>
   
     {#each categories as category}
       <button
@@ -106,6 +105,12 @@
     --button-hover-text: hsla(0, 0%, 100%, 1);
 
     --title-color: hsla(230, 39%, 31%, 1);
+  }
+
+  form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
   }
 
   .main-section {

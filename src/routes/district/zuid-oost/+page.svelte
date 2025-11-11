@@ -7,10 +7,10 @@
 </script>
 
 
-<Filter/>
+<!-- <Filter/>
 <div class="articles">
 <Article article={data} />
-</div>
+</div> -->
 
 <style>
     :global(:root) {
@@ -19,7 +19,7 @@
         --secondary-color-general: var(--secondary-color-south-east);
 	}
 
-
+/* 
   :global(.filter),
   :global(article) {
     display: flex;
@@ -27,13 +27,13 @@
     align-items: center;
     width: 100%;
     margin: 0 auto; 
-  }
+  } */
 
-  .articles {
+  /* .articles {
     display: flex;
     flex-direction: column;
     width: 320px;
     margin: 0 auto;
-  }
+  } */
 
 </style>
