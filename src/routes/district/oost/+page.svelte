@@ -77,7 +77,7 @@ $: allStories = categories.flatMap(c => c.stories);
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* justify-items: center; */
+    justify-items: center;
     align-items: center;
     width: 100%;
 
@@ -92,7 +92,8 @@ $: allStories = categories.flatMap(c => c.stories);
   width: 100%;
   max-width: 1200px;
   margin: 1rem auto 0;
-  padding-left: 1rem;
+  padding-left: 0.5rem;
+  margin-bottom: 5px;
 }
 
 ul li.grid-item {
