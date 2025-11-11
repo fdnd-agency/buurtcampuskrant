@@ -6,9 +6,20 @@
   import { page } from '$app/stores';
   $: categoryId = $page.url.searchParams.get('category');
 
+  $: allStories = categories.flatMap(c => c.stories);
+
 </script>
 
 <Filter {categories}/>
+
+{#if !categoryId}
+  {#if allStories.length > 0}
+    <p>{allStories.length} artikelen gevonden</p>
+  {/if}
+  {:else}
+  <p>Geen artikelen gevonden</p>
+{/if}
+
 
 {#each categories as category}
   {#if category.id == categoryId || !categoryId}
