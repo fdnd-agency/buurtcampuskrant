@@ -5,7 +5,7 @@
 <article data-district="{article.district}">
     <div class="container-content"> 
 <img 
-    src="https://fdnd-agency.directus.app/assets/{article.cover}" 
+    src={`https://fdnd-agency.directus.app/assets/${article.cover}`}
     alt="{article.alt}" 
     width="280" 
     height="150">

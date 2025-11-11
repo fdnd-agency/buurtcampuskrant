@@ -21,8 +21,8 @@ export async function load() {
         );
       });
   
-      // console.log("categories:", categoriesData);
-      // console.log("stories:", storiesData);
+    //   console.log("categories:", categoriesData);
+    //   console.log("stories:", storiesData);
   
       return {
         categories,
