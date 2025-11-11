@@ -1,4 +1,5 @@
 <script>
+import DistrictImg from '$lib/components/DistrictImg.svelte';
 import Filter from '$lib/components/Filter.svelte';
 import Article from '$lib/components/Article.svelte';
 export let data;
@@ -12,6 +13,10 @@ $: allStories = categories.flatMap(c => c.stories);
 </script>
 
 <Filter {categories}/>
+
+<DistrictImg />
+
+<!-- <img src="{districtImg}" alt="District afbeelding" /> -->
 
 {#if !categoryId}
   {#if allStories.length > 0}
@@ -46,6 +51,7 @@ $: allStories = categories.flatMap(c => c.stories);
     {/if}
   {/if}
 {/each}
+
 
 
 <style>
