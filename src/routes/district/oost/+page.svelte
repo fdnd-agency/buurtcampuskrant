@@ -90,14 +90,10 @@ $: allStories = categories.flatMap(c => c.stories);
   .centered-container p {
   text-align: left;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: 1rem auto 0;
   padding-left: 0.5rem;
   margin-bottom: 5px;
-}
-
-ul li.grid-item {
- list-style-type: none;
 }
 
   .article-list {
@@ -105,9 +101,16 @@ ul li.grid-item {
   grid-template-columns: 1fr;
   gap: 20px;
   width: 100%;  
-  max-width: 1200px;  
+  max-width: 1100px;  
   margin: 0 auto;  
+  list-style: none;  
   /* justify-items: center;   */
+  }
+
+  .article-list li.grid-item {
+    width: 100%; 
+    max-width: 600px; 
+    padding-left: 3.5em;
   }
 
   @media (min-width: 600px) {
