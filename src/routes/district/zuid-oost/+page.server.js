@@ -5,7 +5,7 @@ export async function load() {
   const [categoriesRes, storiesRes] = await Promise.all([
     fetch("https://fdnd-agency.directus.app/items/buurtcampuskrant_categories"),
     fetch(
-      `https://fdnd-agency.directus.app/items/buurtcampuskrant_stories?filter[district][_eq]=${district}&fields=*,categories.id`
+      `https://fdnd-agency.directus.app/items/buurtcampuskrant_categories?filter[district][_eq]=${district}&fields=*,categories.id`
     ),
   ]);
 
