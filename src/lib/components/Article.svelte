@@ -12,7 +12,7 @@
             height="150">
         </a>
         <div class="content">   
-            <h2>{ article.title }</h2>
+            <h2>{ article.side_title }</h2>
 
             <div class="buttons">
                 <a href="/district/{ article.district}">{ article.district }</a>
