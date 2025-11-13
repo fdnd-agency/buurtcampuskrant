@@ -15,7 +15,7 @@
 
 <header class="{props.district}">
     <a href="/" aria-label="terug naar home"><LogoBuurtcampus/></a>
-    <a href="#menu" class="menu-toggle" aria-label="open en sluit button menu" onclick={toggleSidebar}>MENU</a>
+    <a href="#menu" class="menu-toggle" aria-label="open en sluit button menu" onclick={toggleSidebar}>menu</a>
 </header>
 
 <nav id="menu" class="menu" class:open={menuOpen}>
@@ -53,6 +53,9 @@
 </nav>
 
 <style>
+    header a:first-child {
+        z-index: 10;
+    }
     :global(header) {        
         display: flex;
         flex-direction: row;
@@ -176,7 +179,8 @@
             width: fit-content;
         }
 
-        :global(.js .menu li:hover > ul) {
+        :global(.js .menu li:hover > ul), 
+        :global(.js .menu li:focus-within > ul) {
             display: block;
         }
 
