@@ -47,6 +47,13 @@
     --secondary-font: "secondary-font";
     --tertiary-font: "tertiary-font";
 
+    /* BUTTON COLORS */
+  --button-bg: var(--secondary-color-general);
+  --button-hover-bg: var(--secondary-color-general-darker);
+  --button-border: var(--secondary-color-general-darker);
+  --button-hover-text: #ffffff;
+  --title-color: #ffffff;
+
     /* SIZING */
     --xs: .5rem;
     --sm: 1rem;
