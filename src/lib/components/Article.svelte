@@ -72,7 +72,7 @@
                 gap: var(--sm);
 
                 h2 {
-
+                    margin-top: 0.5rem;
                 }
 
                 .buttons {
@@ -89,7 +89,6 @@
                         padding: 0.5rem;
                         border-radius: 25px;
                         text-decoration: none;
-
                     }
                 
                     button:nth-of-type(1) {
@@ -97,6 +96,7 @@
                         color: var(--primary-color-general);
                         border: none;
                     }
+                    
                     button:nth-of-type(2) {
                         background-color: var(--primary-color-general);
                         color: var(--secondary-color-general);
