@@ -13,7 +13,6 @@
         </a>
         <div class="content">   
             <h2>{ article.title }</h2>
-            <p>{ article.intro }</p>
 
             <div class="buttons">
                 <a href="/district/{ article.district}">{ article.district }</a>
