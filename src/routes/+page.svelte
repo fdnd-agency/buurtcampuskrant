@@ -27,8 +27,7 @@
     </section>
 </main>
 
-<style>
-     
+<style>     
     main {
         display: flex;
         flex-direction: column;
