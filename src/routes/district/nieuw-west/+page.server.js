@@ -5,8 +5,8 @@ export async function load() {
     const [categoriesRes, storiesRes] = await Promise.all([
       fetch("https://fdnd-agency.directus.app/items/buurtcampuskrant_categories"),
       fetch(
-
-          `https://fdnd-agency.directus.app/items/buurtcampuskrant_categories?filter[district][_eq]=${district}&fields=*`
+        `https://fdnd-agency.directus.app/items/buurtcampuskrant_stories?filter[district][_eq]=${district}&fields=*,categories.id`
+          // `https://fdnd-agency.directus.app/items/buurtcampuskrant_categories?filter[district][_eq]=${district}&fields=*`
   
         
       ),
@@ -20,7 +20,8 @@ export async function load() {
   
       categories.forEach(cat => {
         cat.stories = stories.filter(story =>
-          story.categories.some(c => c.id === cat.id)
+          // story.categories.some(c => c.id === cat.id)
+          !story.categories.length || story.categories.some(c => c.id === cat.id)
         );
       });
   
