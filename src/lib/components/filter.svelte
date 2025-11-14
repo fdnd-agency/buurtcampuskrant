@@ -37,10 +37,10 @@
 
 <section class="main-section">
   <div class="buttons">
-    <button on:click={() => rubriek = null}>alle</button>
-    <button on:click={() => (rubriek = "De wijk")}>de wijk</button>
-    <button on:click={() => (rubriek = "Bewoners")}>bewoners</button>
-    <button on:click={() => (rubriek = "Studenten")}>studenten</button>
+    <button class:selected={rubriek === null}  on:click={() => rubriek = null}>alle</button>
+    <button class:selected={rubriek === "De wijk"} on:click={() => (rubriek = "De wijk")}>de wijk</button>
+    <button class:selected={rubriek === "Bewoners"} on:click={() => (rubriek = "Bewoners")}>bewoners</button>
+    <button class:selected={rubriek === "Studenten"} on:click={() => (rubriek = "Studenten")}>studenten</button>
   </div>
 
   <section class="content-wrapper">
@@ -122,18 +122,17 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    gap: 5px;
+    gap: var(--xs);
     width: 100%;
-    /* padding: 0 1.5rem; */
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: var(--sm);
+    margin-bottom: var(--sm);
   }
 
   button {
-    border-radius: 20px;
-    padding: 7px 10px;
-    font-family: "Arial", sans-serif;
-    font-size: 1rem;
+    border-radius: var(--border-radius);
+    padding: calc(var(--xs) + 2px) var(--sm);
+    font-family: var(--tertiary-font), Arial, sans-serif;
+    font-size:  var(--sm);
     color: var(--title-color);
     background-color: var(--button-bg);
     border: 1px solid var(--button-border);
@@ -153,6 +152,19 @@
 
   button:active {
    transform: scale(0.97);
+   transition: transform 0.05s ease; 
+  }
+
+  button.selected {
+    color: var(--button-hover-text);
+    background-color: var(--button-hover-bg);
+    transform: scale(0.97);
+    transition: transform 0.05s ease; 
+    box-shadow:  0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+
+  button.selected:active {
+    transform: scale(0.97);
    transition: transform 0.05s ease; 
   }
 
