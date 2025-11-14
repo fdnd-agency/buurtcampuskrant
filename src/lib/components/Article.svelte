@@ -113,5 +113,20 @@
             grid-template-columns: 40% 60%;
         }
     }
+
+    @container --article (width < 230px) {
+        h2 {
+            font-size: var(--sm);
+        }
+
+        button {
+            font-size: 0.7rem;
+        }
+
+        .container img {
+            height: 150px;
+        }
+    }
+
 </style>
 
