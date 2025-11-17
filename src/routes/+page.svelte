@@ -1,7 +1,7 @@
 <script>
-    import { Header } from '$lib';
+    import { Newsletter } from '$lib';
     import { Footer } from '$lib';
-    import Article from '$lib/components/Article.svelte';
+  
 
     export let data;
     const articles = data.article;
@@ -9,53 +9,10 @@
     const recentArticle = data.article[0]
 </script>
 
-<Header />
+<Footer/>
 
-<main>
-    <Header/> 
-    <Filter/>
-    <article>
-        <h2>{recentArticle.title}</h2>
-        <h2>{recentArticle.intro}</h2>
-        <h2>{recentArticle.body}</h2>
-
-    </article>
-    <!-- <p>{recentArticle.}</p> -->
-
-    {#each articles.slice(1) as article}
-        <Article {article}/>
-    {/each}   
-        
-
-    <!-- <Header/> -->
-    <!-- <Filter/>
-
-    <h2>Quote</h2>
-    <Quote/>
-
-    <h2>Newsletter</h2>
-    <Newsletter/>
-    
-    <section>
-       {#each articles as article}
-            <Article {article} />
-        {/each}
-    </section>
-</main>
+ 
 
 <style>
-    main {
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
 
-        section {
-            display: flex;
-            flex-direction: column;
-            max-width: 1000px;
-            padding-top: 5em;
-            gap: 1em;
-        }
-    }
 </style>
- 
