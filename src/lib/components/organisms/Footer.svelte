@@ -1,11 +1,11 @@
 <script>
-    import FacebookLogo from "./FacebookLogo.svelte";
-    import InstagramLogo from "./InstagramLogo.svelte";
-    import Newsletter from "./Newsletter.svelte"
+    import FacebookLogo from "../atoms/FacebookLogo.svelte";
+    import InstagramLogo from "../atoms/InstagramLogo.svelte";
+    import Newsletter from "../molecules/Newsletter.svelte"
     
-    import LogoNieuwWestToren from "./LogoNieuwWestToren.svelte";
-    import LogoZuidOostToren from "./LogoZuidOostToren.svelte";
-    import LogoOostToren from "./LogoOostToren.svelte";
+    import LogoNieuwWestToren from "../atoms/LogoNieuwWestToren.svelte";
+    import LogoZuidOostToren from "../atoms/LogoZuidOostToren.svelte";
+    import LogoOostToren from "../atoms/LogoOostToren.svelte";
 </script>
 
 <footer>
