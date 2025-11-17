@@ -1,7 +1,7 @@
 <script>
     import { Header } from '$lib';
     import { Footer } from '$lib';
-    import Article from '$lib/components/Article.svelte';
+    import Article from '$lib/components/molecules/Article.svelte';
 
     export let data;
     const articles = data.article;

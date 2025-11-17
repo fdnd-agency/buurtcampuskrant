@@ -1,8 +1,8 @@
 <script>
-    import LogoNieuwWestToren from "./LogoNieuwWestToren.svelte";
-    import LogoZuidOostToren from "./LogoZuidOostToren.svelte";
-    import LogoOostToren from "./LogoOostToren.svelte";
-    import LogoBuurtcampus from "./LogoBuurtcampus.svelte";
+    import LogoNieuwWestToren from "../atoms/LogoNieuwWestToren.svelte";
+    import LogoZuidOostToren from "../atoms/LogoZuidOostToren.svelte";
+    import LogoOostToren from "../atoms/LogoOostToren.svelte";
+    import LogoBuurtcampus from "../atoms/LogoBuurtcampus.svelte";
 
     let props = $props();
 
