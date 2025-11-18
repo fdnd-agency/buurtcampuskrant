@@ -5,11 +5,13 @@
 <article data-district="{article.district}">
     <a href="/nieuws/{article.id}">
         <div class="container">
-            <img 
-                src="https://fdnd-agency.directus.app/assets/{article.cover}" 
-                alt="" 
-                width="280" 
-                height="150">
+            <picture>
+                <source 
+                    srcset="https://fdnd-agency.directus.app/assets/{ article.cover }?format=webp&width=500"
+                    media="(min-width: 430px)"
+                    type="image/webp">
+                <img src="https://fdnd-agency.directus.app/assets/{ article.cover }?width=300" alt="">
+            </picture>
 
             <div class="content">   
                 <h2>{ article.title }</h2>
@@ -21,7 +23,6 @@
             </div>
         </div>
     </a>
-    
 </article>
 
 <style>
@@ -62,6 +63,7 @@
                 object-position: center;
                 height: 100%;
                 max-height: 240px;
+                display: block;
             }
 
             .content {
@@ -73,6 +75,7 @@
 
                 h2 {
                     margin-top: 0.5rem;
+                    font-size: clamp(1.3rem, 5vw, 1.8rem);
                 }
 
                 .buttons {
@@ -127,6 +130,5 @@
             height: 150px;
         }
     }
-
 </style>
 
