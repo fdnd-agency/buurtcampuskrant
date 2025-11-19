@@ -6,23 +6,30 @@
 
 @font-face {
     font-family: "primary-font";
-    src: url('./fonts/BuurtCampusArial-Bold.ttf') format('truetype');
+    src: url('./fonts/BuurtCampusArial-Bold.woff2') format('woff2'), 
+         url('./fonts/BuurtCampusArial-Bold.woff') format('woff'), 
+         url('./fonts/BuurtCampusArial-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "secondary-font";
-    src: url('./fonts/Arial-BoldMT.ttf') format('truetype');
+    src: url('./fonts/Arial-BoldMT.woff2') format('woff2'), 
+         url('./fonts/Arial-BoldMT.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "tertiary-font";
-    src: url('./fonts/Arial.ttf') format('truetype');
+    src: url('./fonts/Arial.woff2') format('woff2'), 
+         url('./fonts/Arial.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 :root {
