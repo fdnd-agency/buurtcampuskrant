@@ -1,11 +1,11 @@
 <script>
-    import FacebookLogo from "./FacebookLogo.svelte";
-    import InstagramLogo from "./InstagramLogo.svelte";
-    import Newsletter from "$lib/components/Newsletter.svelte";
+    import FacebookLogo from "../atoms/FacebookLogo.svelte";
+    import InstagramLogo from "../atoms/InstagramLogo.svelte";
+    import Newsletter from "../molecules/Newsletter.svelte"
     
-    import LogoNieuwWestToren from "./LogoNieuwWestToren.svelte";
-    import LogoZuidOostToren from "./LogoZuidOostToren.svelte";
-    import LogoOostToren from "./LogoOostToren.svelte";
+    import LogoNieuwWestToren from "../atoms/LogoNieuwWestToren.svelte";
+    import LogoZuidOostToren from "../atoms/LogoZuidOostToren.svelte";
+    import LogoOostToren from "../atoms/LogoOostToren.svelte";
 </script>
 
 <footer>
@@ -104,11 +104,13 @@
                 
                     .submenu {
                         display: inline-block;
+                        li {
+                            padding-bottom: .25rem;
+                        }
                         a {
                             font-family: var(--tertiary-font);
                             text-decoration: none;
-                            color: var(--primary-color-general-darker);
-                            padding-bottom: var(--xs);
+                            color: var(--secondary-color-general);
 
                             &:hover {
                                 font-family: var(--secondary-font);
