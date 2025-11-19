@@ -120,7 +120,7 @@
         background: var(--accent-color);
         color: white;
         text-decoration: none;
-        font-family: "primary-font";
+        font-family: var(--primary-font);
         text-align: center;
 
             &:hover {

@@ -1,19 +1,54 @@
+<script>
+    import { onMount } from 'svelte';
+
+    onMount(() => {                                                                                 // wordt pas uitgevoerd als de DOM geladen is
+        const AccessibilityOptions = document.querySelectorAll('.input-dialog [type="radio"]');     // zoeken alle radio buttons
+
+        AccessibilityOptions.forEach(AccessibilityOption => {                                       // splitsen radio buttons op
+            AccessibilityOption.addEventListener("change", handleAccessibilityOptionChange);        // als er iets wijzigt met 1 van deze dan handle...
+        });
+
+        function handleAccessibilityOptionChange(event) {                               
+            localStorage.setItem(event.target.name, event.target.value);                            // je bewaart de value in de naam als het wijzigt in de localstorage
+        }
+
+        function getAccessibilityOptionOnload() {                                                   // als de component/pagina geladen wordt functie
+            const fontOption = localStorage.getItem("font-setting");                                // opgeslagen font waarde uit localstorage ophalen
+            if (fontOption) {                                                                       // checken of het gelukt is
+                 const fontRadio = document.querySelector("[value='" + fontOption + "']");          // radio zoeken waarvan de value was opgeslagen in localstorage
+                fontRadio.checked = true;                                                           // radio checked 
+            }
+
+            const colorSchemeOption = localStorage.getItem("dl-mode");
+            if (colorSchemeOption) {
+                const colorSchemeRadio = document.querySelector("[value='" + colorSchemeOption + "']");
+                colorSchemeRadio.checked = true;
+            }
+
+        };
+
+        getAccessibilityOptionOnload();     
+
+    });
+</script>
+
 <a class="dialog-trigger" href="#dialogid">toegankelijkheid</a>
 
 <div id="dialogid" class="dialog-window">
-	<a class="close-dialog-bg" href="/"></a>
+	<a class="close-dialog-bg" href="#"></a>
 	
 	<div class="input-dialog">
-			<a class="close-dialog-trigger" href="/" title="Close">sluiten</a>
+			<a class="close-dialog-trigger" href="#" title="Close">sluiten</a>
 		<!-- Content here -->
 		<h2 class="md">Selecteer je voorkeur</h2>
         <!-- <fieldset> -->
-		<label><input type="radio" value="normal-font" name="font" checked/>Normaal font</label>
-		<label><input type="radio" value="dyslexia-font" name="font"/>Dyslexie font</label>
+		<label><input type="radio" value="normal-font" name="font-setting" checked/>Normaal font</label>
+		<label><input type="radio" value="dyslexia-font" name="font-setting"/>Dyslexie font</label>
 		<!-- </fieldset> -->
 
-		<label><input type="radio" value="light-mode" id="light-mode" name="dl-mode"/>Light mode</label>
-		<label><input type="radio" value="dark-mode" id="dark-mode" name="dl-mode"/>Dark mode</label>
+		<label><input type="radio" value="auto-dl-mode" id="auto" name="dl-mode" checked/>Automatisch</label>
+		<label><input type="radio" value="light-dl-mode" id="light-mode" name="dl-mode"/>Light mode</label>
+		<label><input type="radio" value="dark-dl-mode" id="dark-mode" name="dl-mode"/>Dark mode</label>
 	</div>
 </div>
 
@@ -99,20 +134,4 @@ label {
 .close-dialog-trigger {
 	color: var(--secondary-color-general);
 }
-
-
-:global(body:has(.input-dialog #light-mode:checked)) {
-    /* color-scheme: light; */
-    /* --dark-mode-general: var(--primary-color-general);
-    --tertiary-color-general: var(--secondary-color-general); */
-    body {
-        --primary-font: var(--secondary-font);
-} 
-}
-
-/* :global(body:has(.input-dialog #dark-mode:checked)) {
-    color-scheme: dark;
-    --primary-color-general: var(--primary-color-general);
-}  */
-
 </style>

@@ -26,29 +26,27 @@
 }
 
 :root {
+    color-scheme:light dark;
+
     /* COLOR */
-    --primary-color-general: #B4BDD0;
-    --secondary-color-general: #333D52;
+    --primary-color-general: light-dark(#B4BDD0, #333D52);
+    --secondary-color-general: light-dark(#333D52, #E4E8EE);
     --tertiary-color-general: #E4E8EE; 
-    --dark-mode-general: #333D52;
 
     --accent-color: #C94D12;
     --accent-color-darker: #843101;
     --accent-color-lighter: #FEF0E7;
 
-    --primary-color-east: #303A6D;
-    --secondary-color-east: #E3E5F2;
+    --primary-color-east: light-dark(#303A6D, #111527);
+    --secondary-color-east: light-dark(#E3E5F2, #CDD1E9);
     --tertiary-color-east: #CDD1E9;
-    --dark-mode-east: #111527;
 
-    --primary-color-new-west: #8EA34B;
+    --primary-color-new-west: light-dark(#8EA34B, #343B1B);
     --secondary-color-new-west: #F5F8EC;
     --tertiary-color-new-west: #2F3418;
-    --dark-mode-new-west: #343B1B;
 
-    --primary-color-south-east: #085B64;
+    --primary-color-south-east: light-dark(#085B64, #021A1C);
     --secondary-color-south-east: #E5F3F5;
-    --dark-mode-south-east: #021A1C;
 
     --primary-font: "primary-font";
     --secondary-font: "secondary-font";
@@ -66,20 +64,36 @@
     --border-radius: 1.5rem;
 }
 
-body {
+:root:has( [value="light-dl-mode"]:checked ) {
+    color-scheme:light;
+    --border:none;
+}
+
+:root:has( [value="dark-dl-mode"]:checked ) {
+    color-scheme:dark;
+     --border:solid 1px red;
+}
+
+:root:has( [value="dyslexia-font"]:checked ) {
+    --primary-font: var(--secondary-font);
+}
+
+
+
+/* body {
     @media (prefers-color-scheme: dark) {
         --primary-color-general: var(--dark-mode-general);
         --secondary-color-general: var(--tertiary-color-general);
     }
-}
+} */
 
 body.route-zuid-oost {
     --primary-color-general: var(--primary-color-south-east);
     --secondary-color-general: var(--secondary-color-south-east);
 
-    @media (prefers-color-scheme: dark) {
-        --primary-color-general: var(--dark-mode-south-east);
-    }
+    /* @media (prefers-color-scheme: dark) { */
+        /* --primary-color-general: var(--dark-mode-south-east); */
+    /* } */
 }
 
 body.route-oost {
@@ -87,8 +101,8 @@ body.route-oost {
     --secondary-color-general: var(--secondary-color-east);
 
     @media (prefers-color-scheme: dark) {
-        --primary-color-general: var(--dark-mode-east);
-        --secondary-color-general: var(--tertiary-color-east);
+        /* --primary-color-general: var(--dark-mode-east); */
+        /* --secondary-color-general: var(--tertiary-color-east); */
     }
 }
 
@@ -97,8 +111,8 @@ body.route-nieuw-west {
     --secondary-color-general: var(--tertiary-color-new-west);
 
     @media (prefers-color-scheme: dark) {
-        --primary-color-general: var(--dark-mode-new-west);
-        --secondary-color-general: var(--secondary-color-new-west);
+        /* --primary-color-general: var(--dark-mode-new-west); */
+        /* --secondary-color-general: var(--secondary-color-new-west); */
     }
 }
 
@@ -220,3 +234,10 @@ article {
         rotate: -5deg;
     }
 }
+
+/* body:has(.input-dialog [value="dyslexia-font"]:checked) {
+    a {
+        font-family: "secondary-font";
+        opacity:.5;
+    } 
+} */

@@ -44,8 +44,7 @@
 
 <Header/>
 <AccessibleMenu/>
-<!-- {@render children?.()} -->
-
+{@render children?.()}
 <Footer/>
 
 
