@@ -4,9 +4,16 @@
 [Live Link Website](https://buurtcampuskrant.netlify.app/)
 
 ## Description
+
+
+https://github.com/user-attachments/assets/34c24c6e-8a70-49e5-b5d1-2fe01edd41bd
+
+
+
 Our assignment was to work as a team to create a digital version of the buurtcampus newspaper. This is a collaboration between Amsterdam University of Applied Sciences and Amsterdam Public Library, spread across various districts: East, New West and South-East. Buurtcampuskrant organises various social projects and campaigns aimed at enriching the neighbourhood. Important themes include sustainability, the environment and learning. The newspaper keeps you informed about these activities that have taken place. A paper version that can reach a larger audience through a digital version. 
 
-School intends to work with Svelte and Sveltekit. The focus was on dividing the site into different sections (components) that recur frequently on the website. A lot of attention was also paid to the use of colours. Finally, we had to get to work on information architecture and creating a data model.
+We made this digital newspaper with Svelte and Sveltekit. The focus was on dividing the site into different sections (components) that recur frequently on the website. A lot of attention was also paid to the use of colours. Furthermore we have a homepage (where u land on first), this will show you the most recent newsarticle. On the side of that u can find a short link to other news articles. U can also navigate to differect district pages. 
+
 
 
 
@@ -17,13 +24,10 @@ We had already been given a house style and the paper newspaper provided some gu
 
 We chose to carry the colors associated with a particular neighborhood through to the smallest details. This can be seen, for example, in the header and footer, which use the matching background color for each neighborhood. But it can also be found in accent colors in, for example, the small overview of news articles and details such as a filter. 
 
-<img width="800" height="503" alt="variated colors designs" src="https://github.com/user-attachments/assets/98a3c70d-7fdf-4bac-acf5-ee516d56ea43" />
-
+<img width="1075" height="662" alt="Screenshot 2025-10-29 at 17 42 01" src="https://github.com/user-attachments/assets/a4ce6acf-2269-4956-af13-f8e57f2aeb0d" />
 
 
 Furthermore, the flag element is also frequently used in the menu, for example. This is used to open the menu (on small screens) and for the links in the navigation as a so-called :hover state (the animation that takes place when the mouse moves over a link). 
-
-
 
 Of course, the design is responsive, so it works on both small and large screens. 
 
@@ -35,9 +39,8 @@ Of course, the design is responsive, so it works on both small and large screens
 Components are various elements that appear frequently on multiple pages. Below are components that we have used. 
 
 * [Header.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/Header.svelte) This component contains de header with the responsive navigation. It is also progressive enhanced, which means that it'll still work without JS and CSS. 
-* [Article.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/Article.svelte) This component is a brief overview of the new item and links to its detail page.
+* [Article.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/Article.svelte) This component is a brief overview of the new item and links to its detail page where you can read all about the article in an expanded version.
 * [Filter.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/filter.svelte) The filter component ensures that a neighbourhood page can be filtered according to different categories.
-* [Quote.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/Quote.svelte) This component highlights a part from the article.
 * [Footer.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/Footer.svelte) This component contains a newsletter, links to socials and a navigation. This will also take place on every page.  
 * [Newsletter.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/Newsletter.svelte) The newsletter will be implemented in the footer. It goes without saying, but this is where people can subscribe to the newsletter.
 

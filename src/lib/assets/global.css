@@ -6,42 +6,56 @@
 
 @font-face {
     font-family: "primary-font";
-    src: url('./fonts/BuurtCampusArial-Bold.ttf') format('truetype');
+    src: url('./fonts/BuurtCampusArial-Bold.woff2') format('woff2'), 
+         url('./fonts/BuurtCampusArial-Bold.woff') format('woff'), 
+         url('./fonts/BuurtCampusArial-Bold.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "secondary-font";
-    src: url('./fonts/Arial-BoldMT.ttf') format('truetype');
+    src: url('./fonts/Arial-BoldMT.woff2') format('woff2'), 
+         url('./fonts/Arial-BoldMT.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
     font-family: "tertiary-font";
-    src: url('./fonts/Arial.ttf') format('truetype');
+    src: url('./fonts/Arial.woff2') format('woff2'), 
+         url('./fonts/Arial.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: swap;
 }
 
 :root {
     /* COLOR */
     --primary-color-general: #B4BDD0;
-    --primary-color-general-darker: #333D52;
-    --secondary-color-general: #F26522;
-    --secondary-color-general-darker: #B84809;
+    --secondary-color-general: #333D52;
+    --tertiary-color-general: #E4E8EE; 
+    --dark-mode-general: #333D52;
+
+    --accent-color: #C94D12;
+    --accent-color-darker: #843101;
+    --accent-color-lighter: #FEF0E7;
 
     --primary-color-east: #303A6D;
     --secondary-color-east: #E3E5F2;
+    --tertiary-color-east: #CDD1E9;
+    --dark-mode-east: #111527;
 
     --primary-color-new-west: #8EA34B;
     --secondary-color-new-west: #F5F8EC;
     --tertiary-color-new-west: #2F3418;
+    --dark-mode-new-west: #343B1B;
 
     --primary-color-south-east: #085B64;
     --secondary-color-south-east: #E5F3F5;
-    
+    --dark-mode-south-east: #021A1C;
 
     --primary-font: "primary-font";
     --secondary-font: "secondary-font";
@@ -59,6 +73,42 @@
     --border-radius: 1.5rem;
 }
 
+body {
+    @media (prefers-color-scheme: dark) {
+        --primary-color-general: var(--dark-mode-general);
+        --secondary-color-general: var(--tertiary-color-general);
+    }
+}
+
+body.route-zuid-oost {
+    --primary-color-general: var(--primary-color-south-east);
+    --secondary-color-general: var(--secondary-color-south-east);
+
+    @media (prefers-color-scheme: dark) {
+        --primary-color-general: var(--dark-mode-south-east);
+    }
+}
+
+body.route-oost {
+    --primary-color-general: var(--primary-color-east);
+    --secondary-color-general: var(--secondary-color-east);
+
+    @media (prefers-color-scheme: dark) {
+        --primary-color-general: var(--dark-mode-east);
+        --secondary-color-general: var(--tertiary-color-east);
+    }
+}
+
+body.route-nieuw-west {
+    --primary-color-general: var(--primary-color-new-west);
+    --secondary-color-general: var(--tertiary-color-new-west);
+
+    @media (prefers-color-scheme: dark) {
+        --primary-color-general: var(--dark-mode-new-west);
+        --secondary-color-general: var(--secondary-color-new-west);
+    }
+}
+
 h1,
 .xl {
     font-size: clamp(2.5rem, 6vw, 3.5rem);
@@ -68,6 +118,7 @@ h1,
 h2,
 .lg {
     font-size: clamp(2rem, 5vw, 2.5rem);
+    font-family: var(--primary-font);
 }
 
 h3,
@@ -79,6 +130,94 @@ h4,
 .sm {
     font-size: clamp(1rem, 3.5vw, 1.5rem)
 }
+p,a {
+    font-family: var(--tertiary-font);
+}
+
+
+.label-district {
+    border: 1px solid var(--secondary-color-general);
+    background-color: var(--secondary-color-general);
+    width: fit-content;
+    padding: .25rem 1rem;
+    border-radius: 1rem;
+    color: var(--tertiary-color-general);
+}
+.label-outline {
+    border: 1px solid var(--secondary-color-general);
+    background-color: var(--tertiary-color-general);
+    width: fit-content;
+    padding: .25rem 1rem;
+    border-radius: 1rem;
+    color: var(--secondary-color-general);
+}
+
+blockquote {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    font-family: var(--secondary-font);
+    background-color: var(--secondary-color-general);
+    color: var(--tertiary-color-general);
+    width: fit-content;
+    padding: var(--md);
+    border-radius: var(--lg);
+    margin: var(--md);
+}
+
+article {
+    justify-items: center;
+
+    .label-district, .label-outline {
+        margin-bottom: 1.5rem;
+    }
+    .title {
+        margin-bottom: var(--sm);
+    }
+    .title, .intro, p {
+        max-width: 65vw;
+    }
+    .intro {
+        font-family: var(--secondary-font);
+    }
+    .side-title {
+        font-family: var(--primary-font);
+        font-size: clamp(1.5rem, 4vw, 2rem);
+        writing-mode: sideways-lr;
+        float: left;
+        padding-top: 4rem;
+        shape-outside: polygon(0 0, 0 4rem, 100% 4rem, 100% 100%, 0 100%);
+        margin: 1rem 1rem 1rem 0;
+        max-height: 90vh;
+    }
+    .cover {
+        /* float: right; */
+        width: 70%;
+        height: 30vh;
+        object-fit: cover;
+        margin-top: 1rem;
+    }
+    .body {
+        img:first-child {
+            display: none;
+        }
+        p {
+            padding-top: .5rem;
+        }
+    }
+
+    @media (width > 34rem) {
+        .cover {
+            float: right;
+            width: 30vw;
+            margin: 1rem 2rem 2rem 2rem;
+        }
+    }
+}
+
+
 
 @keyframes hover-effect {
     40% {

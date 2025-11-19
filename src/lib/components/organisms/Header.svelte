@@ -1,8 +1,8 @@
 <script>
-    import LogoNieuwWestToren from "./LogoNieuwWestToren.svelte";
-    import LogoZuidOostToren from "./LogoZuidOostToren.svelte";
-    import LogoOostToren from "./LogoOostToren.svelte";
-    import LogoBuurtcampus from "./LogoBuurtcampus.svelte";
+    import LogoNieuwWestToren from "../atoms/LogoNieuwWestToren.svelte";
+    import LogoZuidOostToren from "../atoms/LogoZuidOostToren.svelte";
+    import LogoOostToren from "../atoms/LogoOostToren.svelte";
+    import LogoBuurtcampus from "../atoms/LogoBuurtcampus.svelte";
 
     let props = $props();
 
@@ -14,8 +14,8 @@
 </script>
 
 <header class="{props.district}">
-    <a href="" aria-label="terug naar home"><LogoBuurtcampus/></a>
-    <a href="#menu" class="menu-toggle" onclick={toggleSidebar}>MENU</a>
+    <a href="/" aria-label="terug naar home"><LogoBuurtcampus/></a>
+    <a href="#menu" class="menu-toggle" aria-label="open en sluit button menu" onclick={toggleSidebar}>menu</a>
 </header>
 
 <nav id="menu" class="menu" class:open={menuOpen}>
@@ -53,6 +53,9 @@
 </nav>
 
 <style>
+    header a:first-child {
+        z-index: 10;
+    }
     :global(header) {        
         display: flex;
         flex-direction: row;
@@ -93,7 +96,7 @@
             
         }   
         a {
-            color: var(--primary-color-general-darker);
+            color: var(--secondary-color-general);
             text-decoration: none;
             display: block;
             font-family: "tertiary-font";
@@ -114,14 +117,14 @@
     .menu-toggle {
         display: inline-block;
         padding: var(--xs) var(--md);
-        background: var(--secondary-color-general);
+        background: var(--accent-color);
         color: white;
         text-decoration: none;
         font-family: "primary-font";
         text-align: center;
 
             &:hover {
-                background-color: var(--secondary-color-general-darker);
+                background-color: var(--accent-color-darker);
             }
     }
 
@@ -157,7 +160,7 @@
                     position: relative;
 
                     a {
-                        color: var(--primary-color-general-darker);
+                        color: var(--secondary-color-general);
                         text-decoration: none;
                         padding: var(--xs) var(--sm);
                     }
@@ -176,7 +179,8 @@
             width: fit-content;
         }
 
-        :global(.js .menu li:hover > ul) {
+        :global(.js .menu li:hover > ul), 
+        :global(.js .menu li:focus-within > ul) {
             display: block;
         }
 
