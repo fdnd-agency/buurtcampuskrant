@@ -31,7 +31,7 @@
     /* COLOR */
     --primary-color-general: light-dark(#B4BDD0, #333D52);
     --secondary-color-general: light-dark(#333D52, #E4E8EE);
-    --tertiary-color-general: #E4E8EE; 
+    --tertiary-color-general: light-dark(#E4E8EE, #555e72); 
 
     --accent-color: #C94D12;
     --accent-color-darker: #843101;
@@ -78,42 +78,19 @@
     --primary-font: var(--secondary-font);
 }
 
-
-
-/* body {
-    @media (prefers-color-scheme: dark) {
-        --primary-color-general: var(--dark-mode-general);
-        --secondary-color-general: var(--tertiary-color-general);
-    }
-} */
-
 body.route-zuid-oost {
     --primary-color-general: var(--primary-color-south-east);
     --secondary-color-general: var(--secondary-color-south-east);
-
-    /* @media (prefers-color-scheme: dark) { */
-        /* --primary-color-general: var(--dark-mode-south-east); */
-    /* } */
 }
 
 body.route-oost {
     --primary-color-general: var(--primary-color-east);
     --secondary-color-general: var(--secondary-color-east);
-
-    @media (prefers-color-scheme: dark) {
-        /* --primary-color-general: var(--dark-mode-east); */
-        /* --secondary-color-general: var(--tertiary-color-east); */
-    }
 }
 
 body.route-nieuw-west {
     --primary-color-general: var(--primary-color-new-west);
     --secondary-color-general: var(--tertiary-color-new-west);
-
-    @media (prefers-color-scheme: dark) {
-        /* --primary-color-general: var(--dark-mode-new-west); */
-        /* --secondary-color-general: var(--secondary-color-new-west); */
-    }
 }
 
 h1,
