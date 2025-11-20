@@ -2,7 +2,7 @@
     export let article;
 </script>
 
-<article data-district="{article.district}">
+<article class="route-{article.district}" data-district="{article.district}">
     <a href="/nieuws/{article.id}">
         <div class="container">
             <picture>
@@ -29,16 +29,31 @@
     article[data-district="east"] {
         --primary-color-general: var(--secondary-color-east);
         --secondary-color-general: var(--primary-color-east);
+
+        @media (prefers-color-scheme: dark) {
+            --primary-color-general: var(--dark-mode-east);
+            --secondary-color-general: var(--tertiary-color-east);
+        }
     }
 
     article[data-district="new-west"] {
         --primary-color-general: var(--secondary-color-new-west);
         --secondary-color-general: var(--primary-color-new-west);
+
+        @media (prefers-color-scheme: dark) {
+            --primary-color-general: var(--dark-mode-new-west);
+            --secondary-color-general: var(--secondary-color-new-west);
+        }
     }
 
     article[data-district="south-east"] {
         --primary-color-general: var(--secondary-color-south-east);
         --secondary-color-general: var(--primary-color-south-east);
+
+        @media (prefers-color-scheme: dark) {
+            --primary-color-general: var(--dark-mode-south-east);
+            --secondary-color-general: var(--secondary-color-south-east)
+        }
     }
 
     article { 
