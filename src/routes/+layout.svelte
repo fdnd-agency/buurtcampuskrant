@@ -4,6 +4,7 @@
 
 	import { Header } from '$lib';
     import { Footer } from '$lib';
+	import { AccessibleMenu } from '$lib';
 
 	// HEADER
 	import { afterNavigate } from '$app/navigation';
@@ -42,9 +43,8 @@
 
 
 <Header/>
-
+<AccessibleMenu/>
 {@render children?.()}
-
 <Footer/>
 
 
