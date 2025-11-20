@@ -32,106 +32,109 @@
     });
 </script>
 
-<a class="dialog-trigger" href="#dialogid">toegankelijkheid</a>
+<!-- <a class="dialog-trigger" href="#dialogid">toegankelijkheid</a>
 
 <div id="dialogid" class="dialog-window">
 	<a class="close-dialog-bg" href="#"></a>
 	
 	<div class="input-dialog">
-			<a class="close-dialog-trigger" href="#" title="Close">sluiten</a>
+			<a class="close-dialog-trigger" href="#" title="Close">sluiten</a> -->
+		<!-- Content here -->
+		<!-- <h2 class="md">Selecteer je voorkeur</h2>
+        <fieldset>
+		    <label><input type="radio" value="normal-font" name="font-setting" checked/>Normaal font</label>
+		    <label><input type="radio" value="dyslexia-font" name="font-setting"/>Dyslexie font</label>
+		</fieldset>
+
+        <fieldset>
+		    <label><input type="radio" value="auto-dl-mode" id="auto" name="dl-mode" checked/>Automatisch</label>
+		    <label><input type="radio" value="light-dl-mode" id="light-mode" name="dl-mode"/>Light mode</label>
+		    <label><input type="radio" value="dark-dl-mode" id="dark-mode" name="dl-mode"/>Dark mode</label>
+        </fieldset>
+	</div>
+</div> -->
+
+<button popovertarget="accessible-menu">Toegankelijkheid</button>
+
+<section  popover id="accessible-menu" class="dialog-window">
+	<div class="input-dialog">
 		<!-- Content here -->
 		<h2 class="md">Selecteer je voorkeur</h2>
-        <!-- <fieldset> -->
-		<label><input type="radio" value="normal-font" name="font-setting" checked/>Normaal font</label>
-		<label><input type="radio" value="dyslexia-font" name="font-setting"/>Dyslexie font</label>
-		<!-- </fieldset> -->
+        <fieldset>
+		    <label><input type="radio" value="normal-font" name="font-setting" checked/>Normaal font</label>
+		    <label><input type="radio" value="dyslexia-font" name="font-setting"/>Dyslexie font</label>
+		</fieldset>
 
-		<label><input type="radio" value="auto-dl-mode" id="auto" name="dl-mode" checked/>Automatisch</label>
-		<label><input type="radio" value="light-dl-mode" id="light-mode" name="dl-mode"/>Light mode</label>
-		<label><input type="radio" value="dark-dl-mode" id="dark-mode" name="dl-mode"/>Dark mode</label>
+        <fieldset>
+		    <label><input type="radio" value="auto-dl-mode" id="auto" name="dl-mode" checked/>Automatisch</label>
+		    <label><input type="radio" value="light-dl-mode" id="light-mode" name="dl-mode"/>Light mode</label>
+		    <label><input type="radio" value="dark-dl-mode" id="dark-mode" name="dl-mode"/>Dark mode</label>
+        </fieldset>
 	</div>
-</div>
+</section>
 
 <style>
-    .dialog-window {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-
+    button {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        
-        background-color: rgba(38, 38, 38, 0.7);
-        z-index: 100;
+        place-self: end;
+        padding: .5rem 1rem;
+        margin: 1rem;
+        background-color: var(--primary-color-general);
+        color: var(--secondary-color-general);
+        /* border: var(.5px solid var(--secondary-color-general)); */
+        font-size: 1rem;
+        border: 1px solid var(--secondary-color-general);
 
-        /* DISPLAY NONE */
-        opacity: 0;
-        pointer-events: none;
-
-        transition: all 0.2s ease-in;
-
-        .close-dialog-trigger {
-            display: block;
-            text-align: right;
-            text-decoration: none;
+        &:hover {
+            background-color: var(--secondary-color-general);
+            color: var(--primary-color-general);
         }
+    }
 
+    :popover-open {
         .input-dialog {
             background: var(--primary-color-general);
             border: 1px solid var(--secondary-color-general);
-            padding: 1rem;
-            
+            padding: 3rem 1rem;
+
             display: flex;
+            align-items: center;
             flex-direction: column;
             gap: .5rem;
             color: var(--secondary-color-general);
-    
-            opacity: 0;
-            transform: scale(0.7);
-            transition: all 0.1s ease-in;
-        }
 
-        .close-dialog-bg {
-            display: block;
-            width: 100%;
-            height: 100%;
             position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -1;
-            cursor: default;
-        }
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw;
+        transition: all 0.2s ease-in;
 
-        &:target {
-            opacity: 1;
-            pointer-events: auto;
 
-        .input-dialog {
-                opacity: 1;
-                transform: scale(1);
+            fieldset {
+                border: none;
             }
         }
-}
 
+        &::backdrop {
+            background: rgba(38, 38, 38, 0.7);
+        }
+    }
+
+    @media (width > 30rem) {
+        .input-dialog {
+            max-width: 60vw;
+        }
+    }
+    @media (width > 743px) {
+        .input-dialog {
+            max-width: 25rem;
+        }
+    }
+    
 label {
     font-family: var(--secondary-font);
     display: flex;
     gap: var(--xs);
-}
-
-.dialog-trigger {
-	display: inline-block;
-	color: var(--secondary-color-general);
-	background: var(--primary-color-general);
-	text-decoration: none;
-	
-	padding: 1rem;
-}
-
-.close-dialog-trigger {
-	color: var(--secondary-color-general);
 }
 </style>

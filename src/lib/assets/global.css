@@ -103,6 +103,7 @@ h2,
 .lg {
     font-size: clamp(2rem, 5vw, 2.5rem);
     font-family: var(--primary-font);
+    line-height: 1;
 }
 
 h3,
@@ -117,6 +118,11 @@ h4,
 p,a {
     font-family: var(--tertiary-font);
 }
+p {
+    max-width: 30rem;
+    line-height: 1.5;
+}
+
 
 
 .label-district {
@@ -160,9 +166,6 @@ article {
     .title {
         margin-bottom: var(--sm);
     }
-    .title, .intro, p {
-        max-width: 65vw;
-    }
     .intro {
         font-family: var(--secondary-font);
     }
@@ -175,6 +178,8 @@ article {
         shape-outside: polygon(0 0, 0 4rem, 100% 4rem, 100% 100%, 0 100%);
         margin: 1rem 1rem 1rem 0;
         max-height: 90vh;
+        text-align: center;
+        line-height: 1;
     }
     .cover {
         /* float: right; */
@@ -201,8 +206,6 @@ article {
     }
 }
 
-
-
 @keyframes hover-effect {
     40% {
         rotate: 5deg;
@@ -211,10 +214,3 @@ article {
         rotate: -5deg;
     }
 }
-
-/* body:has(.input-dialog [value="dyslexia-font"]:checked) {
-    a {
-        font-family: "secondary-font";
-        opacity:.5;
-    } 
-} */
