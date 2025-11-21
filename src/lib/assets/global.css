@@ -43,7 +43,7 @@
 
     --primary-color-new-west: light-dark(#8EA34B, #343B1B);
     --secondary-color-new-west: #F5F8EC;
-    --tertiary-color-new-west: #2F3418;
+    --tertiary-color-new-west: light-dark(#2F3418, #F5F8EC);
 
     --primary-color-south-east: light-dark(#085B64, #021A1C);
     --secondary-color-south-east: #E5F3F5;
