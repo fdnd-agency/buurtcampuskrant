@@ -40,15 +40,18 @@
     header a:first-child {
         z-index: 10;
     }
-    :global(header) {        
+    header {        
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
         background-color: var(--primary-color-general);
         padding: var(--sm);
-        position: relative;
+
+        border-radius: var(--border-radius-sm);
+        margin: var(--sm);
     }
+ 
         
     /* zonder JS menu onderaan pagina */
     .menu {

@@ -38,6 +38,7 @@
         article {
             padding: var(--sm);
             background-color: var(--tertiary-color-general);
+            border-radius: var(--border-radius-sm);
             height: 100%;
 
             h2, .side-title {
