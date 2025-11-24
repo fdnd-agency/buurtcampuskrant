@@ -16,41 +16,25 @@
 <header class="{props.district}">
     <a href="/" aria-label="terug naar home"><LogoBuurtcampus/></a>
     <a href="#menu" class="menu-toggle" aria-label="open en sluit button menu" onclick={toggleSidebar}>menu</a>
+
+    <nav id="menu" class="menu" class:open={menuOpen}>
+        <ul>
+        <li class="menu-item">
+            <a href="/district/nieuw-west" aria-label="Nieuw-west"><LogoNieuwWestToren/></a>
+        </li>
+
+        <li class="menu-item">
+            <a href="/district/zuid-oost" aria-label="Zuid-oost"><LogoZuidOostToren/></a>
+        </li>
+
+        <li class="menu-item">
+            <a href="/district/oost" aria-label="Oost"><LogoOostToren/></a>
+        </li>
+        </ul>
+    </nav>
 </header>
 
-<nav id="menu" class="menu" class:open={menuOpen}>
-    <ul>
-      <li class="menu-item">
-        <a href="/district/nieuw-west" aria-label="Nieuw-west"><LogoNieuwWestToren/></a>
-        <ul class="submenu">
-          <li><a href="#">de wijk</a></li>
-          <li><a href="#">studenten</a></li>
-          <li><a href="#">bewoners</a></li>
-          <li><a href="#">wijkpartners</a></li>
-        </ul>
-      </li>
 
-      <li class="menu-item">
-        <a href="/district/zuid-oost" aria-label="Zuid-oost"><LogoZuidOostToren/></a>
-        <ul class="submenu">
-          <li><a href="#">de wijk</a></li>
-          <li><a href="#">studenten</a></li>
-          <li><a href="#">bewoners</a></li>
-          <li><a href="#">wijkpartners</a></li>
-        </ul>
-      </li>
-
-      <li class="menu-item">
-        <a href="/district/oost" aria-label="Oost"><LogoOostToren/></a>
-        <ul class="submenu">
-          <li><a href="#">de wijk</a></li>
-          <li><a href="#">studenten</a></li>
-          <li><a href="#">bewoners</a></li>
-          <li><a href="#">wijkpartners</a></li>
-        </ul>
-      </li>
-    </ul>
-</nav>
 
 <style>
     header a:first-child {
@@ -78,7 +62,7 @@
         justify-content: center;
         top: 0;
         left: -100%;
-        width: 80vw;
+        width: 50vw;
         height: 100vh;
         background-color: var(--primary-color-general);
         padding: var(--md) var(--sm);

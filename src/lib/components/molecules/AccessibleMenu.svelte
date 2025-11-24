@@ -75,15 +75,17 @@
 
 <style>
     button {
-        display: flex;
-        place-self: end;
-        padding: .5rem 1rem;
-        margin: 1rem;
+        position: fixed;
+        bottom: var(--md);
+        right: var(--md);
+        padding: var(--sm);
+        
         background-color: var(--primary-color-general);
         color: var(--secondary-color-general);
-        /* border: var(.5px solid var(--secondary-color-general)); */
-        font-size: 1rem;
+        border: .5px solid var(--secondary-color-general);
+        font-size: var(--sm);
         border: 1px solid var(--secondary-color-general);
+        font-weight: bold;
 
         &:hover {
             background-color: var(--secondary-color-general);
@@ -108,12 +110,20 @@
             left: 50%;
             transform: translate(-50%, -50%);
             width: 80vw;
-        transition: all 0.2s ease-in;
-
+            transition: all 0.2s ease-in;
 
             fieldset {
                 border: none;
+                font-family: var(--tertiary-font);
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    margin-right: var(--xs);
+                }
             }
+
+            
         }
 
         &::backdrop {

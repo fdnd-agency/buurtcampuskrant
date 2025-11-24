@@ -20,7 +20,7 @@
 
     <nav>
         <ul>
-            <li class="menu-item"><a href=""><LogoNieuwWestToren/></a>
+            <li class="menu-item"><a href="/district/nieuw-west"><LogoNieuwWestToren/></a>
                 <ul class="submenu">
                     <li><a href="#">de wijk</a></li>
                     <li><a href="#">studenten</a></li>
@@ -28,7 +28,7 @@
                     <li><a href="#">wijkpartners</a></li>
                 </ul>
             </li>
-            <li class="menu-item"><a href=""><LogoZuidOostToren/></a>
+            <li class="menu-item"><a href="/district/zuid-oost"><LogoZuidOostToren/></a>
                 <ul class="submenu">
                     <li><a href="#">de wijk</a></li>
                     <li><a href="#">studenten</a></li>
@@ -36,7 +36,7 @@
                     <li><a href="#">wijkpartners</a></li>
                 </ul>
             </li>
-            <li class="menu-item"><a href=""><LogoOostToren/></a>
+            <li class="menu-item"><a href="/district/oost"><LogoOostToren/></a>
             <ul class="submenu">
                     <li><a href="#">de wijk</a></li>
                     <li><a href="#">studenten</a></li>
