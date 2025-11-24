@@ -42,7 +42,7 @@
     }
 
     article { 
-        border-radius: 25px;
+        border-radius: var(--border-radius-md);
         color: var(--secondary-color-general);       
         background-color: var(--primary-color-general);
         border: solid 3px var(--secondary-color-general);
@@ -90,7 +90,7 @@
                         height: 22px;
                         min-width: 64px;
                         padding: 0.5rem;
-                        border-radius: 25px;
+                        border-radius: var(--border-radius-sm);;
                         text-decoration: none;
                     }
                 
