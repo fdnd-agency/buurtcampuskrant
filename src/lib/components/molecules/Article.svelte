@@ -18,7 +18,7 @@
 
                 <div class="buttons">
                     <button href="/district/{ article.district}">{ article.district }</button>
-                    <button href="/{ article.categories}">{ article.categories }</button>
+                    <button href="/{ article.categories[0].buurtcampuskrant_categories_id.title }">{ article.categories[0].buurtcampuskrant_categories_id.title }</button>
                 </div>
             </div>
         </div>
