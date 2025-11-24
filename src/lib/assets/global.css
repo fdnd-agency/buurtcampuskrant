@@ -130,7 +130,7 @@ h4,
 .sm {
     font-size: clamp(1rem, 3.5vw, 1.5rem)
 }
-p,a {
+p, a, label {
     font-family: var(--tertiary-font);
 }
 

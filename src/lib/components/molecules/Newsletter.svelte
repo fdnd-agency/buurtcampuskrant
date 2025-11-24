@@ -1,25 +1,31 @@
 <script>
-    /*    await fetch('https://fdnd.directus.app/items/messages/', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                from: email,
-                text: 'Je bent aangemeld',
-                for: 'buurtcampuskrant'
-            })
-        });   */  
+    import { enhance } from '$app/forms';
+	import { page } from '$app/stores';
 </script>
 
-<form action="/subscribe" method="post">
-    <input type="email" name="email" placeholder="  e-mailadres" required>
+
+
+<form method="post" use:enhance>
+    <label for="newsletter" class="sm">
+        Schrijf je in voor de nieuwsbrief!
+    </label>
+    <input type="email" name="email" placeholder=" e-mailadres" required id="newsletter">
     <button type="submit">Aanmelden</button>
 </form>
 
 <style>
+    label {
+        color: white;
+        grid-column: span 2;
+        font-size: 1rem;
+    }
+
     form {
-        display: flex;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr 1fr;
         width: 230px;
-        height: 24px;
+        row-gap: var(--xs);
 
         button {
             position: relative;
@@ -27,12 +33,14 @@
             justify-content: center;
             align-items: center;
             font-size: 11px;
+            grid-row: 2;
             font-weight: 500;
             color: white;
             background-color: var(--accent-color);
             border: none;
             padding-right: 35px;
             padding-left: 10px;
+            height: 24px;
 
             &:hover {
                 background-color: var(--accent-color-darker);
@@ -56,6 +64,8 @@
             border-style: solid;
             border-color: #CACACA;
             border-width: 1px 0 1px 1px; 
+            grid-row: 2;
+            height: 24px;
         }
 
         input::placeholder {

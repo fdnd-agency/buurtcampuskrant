@@ -93,8 +93,14 @@
 
             .flex-container {
                 display: flex;
+                flex-direction: column;
                 gap: var(--md);
                 align-items: center;
+                justify-content: center;
+
+                .socials {
+                    padding: 0;
+                }
             }
 
             .menu-item {
