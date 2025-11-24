@@ -121,20 +121,15 @@
         }
     }
 
-    @media (width > 30rem) {
-        .input-dialog {
-            max-width: 60vw;
-        }
+@media (width > 30rem) {
+    .input-dialog {
+        max-width: 60vw;
     }
-    @media (width > 743px) {
-        .input-dialog {
-            max-width: 25rem;
-        }
-    }
-    
-label {
-    font-family: var(--secondary-font);
-    display: flex;
-    gap: var(--xs);
 }
+@media (width > 743px) {
+    .input-dialog {
+        max-width: 25rem;
+    }
+}
+
 </style>

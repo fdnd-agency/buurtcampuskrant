@@ -36,24 +36,24 @@
     color-scheme:light dark;
 
     /* COLOR */
-    --primary-color-general: light-dark(#B4BDD0, #333D52);
-    --secondary-color-general: light-dark(#333D52, #E4E8EE);
-    --tertiary-color-general: light-dark(#E4E8EE, #555e72); 
+    --primary-color-general: light-dark(hsl(221, 23%, 76%), hsl(221, 23%, 26%));
+    --secondary-color-general: light-dark(hsl(221, 23%, 26%), hsl(216, 23%, 91%));
+    --tertiary-color-general: light-dark(hsl(216, 23%, 91%), hsl(221, 15%, 39%)); 
 
-    --accent-color: #C94D12;
-    --accent-color-darker: #843101;
-    --accent-color-lighter: #FEF0E7;
+    --accent-color: hsl(19, 84%, 43%);
+    --accent-color-darker: hsl(22, 98%, 26%);
+    --accent-color-lighter: hsl(23, 92%, 95%);
 
-    --primary-color-east: light-dark(#303A6D, #111527);
-    --secondary-color-east: light-dark(#E3E5F2, #CDD1E9);
-    --tertiary-color-east: #CDD1E9;
+    --primary-color-east: light-dark(hsl(230, 39%, 31%), hsl(229, 39%, 11%));
+    --secondary-color-east: light-dark(hsl(232, 37%, 92%), hsl(231, 39%, 86%));
+    --tertiary-color-east: hsl(231, 39%, 86%);
 
-    --primary-color-new-west: light-dark(#8EA34B, #343B1B);
-    --secondary-color-new-west: #F5F8EC;
-    --tertiary-color-new-west: #2F3418;
+    --primary-color-new-west: light-dark(hsl(74, 37%, 47%), hsl(73, 37%, 17%));
+    --secondary-color-new-west: hsl(75, 46%, 95%);
+    --tertiary-color-new-west: light-dark(hsl(71, 37%, 15%), hsl(75, 46%, 95%));
 
-    --primary-color-south-east: light-dark(#085B64, #021A1C);
-    --secondary-color-south-east: #E5F3F5;
+    --primary-color-south-east: light-dark(hsl(186, 85%, 21%), hsl(185, 87%, 6%));
+    --secondary-color-south-east: hsl(188, 44%, 93%);
 
     --primary-font: "primary-font";
     --secondary-font: "secondary-font";
