@@ -1,7 +1,7 @@
 <script>
     import FacebookLogo from "../atoms/FacebookLogo.svelte";
     import InstagramLogo from "../atoms/InstagramLogo.svelte";
-    import Newsletter from "../molecules/Newsletter.svelte"
+    import Newsletter from "../atoms/Newsletter.svelte"
     
     import LogoNieuwWestToren from "../atoms/LogoNieuwWestToren.svelte";
     import LogoZuidOostToren from "../atoms/LogoZuidOostToren.svelte";
