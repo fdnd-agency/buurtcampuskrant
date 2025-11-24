@@ -20,30 +20,9 @@
 
     <nav>
         <ul>
-            <li class="menu-item"><a href="/district/nieuw-west"><LogoNieuwWestToren/></a>
-                <ul class="submenu">
-                    <li><a href="#">de wijk</a></li>
-                    <li><a href="#">studenten</a></li>
-                    <li><a href="#">bewoners</a></li>
-                    <li><a href="#">wijkpartners</a></li>
-                </ul>
-            </li>
-            <li class="menu-item"><a href="/district/zuid-oost"><LogoZuidOostToren/></a>
-                <ul class="submenu">
-                    <li><a href="#">de wijk</a></li>
-                    <li><a href="#">studenten</a></li>
-                    <li><a href="#">bewoners</a></li>
-                    <li><a href="#">wijkpartners</a></li>
-                </ul>
-            </li>
-            <li class="menu-item"><a href="/district/oost"><LogoOostToren/></a>
-            <ul class="submenu">
-                    <li><a href="#">de wijk</a></li>
-                    <li><a href="#">studenten</a></li>
-                    <li><a href="#">bewoners</a></li>
-                    <li><a href="#">wijkpartners</a></li>
-                </ul>
-            </li>
+            <li class="menu-item"><a href="/district/nieuw-west"><LogoNieuwWestToren/></a></li>
+            <li class="menu-item"><a href="/district/zuid-oost"><LogoZuidOostToren/></a></li>
+            <li class="menu-item"><a href="/district/oost"><LogoOostToren/></a></li>
         </ul>
     </nav>  
 </footer>
@@ -51,7 +30,9 @@
 <style>
     footer {
         background-color: var(--primary-color-general);
-        padding: var(--sm);
+        padding: var(--xl) var(--sm);
+        margin: var(--sm);
+        border-radius: var(--border-radius-sm);
 
         :global(form) {
             justify-self: center;
@@ -79,11 +60,8 @@
                 height: 12vh;
             }
         }
-        .submenu {
-            display: none;
-        }
 
-        @media (width > 880px) {
+        @media (width > 980px) {
             display: flex;
             justify-content: space-evenly;
 
@@ -101,27 +79,7 @@
                 display: flex;
                 flex-direction: column;
                 gap: var(--sm);
-                
-                    .submenu {
-                        display: inline-block;
-                        li {
-                            padding-bottom: .25rem;
-                        }
-                        a {
-                            font-family: var(--tertiary-font);
-                            text-decoration: none;
-                            color: var(--secondary-color-general);
-
-                            &:hover {
-                                font-family: var(--secondary-font);
-                            }
-                        }
-                    }    
-            }
-            
-            
+            }    
         }
-
-        
     }
 </style>
