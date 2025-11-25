@@ -42,11 +42,9 @@
     }
 
     article { 
-        border-radius: var(--border-radius-md);
         color: var(--secondary-color-general);       
         background-color: var(--primary-color-general);
-        border: solid 3px var(--secondary-color-general);
-        overflow: hidden;
+        border-radius: var(--border-radius-md);
 
         container-type: inline-size;
         container-name: --article;
@@ -56,6 +54,9 @@
             color: var(--secondary-color-general);
             display: flex;
             flex-direction: column;
+            border: solid 3px var(--secondary-color-general);
+            border-radius: var(--border-radius-md);
+            overflow: hidden;
 
             img {
                 width: 100%;
@@ -92,18 +93,40 @@
                         padding: 0.5rem;
                         border-radius: var(--border-radius-sm);;
                         text-decoration: none;
+                        transition: transform 0.2s ease;
+                        border: solid 1px var(--secondary-color-general);
+
+                        &:hover {
+                            transform: translateY(-10px);
+                        }
+
+                        @media (prefers-reduced-motion: reduce) {
+                            transition: background-color 0.5s ease, color 0.5s ease;
+
+                            &:hover {
+                                transform: none;
+                            }
+                        }
                     }
                 
                     button:nth-of-type(1) {
                         background-color: var(--secondary-color-general);
                         color: var(--primary-color-general);
-                        border: none;
+
+                        &:hover {
+                            background-color: var(--primary-color-general);
+                            color: var(--secondary-color-general);
+                        }
                     }
                     
                     button:nth-of-type(2) {
                         background-color: var(--primary-color-general);
                         color: var(--secondary-color-general);
-                        border: solid 1px var(--secondary-color-general);
+
+                        &:hover {
+                            background-color: var(--secondary-color-general);
+                            color: var(--primary-color-general);
+                        }
                     }    
                 }
             }
