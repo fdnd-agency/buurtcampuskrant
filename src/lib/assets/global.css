@@ -55,15 +55,16 @@ html {
     --accent-color-lighter: hsl(23, 92%, 95%);
 
     --primary-color-east: light-dark(hsl(230, 39%, 31%), hsl(229, 39%, 11%));
-    --secondary-color-east: light-dark(hsl(232, 37%, 92%), hsl(231, 39%, 86%));
-    --tertiary-color-east: hsl(231, 39%, 86%);
+    --secondary-color-east: light-dark(hsl(230, 39%, 21%), hsl(231, 39%, 86%));
+    --tertiary-color-east: light-dark(hsl(231, 39%, 86%), hsl(230, 39%, 21%));
 
     --primary-color-new-west: light-dark(hsl(74, 37%, 47%), hsl(73, 37%, 17%));
-    --secondary-color-new-west: hsl(75, 46%, 95%);
-    --tertiary-color-new-west: light-dark(hsl(71, 37%, 15%), hsl(75, 46%, 95%));
+    --secondary-color-new-west: light-dark(hsl(71, 37%, 15%), hsl(75, 46%, 95%));
+    --tertiary-color-new-west: light-dark(hsl(75, 46%, 95%), hsl(71, 37%, 15%));
 
     --primary-color-south-east: light-dark(hsl(186, 85%, 21%), hsl(185, 87%, 6%));
-    --secondary-color-south-east: hsl(188, 44%, 93%);
+    --secondary-color-south-east: light-dark(hsl(186, 85%, 21%), hsl(188, 44%, 93%));
+    --tertiary-color-south-east: light-dark(hsl(186, 45%, 91%), hsl(186, 85%, 21%));
 
     --primary-font: "primary-font";
     --secondary-font: "secondary-font";
