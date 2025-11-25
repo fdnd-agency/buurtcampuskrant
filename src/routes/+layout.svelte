@@ -43,8 +43,8 @@
 
 
 <!-- <Header/> -->
-<AccessibleMenu/>
-<!-- {@render children?.()} -->
+<!-- <AccessibleMenu/> -->
+{@render children?.()} 
 <!-- <Footer/> -->
 
 
