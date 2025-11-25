@@ -121,7 +121,7 @@
             transition:.3s;
         }
         
-        &:hover {
+        &:hover, &:focus-visible {
             width:auto;
             
             span {
