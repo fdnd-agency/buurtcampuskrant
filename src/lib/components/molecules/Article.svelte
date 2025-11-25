@@ -93,18 +93,18 @@
                         padding: 0.5rem;
                         border-radius: var(--border-radius-sm);;
                         text-decoration: none;
-                        transition: transform 0.2s ease;
+                        transition: background-color 0.5s ease, color 0.5s ease;
                         border: solid 1px var(--secondary-color-general);
 
                         &:hover {
-                            transform: translateY(-10px);
+                            transform: none;
                         }
 
-                        @media (prefers-reduced-motion: reduce) {
-                            transition: background-color 0.5s ease, color 0.5s ease;
+                        @media (prefers-reduced-motion: no-preference) {
+                            transition: transform 0.2s ease;
 
                             &:hover {
-                                transform: none;
+                                transform: translateY(-10px);
                             }
                         }
                     }
