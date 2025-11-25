@@ -2,7 +2,7 @@
     export let data;
     $: ({ article } = data); 
 
-    import Header from "$lib/components/Header.svelte"
+    import Header from "$lib/components/organismsHeader.svelte"
     import Footer from "$lib/components/organisms/Footer.svelte"
 </script>
 
