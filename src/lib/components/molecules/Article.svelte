@@ -43,8 +43,6 @@
 
     article { 
         color: var(--secondary-color-general);       
-        background-color: var(--primary-color-general);
-        border-radius: var(--border-radius-md);
 
         container-type: inline-size;
         container-name: --article;
@@ -52,11 +50,13 @@
         a {
             text-decoration: none;
             color: var(--secondary-color-general);
+            background-color: var(--primary-color-general);
+            border: solid 3px var(--secondary-color-general);
             display: flex;
             flex-direction: column;
-            border: solid 3px var(--secondary-color-general);
             border-radius: var(--border-radius-md);
             overflow: hidden;
+            
 
             img {
                 width: 100%;
