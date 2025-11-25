@@ -85,30 +85,34 @@
         position: fixed;
         bottom: var(--md);
         right: var(--md);
-        height:3em;
-        width:3em;
+        height: var(--lg);
+        max-width: var(--lg);
         padding:0;
-        
-        font-size:1em;
-        
-        overflow:hidden;
-        
+
+        font-size: var(--sm);
         border-radius: var(--border-radius-md);
         border: 1px solid var(--secondary-color-general);
         background-color: var(--primary-color-general);
         
-        display:inline-flex;
-        align-items:center;
-        gap:.5em;
+
+        overflow: hidden;
+        display: inline-flex;
+        align-items: center;
+        gap: var(--ws);
         
-        padding-inline:.5em;
+        padding-inline: var(--xs);
         
-        transition:.3s;
+        transition: .5s;
+
+        @supports (interpolate-size: allow-keywords) {
+            max-width: unset;
+            width: var(--lg);
+        }	
 	
         svg {
-            width:2rem;
-            height:2rem;
-            margin-block:.5rem;
+            width: var(--md);
+            height: var(--md);
+            margin-block: var(--xs);
             flex-shrink: 0;
 
             path {
@@ -117,18 +121,27 @@
         }
         
         span {
-            opacity:0;
-            transition:.3s;
+            opacity: 0;
+            transition: .5s;
+            font-family: var(--tertiary-font);
         }
-        
-        &:hover, &:focus-visible {
-            width:auto;
-            
-            span {
-                opacity:1;
-                color: var(--secondary-color-general);
+
+        @media (prefers-reduced-motion: no-preference) {
+            &:hover, &:focus-visible {
+                max-width: 12rem;
+                
+                @supports (interpolate-size: allow-keywords) {
+                    max-width: unset;
+                    width: auto;			
+                }
+
+                span {
+                    opacity: 1;
+                    color: var(--secondary-color-general);
+                }
             }
         }
+        
     }
     
 
