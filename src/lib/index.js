@@ -2,7 +2,7 @@
 export { default as Header } from './components/organisms/Header.svelte'
 export { default as Filter } from './components/organisms/Filter.svelte'
 export { default as Quote } from './components/atoms/Quote.svelte'
-export { default as Newsletter } from './components/molecules/Newsletter.svelte'
+export { default as Newsletter } from './components/atoms/Newsletter.svelte'
 export { default as Article } from './components/molecules/Article.svelte'
 export { default as Footer } from './components/organisms/Footer.svelte'
 export { default as FacebookLogo } from './components/atoms/FacebookLogo.svelte'
