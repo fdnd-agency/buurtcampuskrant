@@ -129,7 +129,7 @@
     @container header-display (width > 48rem) {
         :global(.js .menu) {
             position: absolute;
-            top: 5rem;
+            top: 4.5rem;
             left: auto;
             right: var(--lg);
             transform: translateY(-50%);
