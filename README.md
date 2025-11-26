@@ -6,14 +6,16 @@
 ## Description
 
 
-https://github.com/user-attachments/assets/34c24c6e-8a70-49e5-b5d1-2fe01edd41bd
+
+https://github.com/user-attachments/assets/975e7177-f0c4-4edb-878f-2013a2b64b3b
+
+
 
 
 
 Our assignment was to work as a team to create a digital version of the buurtcampus newspaper. This is a collaboration between Amsterdam University of Applied Sciences and Amsterdam Public Library, spread across various districts: East, New West and South-East. Buurtcampuskrant organises various social projects and campaigns aimed at enriching the neighbourhood. Important themes include sustainability, the environment and learning. The newspaper keeps you informed about these activities that have taken place. A paper version that can reach a larger audience through a digital version. 
 
 We made this digital newspaper with Svelte and Sveltekit. The focus was on dividing the site into different sections (components) that recur frequently on the website. A lot of attention was also paid to the use of colours. Furthermore we have a homepage (where u land on first), this will show you the most recent newsarticle. On the side of that u can find a short link to other news articles. U can also navigate to differect district pages. 
-
 
 
 
@@ -26,7 +28,9 @@ We chose to carry the colors associated with a particular neighborhood through t
 
 Furthermore, the flag element is also frequently used in the menu, for example. This is used to open the menu (on small screens) and in the footer as button. Of course, the design is responsive as well, so it works on both small and large screens. 
 
-<img width="1075" height="662" alt="Screenshot 2025-10-29 at 17 42 01" src="https://github.com/user-attachments/assets/a4ce6acf-2269-4956-af13-f8e57f2aeb0d" />
+
+<img width="806" height="508" alt="Screenshot 2025-11-26 at 19 16 29" src="https://github.com/user-attachments/assets/596733f9-161b-4547-814e-03c23fda68d8" />
+
 
 
 ## Components
