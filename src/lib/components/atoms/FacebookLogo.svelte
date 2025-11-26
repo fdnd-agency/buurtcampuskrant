@@ -7,6 +7,10 @@
     svg {
         path {
             fill: var(--secondary-color-general);
+
+            @media (prefers-color-scheme: dark) {
+                --secondary-color-general: var(--dm-logo-general);
+            }
         }
     }
 </style>
