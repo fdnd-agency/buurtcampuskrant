@@ -27,19 +27,16 @@
 
 <style>
     article[data-district="east"] {
-        --primary-color-general: var(--primary-color-east);
         --secondary-color-general: var(--secondary-color-east);
         --tertiary-color-general: var(--tertiary-color-east);
     }
 
     article[data-district="new-west"] {
-        --primary-color-general: var(--primary-color-new-west);
         --secondary-color-general: var(--secondary-color-new-west);
         --tertiary-color-general: var(--tertiary-color-new-west);
     }
 
     article[data-district="south-east"] {
-        --primary-color-general: var(--primary-color-south-east);
         --secondary-color-general: var(--secondary-color-south-east);
         --tertiary-color-general: var(--tertiary-color-south-east);
     }
