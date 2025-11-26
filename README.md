@@ -43,8 +43,8 @@ Finally, the images of the logos have also been placed in components. This is be
 
 ## Features
 * Navigation: We have used a progressive enhanced menu. This means that the menu will also work for users who have JS and CSS disabled. Normally, a small device will have a drop-down navigation menu. On a larger screen, the navigation menu is simply located in the header.
+* Accessibility Menu: We have made this menu so that people who have for example dyslexia can change the font to a dyslexic font to be able to read it better. It also contains an option to change from light to dark mode and back in case you have a preference. 
 * Newsletter: Finally, we have the newsletter. This is an interactive form where you can subscribe to the newsletter by leaving your email address.
-
 
 ## Datamodel
 ```mermaid
