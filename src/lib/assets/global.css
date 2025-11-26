@@ -6,6 +6,10 @@
 
 html {
     interpolate-size: allow-keywords;
+
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
+    }
 }
 
 @font-face {

@@ -42,7 +42,7 @@
 </svelte:head>
 
 
-<Header/> 
+<Header/>
 <AccessibleMenu/>
 {@render children?.()}
 <Footer/>
