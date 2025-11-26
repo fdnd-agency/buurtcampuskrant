@@ -89,10 +89,9 @@
         place-items: center;
         gap: var(--sm);
 
-        top: 10rem;
+        top: 9.6rem;
         left: -110%;
         width: 100%;
-        height: max-content;
 
         background-color: var(--primary-color-general);
         padding: var(--md) var(--sm);
@@ -115,7 +114,7 @@
             left: 0;
             border-radius: var(--border-radius-sm);
             border: var(--border-dm);
-            top: 9.8rem;
+            top: 9.6rem;
         }
     }
 
