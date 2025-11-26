@@ -104,7 +104,7 @@ html {
 :root:has( [value="light-dl-mode"]:checked ) {
     color-scheme:light;
     
-    header, footer, article {
+    header, footer, .article-detail {
         border: none;
     }
 }
@@ -112,13 +112,13 @@ html {
 :root:has( [value="dark-dl-mode"]:checked ) {
     color-scheme:dark;
 
-    header, footer, article {
+    header, footer, .article-detail {
         border: var(--border-dm);
     }
 }
 
 @media (prefers-color-scheme: dark) {
-    header, footer, article {
+    header, footer, .article-detail {
         border: var(--border-dm);
 
     }

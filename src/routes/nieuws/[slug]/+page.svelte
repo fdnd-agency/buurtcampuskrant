@@ -41,10 +41,10 @@
         align-items: center;
         gap: var(--sm);
         margin: var(--sm);
-        background-color: var(--tertiary-color-general);
 
         article {
             padding: var(--sm);
+            background-color: var(--tertiary-color-general);
             height: 100%;
             width: 80vw;
             justify-items: left;
