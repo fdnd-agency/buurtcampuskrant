@@ -75,6 +75,7 @@
                 gap: var(--md);
                 align-items: center;
                 justify-content: center;
+                min-width: 16rem;
 
                 .socials {
                     padding: 0;

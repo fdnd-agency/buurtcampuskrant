@@ -15,20 +15,25 @@
 
 <style>
     form {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        
         container-type: inline-size;
         container-name: --newsletter;
-        
-        width: 265px;
     }
 
     div {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-content: center;
+        align-items: center;
 
         label {
             color: white;
             font-size: var(--sm);
             padding-bottom: var(--xs);
+            grid-column: span 2;
         }
 
         button {
@@ -41,9 +46,9 @@
             color: white;
             background-color: var(--accent-color);
             border: none;
-            padding-right: 35px;
-            padding-left: 10px;
             height: 1.5rem;
+            padding-inline: var(--xs);
+            grid-column: 2;
 
             &:hover {
                 background-color: var(--accent-color-darker);
@@ -56,8 +61,9 @@
         border-style: solid;
         border-color: #CACACA;
         border-width: 1px 1px 1px 1px; 
-        grid-row: 2;
+        grid-column: span 2;
         height: 1.5rem;
+        width: 100%;
     }
 
     input::placeholder {
@@ -66,7 +72,7 @@
         font-size: 0.7rem;
     }
 
-    @container --newsletter (width > 264px) { 
+    @container --newsletter (width > 220px) { 
 
         div {
             display: grid;
@@ -81,9 +87,12 @@
             button {
                 grid-row: 2;
                 grid-column: 2;
+                padding-right: 35px;
+                padding-left: 10px;
             }
 
             input {
+                grid-column: 1;
                 border-width: 1px 0 1px 1px; 
             }
 
