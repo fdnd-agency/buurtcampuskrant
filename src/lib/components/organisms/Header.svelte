@@ -47,9 +47,9 @@
         font-family: var(--primary-font);
         text-align: center;
 
-            &:hover {
-                background-color: var(--accent-color-darker);
-            }
+        &:hover {
+            background-color: var(--accent-color-darker);
+        }
     }
 
     header {        
@@ -74,7 +74,6 @@
             z-index: 10;
         }
     }
- 
         
     /* zonder JS menu onderaan pagina */
     .menu {
