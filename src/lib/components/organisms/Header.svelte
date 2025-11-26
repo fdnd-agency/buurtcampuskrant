@@ -8,14 +8,15 @@
 
     let menuOpen = $state(false);
 
-    function toggleSidebar () {
+    function toggleSidebar (e) {
+        e.preventDefault();
         menuOpen = !menuOpen;
     }
 </script>
 
 <header class="{props.district}">
     <a href="/" aria-label="terug naar home"><LogoBuurtcampus/></a>
-    <a href="#menu" class="menu-toggle" aria-label="open en sluit button menu" onclick={toggleSidebar}>menu</a>
+    <a href="#footer-menu" class="menu-toggle" aria-label="open en sluit button menu" onclick={toggleSidebar}>menu</a>
 
     <nav id="menu" class="menu" class:open={menuOpen}>
         <ul>
@@ -37,70 +38,6 @@
 
 
 <style>
-    header a:first-child {
-        z-index: 10;
-    }
-    header {        
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        background-color: var(--primary-color-general);
-        padding: var(--sm);
-
-        border-radius: var(--border-radius-sm);
-        margin: var(--sm);
-    }
- 
-        
-    /* zonder JS menu onderaan pagina */
-    .menu {
-        background: #eee;
-        padding: var(--sm);
-    }
-
-    :global(.js .menu) {
-        position: fixed;
-        display: flex;
-        justify-content: center;
-        top: 0;
-        left: -100%;
-        width: 50vw;
-        height: 100vh;
-        background-color: var(--primary-color-general);
-        padding: var(--md) var(--sm);
-        box-shadow: 2px 0 10px rgba(0,0,0,0.3);
-        transition: left .3s ease;
-
-        ul {
-            list-style: none;
-            padding: 0;
-            align-content: center;
-        }
-        li.menu-item {
-            display: flex;
-            padding-bottom: var(--md);
-            
-        }   
-        a {
-            color: var(--secondary-color-general);
-            text-decoration: none;
-            display: block;
-            font-family: "tertiary-font";
-
-                &:hover {
-                    font-family: var(--secondary-font);
-                }
-        }  
-
-    }
-
-    /* MENU OPEN */
-    :global(.js .menu.open) {
-        left: 0;
-    }
-
-    /* MENU-BUTTON */
     .menu-toggle {
         display: inline-block;
         padding: var(--xs) var(--md);
@@ -115,7 +52,81 @@
             }
     }
 
-    @media (min-width: 880px) {
+    header {        
+        container-type: inline-size;
+        container-name: header-display;
+
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(200px);
+
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: var(--primary-color-general);
+        padding: var(--sm);
+
+        border-radius: var(--border-radius-sm);
+        margin: var(--sm);
+
+        a:first-child {
+            z-index: 10;
+        }
+    }
+ 
+        
+    /* zonder JS menu onderaan pagina */
+    .menu {
+        display: none;
+    }
+
+    /* hamburger foldout */
+    :global(.js .menu) {
+        position: fixed;
+        display: grid;
+        grid-template-rows: 1fr max-content 1fr;
+        place-items: center;
+        gap: var(--sm);
+
+        top: 9.6rem;
+        left: -110%;
+        width: 100%;
+
+        background-color: var(--primary-color-general);
+        padding: var(--md) var(--sm);
+        box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+        transition: left .3s ease;
+
+        ul {
+            list-style-type: none;
+            grid-row: 2/3;
+            
+            display: flex;
+            flex-direction: column;
+            gap: var(--sm);
+        }
+    }
+
+    /* MENU OPEN */
+    @container header-display (width < 48rem) {
+        :global(.js .menu.open) {
+            left: 0;
+            border-radius: var(--border-radius-sm);
+            border: var(--border-dm);
+            top: 9.6rem;
+        }
+    }
+
+    @container header-display (width > 30rem) {
+        :global(.js) {
+            .menu ul {
+                flex-direction: row;
+            }
+        }
+    }
+
+    @container header-display (width > 48rem) {
         :global(.js .menu) {
             position: absolute;
             top: 5rem;
@@ -124,58 +135,20 @@
             transform: translateY(-50%);
             width: fit-content;
             height: fit-content;
-            background: transparent;
+            background: none;
             box-shadow: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            align-items: center;
 
-            li.menu-item {
-                padding-bottom: 0;
-            }   
-        }
 
-        :global(.js .menu ul) {
-            display: flex;
-            gap: var(--md);
-            list-style: none;
-            margin: 0;
-            padding: 0;
-
-                li {
-                    position: relative;
-
-                    a {
-                        color: var(--secondary-color-general);
-                        text-decoration: none;
-                        padding: var(--xs) var(--sm);
-                    }
-                }
-        }
-
-        :global(.js .menu ul ul) {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            background: var(--primary-color-general);
-            padding: var(--xs) 0;
-            border-radius: 0 0 8px 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-            width: fit-content;
-        }
-
-        :global(.js .menu li:hover > ul), 
-        :global(.js .menu li:focus-within > ul) {
-            display: block;
+            ul {
+                flex-direction: row;
+                gap: var(--xs);
+            }
         }
 
         .menu-toggle {
             display: none;
         }
     }
-    
 </style>
 
 

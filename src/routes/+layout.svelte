@@ -42,9 +42,9 @@
 </svelte:head>
 
 
-<!-- <Header/> -->
-<!-- <AccessibleMenu/> -->
-{@render children?.()} 
-<!-- <Footer/> -->
+<Header/>
+<AccessibleMenu/>
+{@render children?.()}
+<Footer/>
 
 
