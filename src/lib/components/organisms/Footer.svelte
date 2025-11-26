@@ -18,7 +18,7 @@
         </div>
     </div>
 
-    <nav>
+    <nav id="footer-menu">
         <ul>
             <li class="menu-item"><a href="/district/nieuw-west"><LogoNieuwWestToren/></a></li>
             <li class="menu-item"><a href="/district/zuid-oost"><LogoZuidOostToren/></a></li>
@@ -86,6 +86,10 @@
                 flex-direction: column;
                 gap: var(--sm);
             }    
+        }
+
+        nav {
+            align-self: center;
         }
     }
 </style>
