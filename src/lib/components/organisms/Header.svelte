@@ -81,7 +81,7 @@
     }
 
     /* hamburger foldout */
-    :global(.js .menu) {
+    :global(.js-enabled .menu) {
         position: fixed;
         display: grid;
         grid-template-rows: 1fr max-content 1fr;
@@ -109,7 +109,7 @@
 
     /* MENU OPEN */
     @container header-display (width < 48rem) {
-        :global(.js .menu.open) {
+        :global(.js-enabled .menu.open) {
             left: 0;
             border-radius: var(--border-radius-sm);
             border: var(--border-dm);
@@ -118,7 +118,7 @@
     }
 
     @container header-display (width > 30rem) {
-        :global(.js) {
+        :global(.js-enabled) {
             .menu ul {
                 flex-direction: row;
             }
@@ -126,7 +126,7 @@
     }
 
     @container header-display (width > 48rem) {
-        :global(.js .menu) {
+        :global(.js-enabled .menu) {
             position: absolute;
             top: 4.5rem;
             left: auto;

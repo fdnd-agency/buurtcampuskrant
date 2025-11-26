@@ -53,6 +53,7 @@ html {
     --primary-color-general: light-dark(hsl(221, 23%, 76%), hsl(221, 23%, 26%));
     --secondary-color-general: light-dark(hsl(221, 23%, 26%), hsl(216, 23%, 91%));
     --tertiary-color-general: light-dark(hsl(216, 23%, 91%), hsl(221, 15%, 39%)); 
+    --dm-logo-general: hsl(216, 23%, 91%);
 
     --accent-color: hsl(19, 84%, 43%);
     --accent-color-darker: hsl(22, 98%, 26%);
@@ -61,14 +62,17 @@ html {
     --primary-color-east: light-dark(hsl(230, 39%, 31%), hsl(229, 39%, 11%));
     --secondary-color-east: light-dark(hsl(230, 39%, 21%), hsl(231, 39%, 86%));
     --tertiary-color-east: light-dark(hsl(231, 39%, 86%), hsl(230, 39%, 21%));
+    --dm-logo-east: hsl(231, 39%, 86%);
 
     --primary-color-new-west: light-dark(hsl(74, 37%, 47%), hsl(73, 37%, 17%));
     --secondary-color-new-west: light-dark(hsl(71, 37%, 15%), hsl(75, 46%, 95%));
     --tertiary-color-new-west: light-dark(hsl(75, 46%, 95%), hsl(71, 37%, 15%));
+    --dm-logo-new-west: hsl(75, 46%, 95%);
 
     --primary-color-south-east: light-dark(hsl(186, 85%, 21%), hsl(185, 87%, 6%));
     --secondary-color-south-east: light-dark(hsl(186, 85%, 21%), hsl(188, 44%, 93%));
     --tertiary-color-south-east: light-dark(hsl(186, 45%, 91%), hsl(186, 85%, 21%));
+    --dm-logo-south-east: hsl(188, 44%, 93%);
 
     --primary-font: "primary-font";
     --secondary-font: "secondary-font";
@@ -123,16 +127,19 @@ html {
 body.route-zuid-oost {
     --primary-color-general: var(--primary-color-south-east);
     --secondary-color-general: var(--secondary-color-south-east);
+    --dm-logo-general: var(--dm-logo-south-east);
 }
 
 body.route-oost {
     --primary-color-general: var(--primary-color-east);
     --secondary-color-general: var(--secondary-color-east);
+    --dm-logo-general: var(--dm-logo-east);
 }
 
 body.route-nieuw-west {
     --primary-color-general: var(--primary-color-new-west);
     --secondary-color-general: var(--tertiary-color-new-west);
+    --dm-logo-general: var(--dm-logo-new-west);
 }
 
 h1,
