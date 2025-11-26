@@ -138,7 +138,6 @@
             background: none;
             box-shadow: none;
 
-
             ul {
                 flex-direction: row;
                 gap: var(--xs);

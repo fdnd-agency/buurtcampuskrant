@@ -16,7 +16,7 @@ html {
     font-family: "primary-font";
     src: url('./fonts/BuurtCampusArial-Bold.woff2') format('woff2'), 
          url('./fonts/BuurtCampusArial-Bold.woff') format('woff'), 
-         url('./fonts/BuurtCampusArial-Bold.ttf') format('truetype');
+         url('./fonts/BuurtCampusArial-Bold.ttf') format('truetype'), arial, sans-serif;
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -25,7 +25,7 @@ html {
 @font-face {
     font-family: "secondary-font";
     src: url('./fonts/Arial-BoldMT.woff2') format('woff2'), 
-         url('./fonts/Arial-BoldMT.ttf') format('truetype');
+         url('./fonts/Arial-BoldMT.ttf') format('truetype'), arial, sans-serif;
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -34,7 +34,7 @@ html {
 @font-face {
     font-family: "tertiary-font";
     src: url('./fonts/Arial.woff2') format('woff2'), 
-         url('./fonts/Arial.ttf') format('truetype');
+         url('./fonts/Arial.ttf') format('truetype'), arial, sans-serif;
     font-weight: normal;
     font-style: normal;
     font-display: swap;
