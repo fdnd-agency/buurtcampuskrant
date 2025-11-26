@@ -20,18 +20,18 @@
 
 <style>
     main[data-district="east"] {
-        --primary-color-general: var(--secondary-color-east);
-        --secondary-color-general: var(--primary-color-east);
+        --secondary-color-general: var(--secondary-color-east);
+        --tertiary-color-general: var(--tertiary-color-east);
     }
 
     main[data-district="new-west"] {
-        --primary-color-general: var(--secondary-color-new-west);
-        --secondary-color-general: var(--primary-color-new-west);
+        --secondary-color-general: var(--secondary-color-new-west);
+        --tertiary-color-general: var(--tertiary-color-new-west); 
     }
 
     main[data-district="south-east"] {
-        --primary-color-general: var(--secondary-color-south-east);
-        --secondary-color-general: var(--primary-color-south-east);
+        --secondary-color-general: var(--secondary-color-south-east);
+        --tertiary-color-general: var(--tertiary-color-south-east);
     }
 
     main {
@@ -41,8 +41,7 @@
         align-items: center;
         gap: var(--sm);
         margin: var(--sm);
-        background-color: var(--primary-color-general);
-
+        background-color: var(--tertiary-color-general);
 
         article {
             padding: var(--sm);
