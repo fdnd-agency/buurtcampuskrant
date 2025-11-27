@@ -32,28 +32,6 @@
     });
 </script>
 
-<!-- <a class="dialog-trigger" href="#dialogid">toegankelijkheid</a>
-
-<div id="dialogid" class="dialog-window">
-	<a class="close-dialog-bg" href="#"></a>
-	
-	<div class="input-dialog">
-			<a class="close-dialog-trigger" href="#" title="Close">sluiten</a> -->
-		<!-- Content here -->
-		<!-- <h2 class="md">Selecteer je voorkeur</h2>
-        <fieldset>
-		    <label><input type="radio" value="normal-font" name="font-setting" checked/>Normaal font</label>
-		    <label><input type="radio" value="dyslexia-font" name="font-setting"/>Dyslexie font</label>
-		</fieldset>
-
-        <fieldset>
-		    <label><input type="radio" value="auto-dl-mode" id="auto" name="dl-mode" checked/>Automatisch</label>
-		    <label><input type="radio" value="light-dl-mode" id="light-mode" name="dl-mode"/>Light mode</label>
-		    <label><input type="radio" value="dark-dl-mode" id="dark-mode" name="dl-mode"/>Dark mode</label>
-        </fieldset>
-	</div>
-</div> -->
-
 <button popovertarget="accessible-menu">
     <svg viewBox="0 0 8 10" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M6.49543 1.93751C6.87519 1.81092 7.28569 2.01585 7.41243 2.39552C7.53901 2.77528 7.33409 3.18578 6.95442 3.31251L4.44953 4.14747V5.40431L6.32844 8.22267C6.55055 8.55583 6.46043 9.00642 6.12727 9.22853C5.79411 9.45063 5.34351 9.36051 5.12141 9.02735L3.72493 6.93263L2.32844 9.02735C2.10634 9.36051 1.65574 9.45063 1.32258 9.22853C0.989423 9.00642 0.899304 8.55583 1.12141 8.22267L3.00032 5.40431V4.14747L0.495433 3.31251C0.115762 3.18578 -0.0891618 2.77528 0.0374252 2.39552C0.164158 2.01585 0.574656 1.81092 0.954417 1.93751L3.72493 2.86036L6.49543 1.93751Z" fill="black"/>
