@@ -35,7 +35,6 @@
 
                 @media(min-width:800px) {
                     width: 30vw;
-                    float: right;
                     margin: 1rem 2rem 2rem 2rem;
                 }
             }
