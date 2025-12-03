@@ -2,7 +2,7 @@
     import { Header } from '$lib';
     import { Footer } from '$lib';
     import { Article } from '$lib';
-    import  FullArticle  from '$lib/components/atoms/FullArticle.svelte';
+    import  FullArticle  from '$lib/components/molecules/FullArticle.svelte';
 
     export let data;
     const articles = data.article;

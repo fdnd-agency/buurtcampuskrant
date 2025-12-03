@@ -4,7 +4,7 @@
 
     import Header from "$lib/components/organisms/Header.svelte"
     import Footer from "$lib/components/organisms/Footer.svelte"
-    import FullArticle from "$lib/components/atoms/FullArticle.svelte";
+    import FullArticle from "$lib/components/molecules/FullArticle.svelte";
 </script>
 
 <main  data-district="{article.district}">
