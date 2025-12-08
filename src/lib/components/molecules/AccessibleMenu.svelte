@@ -153,8 +153,6 @@
                     margin-right: var(--xs);
                 }
             }
-
-            
         }
 
         &::backdrop {
