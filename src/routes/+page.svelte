@@ -3,7 +3,8 @@
     import { Footer } from '$lib';
     import { Article } from '$lib';
 
-    export let data;
+    let {data} = $props();
+    
     const articles = data.article;
     const recentArticle = data.article[0]
 </script>
