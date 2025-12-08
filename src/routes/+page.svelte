@@ -3,7 +3,8 @@
     import { Footer } from '$lib';
     import { Article } from '$lib';
 
-    export let data;
+    let {data} = $props();
+
     const articles = data.article;
     const recentArticle = data.article[0]
 </script>
@@ -61,9 +62,6 @@
 
                     h2 {
                         grid-column: 1/-1;
-                    }
-                    article {
-                        grid-row: 2;
                     }
             }
             @media (width > 1020px) {

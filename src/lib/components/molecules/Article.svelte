@@ -1,5 +1,9 @@
 <script>
-    export let article;
+    let { article } = $props();
+    const cat_title = $derived(
+        article?.categories?.[0]?.buurtcampuskrant_categories_id?.title ?? ""
+    );
+    
 </script>
 
 <article data-district="{article.district}">
@@ -18,7 +22,7 @@
 
                 <div class="buttons">
                     <button href="/district/{ article.district}">{ article.district }</button>
-                    <button href="/{ article.categories[0].buurtcampuskrant_categories_id.title }">{ article.categories[0].buurtcampuskrant_categories_id.title }</button>
+                    <button href="/{ cat_title }">{ cat_title }</button>
                 </div>
             </div>
         </div>
