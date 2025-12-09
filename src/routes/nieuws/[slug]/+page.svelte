@@ -4,18 +4,11 @@
 
     import Header from "$lib/components/organisms/Header.svelte"
     import Footer from "$lib/components/organisms/Footer.svelte"
+    import FullArticle from "$lib/components/molecules/FullArticle.svelte";
 </script>
 
 <main  data-district="{article.district}">
-
-<article class="article-detail">
-    <h2 class="title">{article.title}</h2>
-    <p class="intro">{article.intro}</p>
-    <img class="cover" src="https://fdnd-agency.directus.app/assets/{article.cover}" alt="{article.alt}">
-    <p class="side-title">{article.side_title}</p>
-    <div class="body">{@html article.body}</div>
-</article>
-
+    <FullArticle {article} />
 </main>
 
 <style>
@@ -41,48 +34,5 @@
         align-items: center;
         gap: var(--sm);
         margin: var(--sm);
-
-        article {
-            padding: var(--sm);
-            background-color: var(--tertiary-color-general);
-            height: 100%;
-            width: 80vw;
-            justify-items: left;
-
-            img {
-                width: 100%;
-                margin: 0;
-                float: none;
-
-                @media(min-width:650px) {
-                    height: 40vh;
-                }
-
-                @media(min-width:800px) {
-                    width: 30vw;
-                    float: right;
-                    margin: 1rem 2rem 2rem 2rem;
-                }
-            }
-
-            h2, .side-title, p, div {
-                color: var(--secondary-color-general);
-            }
-        }   
-
-        @media (width > 1020px) {
-            flex-direction: row;
-            justify-content: space-evenly;
-            
-            article {
-                width: 80vw;
-            }
-        }
-
-        @media (width > 1200px) {
-            article {
-                width: 70vw;
-            }
-        }
     }
 </style>
