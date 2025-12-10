@@ -7,7 +7,7 @@
 </script>
 
 <article data-district="{article.district}">
-    <a href="/nieuws/{article.id}">
+    <a class="article" href="/nieuws/{article.id}">
         <div class="container">
             <picture>
                 <source 
@@ -32,17 +32,17 @@
 <style>
     article[data-district="east"] {
         --secondary-color-general: var(--secondary-color-east);
-        --tertiary-color-general: var(--tertiary-color-east);
+        --primary-color-general: var(--primary-color-east);
     }
 
     article[data-district="new-west"] {
         --secondary-color-general: var(--secondary-color-new-west);
-        --tertiary-color-general: var(--tertiary-color-new-west);
+        --primary-color-general: var(--primary-color-new-west);
     }
 
     article[data-district="south-east"] {
         --secondary-color-general: var(--secondary-color-south-east);
-        --tertiary-color-general: var(--tertiary-color-south-east);
+        --primary-color-general: var(--primary-color-south-east);
     }
 
     article { 
@@ -52,8 +52,8 @@
         a {
             text-decoration: none;
             color: var(--secondary-color-general);
-            background-color: var(--tertiary-color-general);
-            border: solid 3px var(--secondary-color-general);
+            background-color: var(--primary-color-general);
+            border: solid 3px var(--primary-color-general);
             display: flex;
             flex-direction: column;
             border-radius: var(--border-radius-md);
@@ -113,21 +113,21 @@
                 
                     button:nth-of-type(1) {
                         background-color: var(--secondary-color-general);
-                        color: var(--tertiary-color-general);
+                        color: var(--primary-color-general);
 
                         &:hover {
-                            background-color: var(--tertiary-color-general);
+                            background-color: var(--primary-color-general);
                             color: var(--secondary-color-general);
                         }
                     }
                     
                     button:nth-of-type(2) {
-                        background-color: var(--tertiary-color-general);
+                        background-color: var(--primary-color-general);
                         color: var(--secondary-color-general);
 
                         &:hover {
                             background-color: var(--secondary-color-general);
-                            color: var(--tertiary-color-general);
+                            color: var(--primary-color-general);
                         }
                     }    
                 }
