@@ -1,8 +1,8 @@
 export async function load({url}) {
-    let filter = '&sort=-date&filter={"district":{"_eq":"zuid oost"}}';
+    let filter = '&sort=-date&filter={"district":{"_eq":"zuidoost"}}';
 
     if (url.searchParams.get('filter')) {
-        filter = `&sort=-date&filter={"district":{"_eq":"zuid oost"},"categories": {"buurtcampuskrant_categories_id": {"title": { "_eq": "${url.searchParams.get('filter')}" }}}}`;
+        filter = `&sort=-date&filter={"district":{"_eq":"zuidoost"},"categories": {"buurtcampuskrant_categories_id": {"title": { "_eq": "${url.searchParams.get('filter')}" }}}}`;
     }
 
     const res = await fetch(`https://fdnd-agency.directus.app/items/buurtcampuskrant_stories/?fields=title,intro,cover,district,categories.buurtcampuskrant_categories_id.*${filter}`);
