@@ -3,7 +3,6 @@
     import FilterButtons from "$lib/components/atoms/FilterButtons.svelte";
 
     let { data } = $props();
-    const articles = data.articlesNewWest;
 </script>
 
 <FilterButtons {data}/>
