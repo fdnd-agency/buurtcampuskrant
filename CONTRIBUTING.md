@@ -195,3 +195,9 @@ Bron: [Wat is Definition of Done? Uitleg + voorbeelden (IT & non-IT)](https://ag
 * Merged into dev branch
 * Livelink with dev branch
 
+## Post Mortem
+When will we do a post mortem?
+- If a teammember doesn't meet their agreements.
+- If a teammember doesn't communicate.
+- If a teammember doesn't deliver any work. 
+
