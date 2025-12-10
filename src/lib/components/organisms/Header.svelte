@@ -25,7 +25,7 @@
         </li>
 
         <li class="menu-item">
-            <a href="/district/zuid-oost" aria-label="Zuid-oost"><LogoZuidOostToren/></a>
+            <a href="/district/zuidoost" aria-label="Zuid-oost"><LogoZuidOostToren/></a>
         </li>
 
         <li class="menu-item">

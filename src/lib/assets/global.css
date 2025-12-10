@@ -130,7 +130,7 @@ html {
     }
 }
 
-body.route-zuid-oost {
+body.route-zuidoost {
     --primary-color-general: var(--primary-color-south-east);
     --secondary-color-general: var(--secondary-color-south-east);
     --dm-logo-general: var(--dm-logo-south-east);
