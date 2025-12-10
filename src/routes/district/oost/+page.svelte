@@ -6,7 +6,7 @@
     const articles = data.articlesNewWest;
 </script>
 
-<FilterButtons />
+<FilterButtons {data}/>
 
 <main>
     <ul>

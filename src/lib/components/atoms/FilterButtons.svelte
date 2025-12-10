@@ -3,40 +3,59 @@
     let {data} = $props();
 </script>
 
-<ul>
-    <li class="filter"><a href="/district/nieuw-west">Alles</a></li>
-    <li class="filter"><a href="?filter=de wijk">De wijk</a></li>
-    <li class="filter"><a href="?filter=studenten">Studenten</a></li>
-    <li class="filter"><a href="?filter=wijkpartner">Wijkpartner</a></li>
-</ul>
+<section>
+    <ul>
+        <li class="filter"><a href="/district/nieuw-west">Alles</a></li>
+        <li class="filter"><a href="?filter=de wijk">De wijk</a></li>
+        <li class="filter"><a href="?filter=studenten">Studenten</a></li>
+        <li class="filter"><a href="?filter=wijkpartner">Wijkpartner</a></li>
+    </ul>
+
+    <h2>Buurtcampus // {data.data[0].district}</h2>
+    <p>Alle artikelen met het filter '{data.data[0].categories[0].buurtcampuskrant_categories_id.title}'</p>
+</section>
 
 <style>
-    ul {
+    section {
         display: flex;
-        flex-wrap: wrap;
-        gap: var(--sm);
+        flex-direction: column;
         justify-content: center;
-        padding: var(--sm) var(--md) var(--md);
+        align-items: center;
 
-        li {
-            /* border: 1px solid var(--primary-color-general); */
-            background-color: var(--primary-color-general);
-            border-radius: var(--border-radius-md);
-            padding: var(--xs) var(--sm);
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--sm);
+            justify-content: center;
+            padding: var(--sm) var(--md) var(--md);
 
-            &:hover {
-                /* background-color: var(--primary-color-general); */
+            li {
+                /* border: 1px solid var(--primary-color-general); */
+                background-color: var(--primary-color-general);
+                border-radius: var(--border-radius-md);
+                padding: var(--xs) var(--sm);
+
+                &:hover {
+                    /* background-color: var(--primary-color-general); */
+
+                    a {
+                        color: var(--secondary-color-general);
+                    }
+                }
 
                 a {
+                    text-decoration: none;
                     color: var(--secondary-color-general);
                 }
             }
-
-            a {
-                text-decoration: none;
-                color: var(--secondary-color-general);
-            }
         }
-    }
 
+        h2, p {
+            margin-inline: 0.5em;
+        }
+
+        p {
+            padding-block: 0.5em;
+        }
+    }   
 </style>
