@@ -15,13 +15,13 @@
         font-style: italic;
         width: 300px;
         height: 100px;
-        background-color: hsla(239, 33%, 30%, 1);
+        background-color: var(--secondary-color-general);
         border-radius: 150px;
     }
 
     p {
         text-align: center;
-        color: white;
+        color: var(--primary-color-general);
         max-width: clamp(40ch, 90%, 60ch);
     }
 </style>

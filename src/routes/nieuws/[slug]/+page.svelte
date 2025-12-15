@@ -12,19 +12,19 @@
 </main>
 
 <style>
-    main[data-district="east"] {
+    main[data-district="oost"] {
         --secondary-color-general: var(--secondary-color-east);
-        --tertiary-color-general: var(--tertiary-color-east);
+        --primary-color-general: var(--primary-color-east);
     }
 
-    main[data-district="new-west"] {
+    main[data-district="nieuw-west"] {
         --secondary-color-general: var(--secondary-color-new-west);
-        --tertiary-color-general: var(--tertiary-color-new-west); 
+        --primary-color-general: var(--primary-color-new-west);
     }
 
-    main[data-district="south-east"] {
+    main[data-district="zuidoost"] {
         --secondary-color-general: var(--secondary-color-south-east);
-        --tertiary-color-general: var(--tertiary-color-south-east);
+        --primary-color-general: var(--primary-color-south-east);
     }
 
     main {

@@ -21,7 +21,7 @@
     <nav id="footer-menu">
         <ul>
             <li class="menu-item"><a href="/district/nieuw-west"><LogoNieuwWestToren/></a></li>
-            <li class="menu-item"><a href="/district/zuid-oost"><LogoZuidOostToren/></a></li>
+            <li class="menu-item"><a href="/district/zuidoost"><LogoZuidOostToren/></a></li>
             <li class="menu-item"><a href="/district/oost"><LogoOostToren/></a></li>
         </ul>
     </nav>  

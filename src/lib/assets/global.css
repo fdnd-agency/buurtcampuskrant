@@ -50,8 +50,11 @@ html {
     color-scheme:light dark;
 
     /* COLOR */
+
+    /* header + articles */
     --primary-color-general: light-dark(hsl(221, 23%, 76%), hsl(221, 23%, 26%));
-    --secondary-color-general: light-dark(hsl(221, 23%, 26%), hsl(216, 23%, 91%));
+    /* text articles, buttons */
+    --secondary-color-general: light-dark(hsl(221, 23%, 26%), hsl(221, 23%, 76%));
     --tertiary-color-general: light-dark(hsl(216, 23%, 91%), hsl(221, 15%, 39%)); 
     --dm-logo-general: hsl(216, 23%, 91%);
 
@@ -60,17 +63,17 @@ html {
     --accent-color-lighter: hsl(23, 92%, 95%);
 
     --primary-color-east: light-dark(hsl(230, 39%, 31%), hsl(229, 39%, 11%));
-    --secondary-color-east: light-dark(hsl(230, 39%, 21%), hsl(231, 39%, 86%));
+    --secondary-color-east: light-dark(hsl(232, 37%, 92%), hsl(232, 37%, 92%));
     --tertiary-color-east: light-dark(hsl(231, 39%, 86%), hsl(230, 39%, 21%));
     --dm-logo-east: hsl(231, 39%, 86%);
 
     --primary-color-new-west: light-dark(hsl(74, 37%, 47%), hsl(73, 37%, 17%));
-    --secondary-color-new-west: light-dark(hsl(71, 37%, 15%), hsl(75, 46%, 95%));
+    --secondary-color-new-west: light-dark(hsl(71, 37%, 15%), hsl(72, 37%, 92%));
     --tertiary-color-new-west: light-dark(hsl(75, 46%, 95%), hsl(71, 37%, 15%));
     --dm-logo-new-west: hsl(75, 46%, 95%);
 
     --primary-color-south-east: light-dark(hsl(186, 85%, 21%), hsl(185, 87%, 6%));
-    --secondary-color-south-east: light-dark(hsl(186, 85%, 21%), hsl(188, 44%, 93%));
+    --secondary-color-south-east: light-dark(hsl(185, 45%, 91%), hsl(185, 45%, 91%));
     --tertiary-color-south-east: light-dark(hsl(186, 45%, 91%), hsl(186, 85%, 21%));
     --dm-logo-south-east: hsl(188, 44%, 93%);
 
@@ -112,8 +115,11 @@ html {
 :root:has( [value="dark-dl-mode"]:checked ) {
     color-scheme:dark;
 
-    header, footer, .article-detail {
+    header, footer, .article-detail, .filter {
         border: var(--border-dm);
+    }
+    .article {
+        border: 3px solid var(--secondary-color-general);
     }
 }
 
@@ -124,7 +130,7 @@ html {
     }
 }
 
-body.route-zuid-oost {
+body.route-zuidoost {
     --primary-color-general: var(--primary-color-south-east);
     --secondary-color-general: var(--secondary-color-south-east);
     --dm-logo-general: var(--dm-logo-south-east);
@@ -138,7 +144,7 @@ body.route-oost {
 
 body.route-nieuw-west {
     --primary-color-general: var(--primary-color-new-west);
-    --secondary-color-general: var(--tertiary-color-new-west);
+    --secondary-color-general: var(--secondary-color-new-west);
     --dm-logo-general: var(--dm-logo-new-west);
 }
 
@@ -172,7 +178,9 @@ p {
     line-height: 1.5;
 }
 
-
+ul {
+    list-style-type: none;
+}
 
 .label-district {
     border: 1px solid var(--secondary-color-general);
@@ -199,7 +207,7 @@ blockquote {
     align-items: center;
     font-family: var(--secondary-font);
     background-color: var(--secondary-color-general);
-    color: var(--tertiary-color-general);
+    color: var(--primary-color-general);
     width: fit-content;
     padding: var(--md);
     border-radius: var(--lg);

@@ -4,7 +4,8 @@
     import { Article } from '$lib';
     import  FullArticle  from '$lib/components/molecules/FullArticle.svelte';
 
-    export let data;
+    let {data} = $props();
+
     const articles = data.article;
     const recentArticle = data.article[0]
 </script>
@@ -45,9 +46,6 @@
 
                     h2 {
                         grid-column: 1/-1;
-                    }
-                    article {
-                        grid-row: 2;
                     }
             }
 
