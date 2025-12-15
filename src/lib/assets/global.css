@@ -170,7 +170,7 @@ h4,
 .sm {
     font-size: clamp(1rem, 3.5vw, 1.5rem)
 }
-p, a, label {
+p, a, label, span {
     font-family: var(--tertiary-font);
 }
 p {
@@ -251,6 +251,9 @@ article {
         }
         p {
             padding-top: .5rem;
+        }
+        span {
+            font: inherit !important;
         }
     }
 
