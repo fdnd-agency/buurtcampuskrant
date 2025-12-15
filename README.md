@@ -10,13 +10,13 @@
 https://github.com/user-attachments/assets/975e7177-f0c4-4edb-878f-2013a2b64b3b
 
 
+https://github.com/user-attachments/assets/a3323f37-606e-4762-84b4-32c02205d818
 
 
 
 Our assignment was to work as a team to create a digital version of the buurtcampus newspaper. This is a collaboration between Amsterdam University of Applied Sciences and Amsterdam Public Library, spread across various districts: East, New West and South-East. Buurtcampuskrant organises various social projects and campaigns aimed at enriching the neighbourhood. Important themes include sustainability, the environment and learning. The newspaper keeps you informed about these activities that have taken place. A paper version that can reach a larger audience through a digital version. 
 
-We made this digital newspaper with Svelte and Sveltekit. The focus was on dividing the site into different sections (components) that recur frequently on the website. A lot of attention was also paid to the use of colours. Furthermore we have a homepage (where u land on first), this will show you the most recent newsarticle. On the side of that u can find a short link to other news articles. U can also navigate to differect district pages. 
-
+We made this digital newspaper with Svelte and Sveltekit. The focus was on dividing the site into different sections (components) that recur frequently on the website. A lot of attention was also paid to the use of colours. Furthermore we have a homepage (where u land on first), this will show you the most recent newsarticle. On the side of that u can find a short link to other news articles. U can also navigate to differect district pages. On these district pages, you'll find all the articles related to this district. You can filter by various categories.
 
 
 ## Design choices
@@ -41,6 +41,7 @@ Components are various elements that appear frequently on multiple pages. Below 
 * [AccessibilityMenu.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/molecules/AccessibilityMenu.svelte) This component is full of support of the accessibility aspects. We've added the dark and light mode here. There's also an option for people that struggle with dyslexia that they can use the font that is easier to read for them. 
 * [Footer.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/organisms/Footer.svelte) This component contains a newsletter, links to socials and a navigation. This will also take place on every page.  
 * [Newsletter.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/atoms/Newsletter.svelte) The newsletter will be implemented in the footer. It goes without saying, but this is where people can subscribe to the newsletter.
+* [FilterButtons.svelte:](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/src/lib/components/atoms/FilterButtons.svelte) The various filtering buttons on each district page are built into a component. These are loaded on the district page and then linked to the corresponding articles. 
 
 Finally, the images of the logos have also been placed in components. This is because they are reused very often. 
 
