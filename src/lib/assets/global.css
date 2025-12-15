@@ -207,7 +207,7 @@ blockquote {
     align-items: center;
     font-family: var(--secondary-font);
     background-color: var(--secondary-color-general);
-    color: var(--tertiary-color-general);
+    color: var(--primary-color-general);
     width: fit-content;
     padding: var(--md);
     border-radius: var(--lg);

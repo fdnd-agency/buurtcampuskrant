@@ -9,6 +9,7 @@
         <li class="filter"><a href="?filter=de wijk">De wijk</a></li>
         <li class="filter"><a href="?filter=studenten">Studenten</a></li>
         <li class="filter"><a href="?filter=wijkpartner">Wijkpartner</a></li>
+        <li class="filter"><a href="?filter=bewoners">Bewoners</a></li>
     </ul>
 
     <h2>Buurtcampus // {data.data[0].district}</h2>

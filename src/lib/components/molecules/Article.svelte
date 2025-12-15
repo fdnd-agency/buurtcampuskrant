@@ -30,17 +30,17 @@
 </article>
 
 <style>
-    article[data-district="east"] {
+    article[data-district="oost"] {
         --secondary-color-general: var(--secondary-color-east);
         --primary-color-general: var(--primary-color-east);
     }
 
-    article[data-district="new-west"] {
+    article[data-district="nieuw-west"] {
         --secondary-color-general: var(--secondary-color-new-west);
         --primary-color-general: var(--primary-color-new-west);
     }
 
-    article[data-district="south-east"] {
+    article[data-district="zuidoost"] {
         --secondary-color-general: var(--secondary-color-south-east);
         --primary-color-general: var(--primary-color-south-east);
     }
