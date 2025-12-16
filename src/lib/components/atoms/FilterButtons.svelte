@@ -6,9 +6,9 @@
 <section>
     <ul>
         <li class="filter"><a href="/district/{data.data[0].district}">Alles</a></li>
-        <li class="filter"><a href="?filter=de wijk">De wijk</a></li>
+        <li class="filter"><a href="?filter=hva medewerkers">Hva medewerkers</a></li>
         <li class="filter"><a href="?filter=studenten">Studenten</a></li>
-        <li class="filter"><a href="?filter=wijkpartner">Wijkpartner</a></li>
+        <li class="filter"><a href="?filter=wijkpartners">Wijkpartners</a></li>
         <li class="filter"><a href="?filter=bewoners">Bewoners</a></li>
     </ul>
 
