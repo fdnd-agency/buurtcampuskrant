@@ -18,7 +18,7 @@
 <style>
     article {
             padding: var(--sm);
-            background-color: var(--tertiary-color-general);
+            background-color: var(--primary-color-general);
             border-radius: var(--border-radius-sm);
             height: 100%;
             width: 80vw;
@@ -44,7 +44,7 @@
             }
 
             .label-district {
-                color: var(--tertiary-color-general);
+                color: var(--primary-color-general);
             }
         }   
 </style>

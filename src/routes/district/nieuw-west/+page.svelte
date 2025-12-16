@@ -1,6 +1,8 @@
 <script>
     import Article from "$lib/components/molecules/Article.svelte";
     import FilterButtons from "$lib/components/atoms/FilterButtons.svelte";
+    import Header from "$lib/components/organisms/Header.svelte";
+    import Filter from "$lib/components/organisms/Filter.svelte";
 
     let { data } = $props();
 </script>
