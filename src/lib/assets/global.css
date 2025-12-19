@@ -124,7 +124,7 @@ html {
 }
 
 @media (prefers-color-scheme: dark) {
-    header, footer, .article-detail {
+    header, footer, .article-detail, #progress {
         border: var(--border-dm);
 
     }

@@ -1,6 +1,10 @@
 <script>
     export let article; 
+
+    import ProgressBar from "../atoms/ProgressBar.svelte";
 </script>
+
+<ProgressBar/>
 
 <article class="article-detail">
     <p class="label-district">{article.district}</p>
