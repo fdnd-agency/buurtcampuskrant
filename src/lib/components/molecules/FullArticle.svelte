@@ -4,28 +4,35 @@
     import ProgressBar from "../atoms/ProgressBar.svelte";
 </script>
 
-<ProgressBar/>
+<div class="flex-progress">
+    <ProgressBar/>
 
-<article class="article-detail">
-    <p class="label-district">{article.district}</p>
-    <p class="label-category">{article.category}</p>
-    <h2 class="title">{article.title}</h2>
-    <p class="intro">{article.intro}</p>
-    <p class="side-title">{article.side_title}</p>
-    <img class="cover"
-         src="https://fdnd-agency.directus.app/assets/{article.cover}"
-         alt="{article.alt}" />
+    <article class="article-detail">
+        <p class="label-district">{article.district}</p>
+        <p class="label-category">{article.category}</p>
+        <h2 class="title">{article.title}</h2>
+        <p class="intro">{article.intro}</p>
+        <p class="side-title">{article.side_title}</p>
+        <img class="cover"
+            src="https://fdnd-agency.directus.app/assets/{article.cover}"
+            alt="{article.alt}" />
 
-    <div class="body">{@html article.body}</div>
-</article>
-
+        <div class="body">{@html article.body}</div>
+    </article>
+</div>
 <style>
+    .flex-progress {
+        display: flex;
+        flex-direction: column;
+        gap: var(--sm);
+    }
+
     article {
             padding: var(--sm);
             background-color: var(--tertiary-color-general);
             border-radius: var(--border-radius-sm);
             height: 100%;
-            width: 80vw;
+            width: 70vw;
             justify-items: left;
 
             img {
