@@ -48,6 +48,14 @@
                     text-decoration: none;
                     color: var(--secondary-color-general);
                 }
+
+                &:hover {
+                    background-color: var(--secondary-color-general);
+
+                    a {
+                        color: var(--primary-color-general);
+                    }
+                }
             }
         }
 
