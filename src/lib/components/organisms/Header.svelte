@@ -56,7 +56,7 @@
         container-type: inline-size;
         container-name: header-display;
 
-        position: sticky;
+        /* position: sticky; */
         top: 0;
         backdrop-filter: blur(200px);
 

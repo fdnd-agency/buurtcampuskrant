@@ -59,7 +59,7 @@
         @media (width > 1020px) {
             flex-direction: row;
             justify-content: space-evenly;
-            margin-inline: 5vw;
+            padding: 0 5vw;
             column-gap: 5vw;
             
             section {

@@ -13,5 +13,5 @@ export { default as LogoNieuwWestToren } from './components/atoms/LogoNieuwWestT
 export { default as LogoZuidOostToren } from './components/atoms/LogoZuidOostToren.svelte'
 export { default as LogoOostToren } from './components/atoms/LogoOostToren.svelte'
 export { default as LogoBuurtcampus } from './components/atoms/LogoBuurtcampus.svelte'
-
+export { default as ProgressBar } from './components/atoms/ProgressBar.svelte'
 
