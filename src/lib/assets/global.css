@@ -54,7 +54,7 @@ html {
     /* header + articles */
     --primary-color-general: light-dark(hsl(221, 23%, 76%), hsl(221, 23%, 26%));
     /* text articles, buttons */
-    --secondary-color-general: light-dark(hsl(221, 23%, 26%), hsl(221, 23%, 76%));
+    --secondary-color-general: light-dark(hsl(221, 23%, 26%), hsl(216, 23%, 91%));
     --tertiary-color-general: light-dark(hsl(216, 23%, 91%), hsl(221, 15%, 39%)); 
     --dm-logo-general: hsl(216, 23%, 91%);
 
@@ -239,7 +239,6 @@ article {
         line-height: 1;
     }
     .cover {
-        /* float: right; */
         width: 70%;
         height: 30vh;
         object-fit: cover;
