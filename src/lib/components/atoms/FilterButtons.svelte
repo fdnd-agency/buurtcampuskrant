@@ -1,6 +1,12 @@
 <script>
     import { Article } from '$lib';
+    import { page } from '$app/state';
+    
     let {data} = $props();
+
+    const activeFilter = $derived(
+        page.url.searchParams.get('filter')
+    );
 </script>
 
 <section>
@@ -13,7 +19,14 @@
     </ul>
 
     <h2>Buurtcampus // {data.data[0].district}</h2>
-    <p>Alle artikelen met het filter '{data.data[0].categories[0].buurtcampuskrant_categories_id.title}'</p>
+    <p>
+        Alle artikelen met het filter
+        {#if !activeFilter}
+            'alles'
+        {:else}
+            '{data.data[0].categories[0].buurtcampuskrant_categories_id.title}'
+        {/if}
+    </p>
 </section>
 
 <style>
