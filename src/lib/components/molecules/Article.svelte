@@ -153,10 +153,6 @@
             font-size: var(--sm);
         }
 
-        button {
-            font-size: 0.7rem;
-        }
-
         .container img {
             height: 150px;
         }
