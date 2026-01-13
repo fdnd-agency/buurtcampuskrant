@@ -1,21 +1,27 @@
 <script>
+    import fallbackimage from "../../assets/images/Fallback.png";
+
     let { article } = $props();
     const cat_title = $derived(
         article?.categories?.[0]?.buurtcampuskrant_categories_id?.title ?? ""
-    );
-    
+    ); 
 </script>
 
 <article data-district="{article.district}">
     <a class="article" href="/nieuws/{article.id}">
         <div class="container">
-            <picture>
-                <source 
-                    srcset="https://fdnd-agency.directus.app/assets/{ article.cover }?format=webp&width=500"
-                    media="(min-width: 430px)"
-                    type="image/webp">
-                <img src="https://fdnd-agency.directus.app/assets/{ article.cover }?width=300" alt="">
-            </picture>
+            {#if article.cover}
+                <picture>
+                    <source 
+                        srcset="https://fdnd-agency.directus.app/assets/{ article.cover }?format=webp&width=500"
+                        media="(min-width: 430px)"
+                        type="image/webp">
+
+                    <img src="https://fdnd-agency.directus.app/assets/{ article.cover }?width=300" alt="">
+                </picture>
+            {:else}
+                <img src="{ fallbackimage }?width=300" alt="">
+            {/if}
 
             <div class="content">   
                 <h2>{ article.title }</h2>
