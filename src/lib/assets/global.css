@@ -130,18 +130,22 @@ html {
     }
 }
 
+
+body:has(main[data-district="zuidoost"]),
 body.route-zuidoost {
     --primary-color-general: var(--primary-color-south-east);
     --secondary-color-general: var(--secondary-color-south-east);
     --dm-logo-general: var(--dm-logo-south-east);
 }
 
+body:has(main[data-district="oost"]),
 body.route-oost {
     --primary-color-general: var(--primary-color-east);
     --secondary-color-general: var(--secondary-color-east);
     --dm-logo-general: var(--dm-logo-east);
 }
 
+body:has(main[data-district="nieuw-west"]),
 body.route-nieuw-west {
     --primary-color-general: var(--primary-color-new-west);
     --secondary-color-general: var(--secondary-color-new-west);

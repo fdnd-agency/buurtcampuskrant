@@ -21,7 +21,7 @@
                 <h2>{ article.title }</h2>
 
                 <div class="buttons">
-                    <button href="/district/{ article.district}">{ article.district }</button>
+                    <button href="/district/{ article.district }">{ article.district }</button>
                     <button href="/{ cat_title }">{ cat_title }</button>
                 </div>
             </div>
