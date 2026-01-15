@@ -26,34 +26,34 @@
 
 <style>
     .flag {
-        display: inline-block;
+      display: inline-block;
 
-        .flag-cloth {
+      .flag-cloth {
           transform-box: fill-box;
-          transform-origin: left center;
+          transform-origin: left center; 
           transition: transform 0.2s ease-out;
-        }
-    
-        &:hover .flag-cloth {
-          animation: flag-wave 1.2s ease-in-out infinite;
-        }
+      }
+
+      &:hover .flag-cloth {
+          animation: flag-wave 0.6s ease-in-out infinite;
+      }
     }
 
     @keyframes flag-wave {
         0% {
-          transform: skewY(0deg) rotate(0deg);
+            transform: rotate(0deg) skewY(0deg);
         }
         25% {
-          transform: skewY(-3deg) rotate(1deg);
+            transform: rotate(2deg) skewY(-5deg) scaleX(0.95);
         }
         50% {
-          transform: skewY(4deg) rotate(-1deg);
+            transform: rotate(0deg) skewY(0deg) scaleX(1);
         }
         75% {
-          transform: skewY(-2deg) rotate(0.5deg);
+            transform: rotate(-2deg) skewY(5deg) scaleX(0.95);
         }
         100% {
-          transform: skewY(0deg) rotate(0deg);
+            transform: rotate(0deg) skewY(0deg);
         }
     }
 </style>
