@@ -37,6 +37,14 @@
       &:hover .flag-cloth {
           animation: flag-wave 0.6s ease-in-out infinite;
       }
+
+      &:hover {
+        path:nth-of-type(1) {
+            fill: var(--primary-color-new-west);
+            stroke: var(--secondary-color-new-west); 
+            stroke-width: 1px;
+        }
+      }
     }
 
     @keyframes flag-wave {
