@@ -11,7 +11,7 @@
 <main>
     <ul>
         {#each data.data as article}
-            <Article {article} />
+            <li><Article {article} /></li>
         {/each}
     </ul>
 </main>

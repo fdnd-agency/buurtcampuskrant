@@ -66,6 +66,7 @@
         height: var(--lg);
         max-width: var(--lg);
         padding:0;
+        z-index: 35;
 
         font-size: var(--sm);
         border-radius: var(--border-radius-md);
