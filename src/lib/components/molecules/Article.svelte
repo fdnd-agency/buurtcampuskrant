@@ -60,22 +60,27 @@
         container-type: inline-size;
         container-name: --article;
 
-        background-color: var(--primary-color-general);
-        border: solid 3px var(--primary-color-general);
-        width: min-content;
-        border-radius: var(--border-radius-lg);
-        width: 100%;
+        /* background-color: var(--primary-color-general); */
+        /* border: solid 3px var(--primary-color-general); */
+        /* width: min-content; */
+        /* border-radius: var(--border-radius-lg); */
+        /* width: 100%; */
 
         .container {
             display: grid;
             grid-template-rows: 1fr max-content;
+            width: 100%;
             position: relative;
+            
+            background-color: var(--primary-color-general);
+            border-radius: var(--border-radius-lg);
+            padding: 3px;
 
             img {
                 grid-row: 1;
                 border-radius: var(--md) var(--md) 0 0;
 
-                max-height: 15rem;
+                height: 15rem;
                 width: 100%;
                 object-fit: cover;
             }
@@ -83,35 +88,33 @@
         .content {
             grid-row: 2;
             padding: var(--sm);
-            
+
             h2 {
                 font-size: clamp(1.3rem, 5vw, 1.8rem);
-                margin-bottom: var(--sm);      
+                margin-bottom: var(--sm);
                 a {
                     font-family: var(--primary-font);
                 }
-               
             }
+
             .buttons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: var(--xs);
+
                 a {
                     border: 1px solid var(--secondary-color-general);
                     border-radius: var(--border-radius-sm);
-                    padding: .25rem var(--xs);
-                    transition: background-color 0.5s ease, color 0.5s ease;
+                    padding: 0.25rem var(--xs);
                     z-index: 25;
+                    width: max-content;
 
-                    @media (prefers-reduced-motion: no-preference) {
-                        transition: transform 0.2s ease;
-
-                        &:hover {
-                            transform: translateY(-10px);
-                        }
-                    }
                     &:hover {
                         background-color: var(--secondary-color-general);
                         color: var(--primary-color-general);
                     }
                 }
+
                 a:nth-of-type(1) {
                     background-color: var(--secondary-color-general);
                     color: var(--primary-color-general);
@@ -124,17 +127,19 @@
             }
         }
 
-        @container --article (width > 430px) { 
+        @container --article (width > 430px) {
             .container {
                 display: grid;
                 grid-template-columns: 40% 60%;
                 grid-template-rows: max-content;
+                align-items: center;
 
                 img {
-                    height: 100%;
+                    width: 100%;
                     border-radius: var(--md) 0 0 var(--md);
                 }
             }
+
             .content {
                 grid-row: 1;
                 grid-column: 2;
@@ -142,7 +147,7 @@
         }
     }
 
-    h2 a::before {                   
+    h2 a::before {
         content: "";
         position: absolute;
         top: 0px;
@@ -150,6 +155,6 @@
         right: 0;
         bottom: 15%;
         z-index: 20;
-        background: transparent;                   
+        background: transparent;
     }
 </style>

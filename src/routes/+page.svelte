@@ -59,11 +59,13 @@
         @media (width > 1020px) {
             flex-direction: row;
             justify-content: space-evenly;
-            padding: 0 5vw;
-            column-gap: 5vw;
+            padding: 0 3vw;
+            column-gap: 4vw;
             
             section {
                 width: 30vw;
+                align-self: start;
+                padding-top: 15rem;
             }
         }
     }
