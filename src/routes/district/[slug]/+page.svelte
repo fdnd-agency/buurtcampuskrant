@@ -24,14 +24,14 @@
         row-gap: var(--lg);
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
-        @media (min-width: 1128px) {
+        @media (width > 1128px) {
             grid-template-columns: repeat(3, 1fr);
             padding: 0 4rem;
         }
-        @media (min-width: 1280px) {
+        @media (width > 1280px) {
             padding: 0 7rem;
         }
-        @media (min-width: 1440px) {
+        @media (width > 1440px) {
             padding: 0 10rem;
         }
     }
