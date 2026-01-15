@@ -22,7 +22,8 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         grid-template-rows: 1fr 1fr;
-        width: 14.375rem;
+        width: 100%;
+        max-width: 20rem;
         row-gap: var(--xs);
 
         button {
@@ -30,7 +31,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 0.7rem;
+            font-size: 1rem;
             grid-row: 2;
             font-weight: 500;
             color: white;
@@ -69,7 +70,32 @@
         input::placeholder {
             color: #CACACA;
             font-style: italic;
-            font-size: 0.7rem;
+            font-size: 1rem;
         }
     }
+
+    @media (min-width: 1024px) {
+
+        form {
+            max-width: 25rem;
+        }
+
+        form label {
+            font-size: 1.5rem;
+        }
+        
+        form input, form button {
+            height: 2rem; 
+        }
+
+        form input::placeholder, form button {
+            font-size: 1.2rem; 
+        }
+
+        form button::after {
+            border-top: 16px solid transparent;
+            border-bottom: 16px solid transparent;
+            border-right: 20px solid var(--primary-color-general);
+        }
+    }  
 </style>
