@@ -45,7 +45,7 @@
                 }
 
                 @media(min-width:800px) {
-                    width: 30vw;
+                    width: 25vw;
                     margin: 1rem 2rem 2rem 2rem;
                 }
             }
@@ -62,6 +62,7 @@
         @media (width > 1020px) {
             article {
                 width: 65vw;
+                font-size: 1.5rem;
             }
         }
 </style>
