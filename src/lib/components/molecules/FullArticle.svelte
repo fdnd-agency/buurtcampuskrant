@@ -32,7 +32,7 @@
             background-color: var(--primary-color-general);
             border-radius: var(--border-radius-sm);
             height: 100%;
-            width: 70vw;
+            width: 100%;
             justify-items: left;
 
             img {
@@ -57,5 +57,11 @@
             .label-district {
                 color: var(--primary-color-general);
             }
-        }   
+        } 
+        
+        @media (width > 1020px) {
+            article {
+                width: 65vw;
+            }
+        }
 </style>
