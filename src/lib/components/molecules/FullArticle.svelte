@@ -33,7 +33,7 @@
             border-radius: var(--border-radius-sm);
             height: 100%;
             width: 100%;
-            justify-items: left;
+            justify-items: center;
 
             img {
                 width: 100%;
