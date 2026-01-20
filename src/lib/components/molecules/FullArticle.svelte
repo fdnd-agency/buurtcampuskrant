@@ -32,8 +32,8 @@
             background-color: var(--primary-color-general);
             border-radius: var(--border-radius-sm);
             height: 100%;
-            width: 100%;
-            justify-items: left;
+            width: 90vw;
+            justify-items: center;
 
             img {
                 width: 100%;
@@ -45,9 +45,13 @@
                 }
 
                 @media(min-width:800px) {
-                    width: 30vw;
+                    width: 25vw;
                     margin: 1rem 2rem 2rem 2rem;
                 }
+            }
+
+            h2 {
+                max-width: 30rem;
             }
 
             h2, .side-title, p, div {
@@ -62,6 +66,12 @@
         @media (width > 1020px) {
             article {
                 width: 65vw;
+            }
+        }
+
+        @media (width > 1680px) {
+            article {
+                font-size: 1.2rem;
             }
         }
 </style>
