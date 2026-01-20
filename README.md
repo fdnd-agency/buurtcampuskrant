@@ -7,10 +7,7 @@
 
 
 
-https://github.com/user-attachments/assets/975e7177-f0c4-4edb-878f-2013a2b64b3b
-
-
-https://github.com/user-attachments/assets/a3323f37-606e-4762-84b4-32c02205d818
+https://github.com/user-attachments/assets/73b5bc43-8739-44cc-86d6-20f849dccf6d
 
 
 
@@ -92,7 +89,9 @@ npm run dev -- --open
 ^ This wil make sure you can follow your code changes live. 
 
 
+Rick Pijnacker - [@rickFDND](https://github.com/rickFDND) 
 
+Jules Bruins - [@julesbruins](https://github.com/julesbruins)
 
 
 
