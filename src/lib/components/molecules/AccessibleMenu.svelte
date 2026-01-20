@@ -171,5 +171,10 @@
         max-width: 25rem;
     }
 }
+@media (width > 1480px) {
+    label {
+        font-size: 1.2rem;
+    }
+}
 
 </style>
