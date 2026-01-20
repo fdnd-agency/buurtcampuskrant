@@ -18,7 +18,7 @@
 
 <style>
     ul {
-        padding: var(--sm);
+        padding: var(--sm) var(--sm) var(--lg) var(--sm);
         display: grid;
         gap: var(--md);
         row-gap: var(--lg);
@@ -26,13 +26,13 @@
 
         @media (width > 1128px) {
             grid-template-columns: repeat(3, 1fr);
-            padding: 0 4rem;
+            padding: var(--md) var(--xl) var(--lg) var(--xl);
         }
         @media (width > 1280px) {
-            padding: 0 7rem;
+            padding: var(--md) 7rem var(--lg) 7rem;
         }
         @media (width > 1440px) {
-            padding: 0 10rem;
+            padding: var(--md) 10rem var(--lg) 10rem;
         }
     }
 </style>
