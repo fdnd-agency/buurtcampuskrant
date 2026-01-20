@@ -64,4 +64,10 @@
             transform: rotate(0deg) skewY(0deg);
         }
     }
+
+    svg {
+        height: 11vh;
+        width: auto;
+    }
+
 </style>

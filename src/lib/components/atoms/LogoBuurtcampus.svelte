@@ -8,15 +8,19 @@
 
 <style>
 svg {
-        path:nth-of-type(1) {
-            fill: var(--secondary-color-general);
+    height: 11vh;
+    width: auto;
+        
+    path:nth-of-type(1) {
+        fill: var(--secondary-color-general);
 
-            @media (prefers-color-scheme: dark) {
-                --secondary-color-general: var(--dm-logo-general);
-            }
-        }
-        rect:nth-of-type(2) {
-            fill: var(--primary-color-general);
+        @media (prefers-color-scheme: dark) {
+            --secondary-color-general: var(--dm-logo-general);
         }
     }
+    rect:nth-of-type(2) {
+        fill: var(--primary-color-general);
+    }
+}
+
 </style>

@@ -55,6 +55,7 @@
     header {        
         container-type: inline-size;
         container-name: header-display;
+        height: 15vh;
 
         /* position: sticky; */
         top: 0;
@@ -128,7 +129,7 @@
     @container header-display (width > 48rem) {
         :global(.js-enabled .menu) {
             position: absolute;
-            top: 4.5rem;
+            top: 7.5vh;
             left: auto;
             right: var(--lg);
             transform: translateY(-50%);
