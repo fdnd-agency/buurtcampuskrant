@@ -59,17 +59,13 @@
     article {
         container-type: inline-size;
         container-name: --article;
-
-        /* background-color: var(--primary-color-general); */
-        /* border: solid 3px var(--primary-color-general); */
-        /* width: min-content; */
-        /* border-radius: var(--border-radius-lg); */
-        /* width: 100%; */
+        height: stretch;
 
         .container {
             display: grid;
-            grid-template-rows: 1fr max-content;
+            grid-template-rows: max-content max-content;
             width: 100%;
+            height: stretch;
             position: relative;
             
             background-color: var(--primary-color-general);
