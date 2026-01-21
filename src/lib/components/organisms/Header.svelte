@@ -116,7 +116,7 @@
             left: 0;
             border-radius: var(--border-radius-sm);
             border: var(--border-dm);
-            top: 9.6rem;
+            top: 16.5vh;
         }
     }
 
