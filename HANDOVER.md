@@ -1,4 +1,4 @@
-# Handover
+# HANDOVER
 
 ## The status
 The current status of the project is that the site includes the following:
