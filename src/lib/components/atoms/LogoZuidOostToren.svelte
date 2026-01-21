@@ -69,5 +69,4 @@
         height: 11vh;
         width: auto;
     }
-
 </style>
