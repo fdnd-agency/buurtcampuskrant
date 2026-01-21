@@ -28,6 +28,6 @@ Wat zijn de grootste aandachtspunten of uitdagingen?
 
 ## First steps
 - **Component layout:** Try to understand the atoms, molecules, and organisms structure in relation to the layout of the components.
-- **Read.me:** Read all about the features etc. in the read.me for a more extensive description.
-- **Contrubting:** Read in the contrubting more of the workflow and the conventions.
+- **Read.me:** Read all about the features etc. in the [read.me](https://github.com/fdnd-agency/buurtcampuskrant/tree/dev?tab=readme-ov-file#buurtcampuskrant) for a more extensive description.
+- **Contrubting:** Read in the [contrubting](https://github.com/fdnd-agency/buurtcampuskrant/blob/dev/CONTRIBUTING.md](https://github.com/fdnd-agency/buurtcampuskrant/tree/dev?tab=contributing-ov-file#teamafspraken-en-teamcanvas)) more of the workflow and the conventions.
 - **Database:** Check the database of all the content we have. 
