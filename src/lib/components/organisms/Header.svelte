@@ -56,6 +56,8 @@
         container-type: inline-size;
         container-name: header-display;
         height: 15vh;
+        position: relative;
+        z-index: 30;
 
         /* position: sticky; */
         top: 0;

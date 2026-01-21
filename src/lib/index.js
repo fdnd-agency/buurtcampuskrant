@@ -1,7 +1,6 @@
 // place files you want to import through the `$lib` alias in this folder.
 export { default as Header } from './components/organisms/Header.svelte'
 export { default as AccessibleMenu } from './components/molecules/AccessibleMenu.svelte'
-export { default as Quote } from './components/atoms/Quote.svelte'
 export { default as Newsletter } from './components/atoms/Newsletter.svelte'
 export { default as Article } from './components/molecules/Article.svelte'
 export { default as Footer } from './components/organisms/Footer.svelte'
