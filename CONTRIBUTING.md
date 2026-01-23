@@ -201,3 +201,11 @@ When will we do a post mortem?
 - If a teammember doesn't communicate.
 - If a teammember doesn't deliver any work. 
 
+## Final retrospective
+How did the teamwork go?
+- Jules: Nice contact between eachother. Great teamwork. Rick is a very funny guy which helps with the balance between fun and working. This helped me to reduce the stress I had. 
+- Rick: We had good contact. If we weren't at school together we would call on teams. Jules is very good at making plannings together and helping eachother with small things within the project. It was very fun to work together.
+
+What problems did you face?
+- Since we had 1 teammember at first who wasn't a good fit for our team. We talked about it and decided to part ways with this person.
+
