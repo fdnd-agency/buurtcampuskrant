@@ -1,5 +1,7 @@
 title: "Buurtcampuskrant"
-status: "in progress"
+client: "Buurtcampus"
+status: "active"
+years: [1]
 main_link: "https://buurtcampuskrant.agency.fdnd.nl/"
 dev_link: "https://buurtcampuskrant.dev.fdnd.nl/"
 tech_stack: ["SvelteKit", "Directus"]
