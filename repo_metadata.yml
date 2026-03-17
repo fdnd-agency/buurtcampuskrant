@@ -5,3 +5,14 @@ years: [1]
 main_link: "https://buurtcampuskrant.agency.fdnd.nl/"
 dev_link: "https://buurtcampuskrant.dev.fdnd.nl/"
 tech_stack: ["SvelteKit", "Directus"]
+team:
+  - name: 'Emre'
+    github: 'EmreBahar0912'
+  - name: 'Isaac'
+    github: 'IsaacEswa'
+  - name: 'Oumaima'
+    github: 'meemo99'
+  - name: 'Semih'
+    github: 'hexterty46'
+  - name: 'Mete'
+    github: 'Mete2004'
