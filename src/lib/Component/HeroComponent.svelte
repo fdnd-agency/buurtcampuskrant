@@ -56,13 +56,13 @@
     color: #303A6D;
   }
 
-  /* Header */
+  /* Header - mobiel als basis */
 
   .site-header {
     display: flex;
     align-items: center;
     width: 100%;
-    padding: 2rem;
+    padding: 1.25rem;
     background-color: #F5DFD0;
     color: #303A6D;
   }
@@ -75,25 +75,21 @@
     flex-shrink: 0;
     color: #303A6D;
     font-family: "Arial Black", Arial, sans-serif;
-    font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+    font-size: 1.8rem;
     font-weight: 900;
     line-height: 0.88;
     letter-spacing: -0.06em;
     text-decoration: none;
   }
 
-  .logo-a {
-    color: #EA5B0D;
-  }
-
-  /* Hero */
+  /* Hero - mobiel als basis */
 
   .hero {
     display: grid;
-    grid-template-columns: 1fr 0.85fr;
+    grid-template-columns: 1fr;
     align-items: center;
-    gap: 3rem;
-    padding: 5rem 8%;
+    gap: 2rem;
+    padding: 3rem 1.25rem;
     background-color: #F5EBDF;
     color: #303A6D;
   }
@@ -104,14 +100,14 @@
 
   .hero h1 {
     font-family: "Arial Black", Arial, sans-serif;
-    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-size: clamp(2.5rem, 10vw, 3.5rem);
     line-height: 1.05;
     margin: 0 0 1.5rem;
     max-width: 650px;
   }
 
   .hero-description {
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 1.7;
     margin: 0 0 2rem;
   }
@@ -142,48 +138,46 @@
     display: block;
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 4.5;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 12px;
   }
 
-  /* Tablet */
+  /* Tablet en grotere schermen */
 
-  @media (min-width: 1000px) {
+  @media (min-width: 701px) {
     .site-header {
       padding: 1.5rem;
     }
-  }
 
-  /* Mobiel */
-
-  @media (min-width: 700px) {
-    .site-header {
-      padding: 1.25rem;
+    .logo {
+      font-size: clamp(1.7rem, 2.8vw, 2.4rem);
     }
 
     .hero {
-      grid-template-columns: 1fr;
-      gap: 2rem;
-      padding: 3rem 1.25rem;
+      grid-template-columns: 1fr 0.85fr;
+      gap: 3rem;
+      padding: 5rem 8%;
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 10vw, 3.5rem);
+      font-size: clamp(2.5rem, 5vw, 5rem);
     }
 
     .hero-description {
-      font-size: 1rem;
+      font-size: 1.15rem;
     }
 
     .hero-image img {
-      aspect-ratio: 4 / 3;
+      aspect-ratio: 4 / 4.5;
     }
   }
 
-  @media (min-width: 560px) {
-    .logo {
-      font-size: 1.8rem;
+  /* Brede schermen */
+
+  @media (min-width: 1000px) {
+    .site-header {
+      padding: 1.5rem 2rem;
     }
   }
 </style>
