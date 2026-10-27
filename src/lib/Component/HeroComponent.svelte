@@ -149,7 +149,7 @@
 
   /* Tablet */
 
-  @media (max-width: 1000px) {
+  @media (min-width: 1000px) {
     .site-header {
       padding: 1.5rem;
     }
@@ -157,7 +157,7 @@
 
   /* Mobiel */
 
-  @media (max-width: 700px) {
+  @media (min-width: 700px) {
     .site-header {
       padding: 1.25rem;
     }
@@ -181,7 +181,7 @@
     }
   }
 
-  @media (max-width: 560px) {
+  @media (min-width: 560px) {
     .logo {
       font-size: 1.8rem;
     }
