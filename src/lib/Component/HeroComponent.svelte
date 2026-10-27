@@ -10,14 +10,15 @@
 <header class="site-header">
   <a class="logo" href="/" aria-label="Buurtcampuskrant - Home">
     <span>BUURT-</span>
-    <span>CAM</span><span>PUS</span>
+    <span>CAM</span>
+    <span>PUS</span>
   </a>
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-title">
     <div class="hero-content">
-      <h1>Verhalen van de buurt voor de buurt</h1>
+      <h1 id="hero-title">Verhalen van de buurt voor de buurt</h1>
 
       <p class="hero-description">
         Blijf op de hoogte van het laatste nieuws, bijzondere
@@ -42,12 +43,25 @@
     </div>
   </section>
 
-  <!-- Plaats hier je artikelen met id="artikelen" -->
+  <section id="artikelen" class="articles" aria-labelledby="artikelen-titel">
+    <h2 id="artikelen-titel">Verhalen uit de buurt</h2>
+
+    <p>
+      Ontdek binnenkort de nieuwsartikelen en verhalen uit de verschillende
+      buurten van Amsterdam.
+    </p>
+
+    <!-- Plaats hier later je artikelkaarten. -->
+  </section>
 </main>
 
 <style>
   :global(*) {
     box-sizing: border-box;
+  }
+
+  :global(html) {
+    scroll-behavior: smooth;
   }
 
   :global(body) {
@@ -82,6 +96,11 @@
     text-decoration: none;
   }
 
+  .logo:focus-visible {
+    outline: 3px solid #EA5B0D;
+    outline-offset: 4px;
+  }
+
   /* Hero - mobiel als basis */
 
   .hero {
@@ -99,29 +118,31 @@
   }
 
   .hero h1 {
+    margin: 0 0 1.5rem;
+    max-width: 650px;
     font-family: "Arial Black", Arial, sans-serif;
     font-size: clamp(2.5rem, 10vw, 3.5rem);
     line-height: 1.05;
-    margin: 0 0 1.5rem;
-    max-width: 650px;
   }
 
   .hero-description {
+    margin: 0 0 2rem;
     font-size: 1rem;
     line-height: 1.7;
-    margin: 0 0 2rem;
   }
+
+  /* Call-to-action */
 
   .hero-button {
     display: inline-flex;
     align-items: center;
     gap: 1rem;
     padding: 1rem 1.5rem;
-    background-color: #EA5B0D;
-    color: white;
-    text-decoration: none;
-    font-weight: 700;
     border-radius: 6px;
+    background-color: #EA5B0D;
+    color: #FFFFFF;
+    font-weight: 700;
+    text-decoration: none;
     transition: background-color 0.2s ease;
   }
 
@@ -134,6 +155,8 @@
     outline-offset: 4px;
   }
 
+  /* Hero-afbeelding */
+
   .hero-image img {
     display: block;
     width: 100%;
@@ -141,6 +164,29 @@
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 12px;
+  }
+
+  /* Artikelen */
+
+  .articles {
+    padding: 3rem 1.25rem;
+    background-color: #FFFFFF;
+    color: #303A6D;
+    scroll-margin-top: 1rem;
+  }
+
+  .articles h2 {
+    margin: 0 0 1rem;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-size: clamp(1.8rem, 6vw, 2.5rem);
+    line-height: 1.15;
+  }
+
+  .articles p {
+    max-width: 650px;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
   /* Tablet en grotere schermen */
@@ -171,6 +217,10 @@
     .hero-image img {
       aspect-ratio: 4 / 4.5;
     }
+
+    .articles {
+      padding: 4rem 8%;
+    }
   }
 
   /* Brede schermen */
@@ -178,6 +228,18 @@
   @media (min-width: 1000px) {
     .site-header {
       padding: 1.5rem 2rem;
+    }
+  }
+
+  /* Minder beweging voor gebruikers die dit instellen */
+
+  @media (prefers-reduced-motion: reduce) {
+    :global(html) {
+      scroll-behavior: auto;
+    }
+
+    .hero-button {
+      transition: none;
     }
   }
 </style>
