@@ -1,4 +1,8 @@
 
+<script>
+  import Herofoto from '#lib/assets/HG-20240713-8674.jpg';
+</script>
+
 <svelte:head>
   <title>Buurtcampuskrant | Verhalen uit de buurt</title>
   <meta
@@ -6,14 +10,6 @@
     content="Ontdek nieuws, projecten en verhalen van de Buurtcampus in Amsterdam."
   />
 </svelte:head>
-
-<header class="site-header">
-  <a class="logo" href="/" aria-label="Buurtcampuskrant - Home">
-    <span>BUURT-</span>
-    <span>CAM</span>
-    <span>PUS</span>
-  </a>
-</header>
 
 <main>
   <section class="hero" aria-labelledby="hero-title">
@@ -34,7 +30,7 @@
 
     <div class="hero-image">
       <img
-        src="/images/buurtcampus.jpg"
+        src={Herofoto}
         alt="De omgeving van Amsterdam met gebouwen en water"
         width="800"
         height="900"
@@ -43,15 +39,17 @@
     </div>
   </section>
 
-  <section id="artikelen" class="articles" aria-labelledby="artikelen-titel">
-    <h2 id="artikelen-titel">Verhalen uit de buurt</h2>
+  <section
+    class="articles"
+    id="artikelen"
+    aria-labelledby="articles-title"
+  >
+    <h2 id="articles-title">Ontdek de buurten</h2>
 
     <p>
-      Ontdek binnenkort de nieuwsartikelen en verhalen uit de verschillende
-      buurten van Amsterdam.
+      Ontdek nieuws, projecten en inspirerende verhalen uit
+      Amsterdam Nieuw-West, Oost en Zuidoost.
     </p>
-
-    <!-- Plaats hier later je artikelkaarten. -->
   </section>
 </main>
 
@@ -70,40 +68,12 @@
     color: #303A6D;
   }
 
-  /* Header - mobiel als basis */
-
-  .site-header {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 1.25rem;
-    background-color: #F5DFD0;
-    color: #303A6D;
-  }
-
-  /* Logo */
-
-  .logo {
-    display: flex;
-    flex-direction: column;
-    flex-shrink: 0;
-    color: #303A6D;
-    font-family: "Arial Black", Arial, sans-serif;
-    font-size: 1.8rem;
-    font-weight: 900;
-    line-height: 0.88;
-    letter-spacing: -0.06em;
-    text-decoration: none;
-  }
-
-  .logo:focus-visible {
-    outline: 3px solid #EA5B0D;
-    outline-offset: 4px;
-  }
-
-  /* Hero - mobiel als basis */
+  /* Hero met container query */
 
   .hero {
+    container-type: inline-size;
+    container-name: hero;
+
     display: grid;
     grid-template-columns: 1fr;
     align-items: center;
@@ -113,8 +83,12 @@
     color: #303A6D;
   }
 
+  /* Hero-teksten iets lager plaatsen */
+
   .hero-content {
     max-width: 650px;
+    position: relative;
+    top: 30px;
   }
 
   .hero h1 {
@@ -131,7 +105,7 @@
     line-height: 1.7;
   }
 
-  /* Call-to-action */
+  /* Knop */
 
   .hero-button {
     display: inline-flex;
@@ -155,7 +129,14 @@
     outline-offset: 4px;
   }
 
-  /* Hero-afbeelding */
+  /* Kleinere afbeelding */
+
+  .hero-image {
+    width: 100%;
+    max-width: 380px;
+    justify-self: end;
+    min-width: 0;
+  }
 
   .hero-image img {
     display: block;
@@ -164,6 +145,28 @@
     aspect-ratio: 4 / 3;
     object-fit: cover;
     border-radius: 12px;
+  }
+
+  /* Container query voor bredere containers */
+
+  @container hero (min-width: 650px) {
+    .hero {
+      grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+      gap: 3rem;
+      padding: 5rem 8%;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 5rem);
+    }
+
+    .hero-description {
+      font-size: 1.15rem;
+    }
+
+    .hero-image img {
+      aspect-ratio: 4 / 4.5;
+    }
   }
 
   /* Artikelen */
@@ -189,49 +192,7 @@
     line-height: 1.7;
   }
 
-  /* Tablet en grotere schermen */
-
-  @media (min-width: 701px) {
-    .site-header {
-      padding: 1.5rem;
-    }
-
-    .logo {
-      font-size: clamp(1.7rem, 2.8vw, 2.4rem);
-    }
-
-    .hero {
-      grid-template-columns: 1fr 0.85fr;
-      gap: 3rem;
-      padding: 5rem 8%;
-    }
-
-    .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 5rem);
-    }
-
-    .hero-description {
-      font-size: 1.15rem;
-    }
-
-    .hero-image img {
-      aspect-ratio: 4 / 4.5;
-    }
-
-    .articles {
-      padding: 4rem 8%;
-    }
-  }
-
-  /* Brede schermen */
-
-  @media (min-width: 1000px) {
-    .site-header {
-      padding: 1.5rem 2rem;
-    }
-  }
-
-  /* Minder beweging voor gebruikers die dit instellen */
+  /* Minder beweging voor toegankelijkheid */
 
   @media (prefers-reduced-motion: reduce) {
     :global(html) {
