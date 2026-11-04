@@ -35,6 +35,7 @@
         width="800"
         height="900"
         fetchpriority="high"
+        decoding="async"
       />
     </div>
   </section>
@@ -83,8 +84,6 @@
     color: #303A6D;
   }
 
-  /* Hero-teksten iets lager plaatsen */
-
   .hero-content {
     max-width: 650px;
     position: relative;
@@ -129,7 +128,7 @@
     outline-offset: 4px;
   }
 
-  /* Kleinere afbeelding */
+  /* Afbeelding */
 
   .hero-image {
     width: 100%;
@@ -147,7 +146,7 @@
     border-radius: 12px;
   }
 
-  /* Container query voor bredere containers */
+  /* Container query */
 
   @container hero (min-width: 650px) {
     .hero {
@@ -192,7 +191,7 @@
     line-height: 1.7;
   }
 
-  /* Minder beweging voor toegankelijkheid */
+  /* Minder beweging */
 
   @media (prefers-reduced-motion: reduce) {
     :global(html) {
