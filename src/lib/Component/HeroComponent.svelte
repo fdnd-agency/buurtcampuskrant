@@ -11,10 +11,21 @@
   />
 </svelte:head>
 
+<!-- Hoofdnavigatie -->
+
+<nav class="main-nav" aria-label="Hoofdnavigatie">
+  <a href="/" aria-current="page">Home</a>
+  <a href="/artikel">Article Header</a>
+</nav>
+
 <main>
+  <!-- Hero section -->
+
   <section class="hero" aria-labelledby="hero-title">
     <div class="hero-content">
-      <h1 id="hero-title">Verhalen van de buurt voor de buurt</h1>
+      <h1 id="hero-title">
+        Verhalen van de buurt voor de buurt
+      </h1>
 
       <p class="hero-description">
         Blijf op de hoogte van het laatste nieuws, bijzondere
@@ -40,6 +51,8 @@
     </div>
   </section>
 
+  <!-- Artikelen -->
+
   <section
     class="articles"
     id="artikelen"
@@ -55,6 +68,8 @@
 </main>
 
 <style>
+  /* Algemene instellingen */
+
   :global(*) {
     box-sizing: border-box;
   }
@@ -69,14 +84,51 @@
     color: #303A6D;
   }
 
-  /* Hero met container query */
+  /* Hoofdnavigatie */
+
+  .main-nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background-color: #F5DFD0;
+  }
+
+  .main-nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    border: 2px solid #303A6D;
+    border-radius: 6px;
+    color: #303A6D;
+    font-weight: 700;
+    text-decoration: none;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+  }
+
+  .main-nav a:hover,
+  .main-nav a[aria-current="page"] {
+    background-color: #303A6D;
+    color: #FFFFFF;
+  }
+
+  .main-nav a:focus-visible {
+    outline: 3px solid #EA5B0D;
+    outline-offset: 3px;
+  }
+
+  /* Hero section */
 
   .hero {
     container-type: inline-size;
     container-name: hero;
 
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     align-items: center;
     gap: 2rem;
     padding: 3rem 1.25rem;
@@ -84,31 +136,35 @@
     color: #303A6D;
   }
 
+  /* Hero tekst */
+
   .hero-content {
+    width: 100%;
     max-width: 650px;
-    position: relative;
-    top: 30px;
+    padding-top: 1.5rem;
   }
 
   .hero h1 {
-    margin: 0 0 1.5rem;
     max-width: 650px;
+    margin: 0 0 1.5rem;
     font-family: "Arial Black", Arial, sans-serif;
     font-size: clamp(2.5rem, 10vw, 3.5rem);
     line-height: 1.05;
   }
 
   .hero-description {
+    max-width: 600px;
     margin: 0 0 2rem;
     font-size: 1rem;
     line-height: 1.7;
   }
 
-  /* Knop */
+  /* Hero knop */
 
   .hero-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     padding: 1rem 1.5rem;
     border-radius: 6px;
@@ -128,13 +184,13 @@
     outline-offset: 4px;
   }
 
-  /* Afbeelding */
+  /* Hero afbeelding */
 
   .hero-image {
     width: 100%;
     max-width: 380px;
-    justify-self: end;
     min-width: 0;
+    justify-self: end;
   }
 
   .hero-image img {
@@ -146,21 +202,31 @@
     border-radius: 12px;
   }
 
-  /* Container query */
+  /* Container query voor grotere containers */
 
   @container hero (min-width: 650px) {
     .hero {
-      grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+      grid-template-columns:
+        minmax(0, 1fr)
+        minmax(0, 0.85fr);
       gap: 3rem;
       padding: 5rem 8%;
     }
 
+    .hero-content {
+      padding-top: 1.5rem;
+    }
+
     .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 5rem);
+      font-size: clamp(2.5rem, 5cqi, 5rem);
     }
 
     .hero-description {
       font-size: 1.15rem;
+    }
+
+    .hero-image {
+      max-width: 380px;
     }
 
     .hero-image img {
@@ -168,7 +234,7 @@
     }
   }
 
-  /* Artikelen */
+  /* Artikelen section */
 
   .articles {
     padding: 3rem 1.25rem;
@@ -185,20 +251,21 @@
   }
 
   .articles p {
-    max-width: 650px;
+    min-width: 650px;
     margin: 0;
     font-size: 1rem;
     line-height: 1.7;
   }
 
-  /* Minder beweging */
+  /* Minder beweging voor gebruikers die dit instellen */
 
   @media (prefers-reduced-motion: reduce) {
     :global(html) {
       scroll-behavior: auto;
     }
 
-    .hero-button {
+    .hero-button,
+    .main-nav a {
       transition: none;
     }
   }
