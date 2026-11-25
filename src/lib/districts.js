@@ -1,5 +1,5 @@
 export const DISTRICTS = [
-  { slug: "nieuw-west", name: "Nieuw-West" },
-  { slug: "zuidoost", name: "Zuidoost" },
-  { slug: "oost", name: "Oost" },
+  { slug: "nieuw-west", name: "Nieuw-West", colour: "hsl(239, 34%, 30%)" },
+  { slug: "zuidoost", name: "Zuidoost", colour: "hsl(74, 37%, 47%)" },
+  { slug: "oost", name: "Oost", colour: "hsl(186, 85%, 21%)" }
 ];

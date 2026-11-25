@@ -10,16 +10,26 @@
   );
 </script>
 
-<p>Je leest een verhaal uit <span>{district.name}</span></p>
+<section style:background-color={district.colour}>
+  <p>Je leest een verhaal uit <span>{district.name}</span></p>
 
-<a href="/{page.data.story.district}">
-  ← Alle verhalen uit {district.name}
-</a>
+  <a href="/{page.data.story.district}">
+    ← Alle verhalen uit {district.name}
+  </a>
 
-<nav>
-  {#each DISTRICTS as district}
-    <a href="/{district.slug}">{district.name}</a>
-  {/each}
-</nav>
+  <nav>
+    {#each DISTRICTS as district}
+      <a href="/{district.slug}">
+        {district.name}
+      </a>
+    {/each}
+  </nav>
 
-<img alt="De stadsdeel indicator" src={moestuin} width="198" height="198"/>
+  <img alt="De stadsdeel indicator" src={moestuin} width="198" height="198"/>
+</section>
+
+<style>
+  section{
+    color: white;
+  } 
+</style>
