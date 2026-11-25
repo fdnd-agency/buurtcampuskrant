@@ -1,4 +1,4 @@
-// src/routes/[stadsdeel]/[id]/+page.server.js
+// src/routes/[stadsdeel]/[slug]/+page.server.js
 import { error } from "@sveltejs/kit";
 
 const BASE_URL = "https://fdnd-agency.directus.app/items";
