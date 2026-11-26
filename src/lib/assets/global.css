@@ -1,0 +1,42 @@
+:root {
+  --hue-orange: 21;
+  --hue-navy: 239;
+  --hue-teal: 186;
+  --hue-green: 74;
+
+  --color-orange: hsl(var(--hue-orange), 90%, 48%);
+  --color-navy: hsl(var(--hue-navy), 34%, 30%);
+  --color-teal: hsl(var(--hue-teal), 85%, 21%);
+  --color-green: hsl(var(--hue-green), 37%, 47%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-sand: hsl(var(--hue-orange), 55%, 90%);
+
+  --font-size-h1: 2.5rem;
+  --font-size-h2: 2rem;
+  --font-size-h3: 1.5rem;
+  --font-size-h4: 1.3rem;
+  --font-size-large: 1.25rem;
+  --font-size-normal: 1.12rem;
+  --font-size-small: 1rem;
+}
+
+
+body {
+  margin: 0;
+  container: page / inline-size;
+}
+
+
+.pill {
+  border: 2px solid var(--color-navy);
+  border-radius: 100vmax;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
