@@ -11,21 +11,28 @@
 </script>
 
 <section style:background-color={district.colour}>
-  <p>Je leest een verhaal uit <span>{district.name}</span></p>
+  <header class="indication">
+    <p>Je leest een verhaal uit <span>{district.name}</span></p>
 
-  <a href="/{page.data.story.district}">
-    ← Alle verhalen uit {district.name}
-  </a>
+    <a href="/{page.data.story.district}">
+      ← Alle verhalen uit {district.name}
+    </a>
+  </header>
 
-  <nav>
+  <nav aria-label="Andere stadsdelen">
     {#each DISTRICTS as district}
       <a href="/{district.slug}">
         {district.name}
       </a>
     {/each}
-  </nav>
 
-  <img alt="De stadsdeel indicator" src={moestuin} width="198" height="198"/>
+    <img 
+      alt="moestuin" 
+      src={moestuin} 
+      width="198" 
+      height="198"
+    />
+  </nav>
 </section>
 
 <style>
